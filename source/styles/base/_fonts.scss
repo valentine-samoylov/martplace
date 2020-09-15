@@ -1,0 +1,55 @@
+// Local fonts
+// @font-face {
+// 	font-family: "Quicksand";
+// 	src: url("Quicksand-Light.ttf") format("truetype"),
+// 		url("Quicksand-Light.woff") format("woff"),
+// 		url("Quicksand-Light.woff2") format("woff2");
+// 	font-weight: 300;
+// 	font-style: normal;
+// }
+
+// @font-face {
+// 	font-family: "Quicksand";
+// 	src: url("Quicksand-Regular.ttf") format("truetype"),
+// 		url("Quicksand-Regular.woff") format("woff"),
+// 		url("Quicksand-Regular.woff2") format("woff2");
+// 	font-weight: 400;
+// 	font-style: normal;
+// }
+
+// @font-face {
+// 	font-family: "Quicksand";
+// 	src: url("Quicksand-Medium.ttf") format("truetype"),
+// 		url("Quicksand-Medium.woff") format("woff"),
+// 		url("Quicksand-Medium.woff2") format("woff2");
+// 	font-weight: 500;
+// 	font-style: normal;
+// }
+
+// @font-face {
+// 	font-family: "Quicksand";
+// 	src: url("Quicksand-Bold.ttf") format("truetype"),
+// 		url("Quicksand-Bold.woff") format("woff"),
+// 		url("Quicksand-Bold.woff2") format("woff2");
+// 	font-weight: 700;
+// 	font-style: normal;
+// }
+
+@font-face {
+	font-family: "Quicksand Medium";
+	src: url("QuicksandMedium.ttf") format("truetype"),
+		url("QuicksandMedium.woff") format("woff"),
+		url("QuicksandMedium.woff2") format("woff2");
+	font-weight: 500;
+	font-style: normal;
+}
+
+@include font-face("Quicksand", Quicksand-Light, 300, normal);
+@include font-face("Quicksand", Quicksand-Regular, 400, normal);
+@include font-face("Quicksand", Quicksand-Medium, 500, normal);
+@include font-face("Quicksand", Quicksand-Bold, 700, normal);
+
+// Internet fonts
+
+// Icon fonts
+@import url("https://use.fontawesome.com/releases/v5.7.2/css/all.css");
