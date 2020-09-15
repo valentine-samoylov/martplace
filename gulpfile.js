@@ -97,7 +97,7 @@ function css() {
 function cssLibs() {
 	return gulp.src([
 		'node_modules/normalize.css/normalize.css',
-		// 'node_modules/linearicons/dist/web-font/style.css',
+		'node_modules/linearicons/dist/web-font/style.css',
 		'node_modules/swiper/swiper-bundle.css'
 
 	])

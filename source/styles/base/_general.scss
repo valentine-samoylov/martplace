@@ -16,6 +16,18 @@ main {
 	height: 100%;
 }
 
+a {
+	display: inline-block;
+	text-decoration: none;
+}
+
+ul,
+li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
 body {
 	background-color: $white;
 	font-family: $fontfamily;
