@@ -1,18 +1,4 @@
-@font-face {
-	font-family: "Quicksand Medium";
-	src: url("QuicksandMedium.ttf") format("truetype"),
-		url("QuicksandMedium.woff") format("woff"),
-		url("QuicksandMedium.woff2") format("woff2");
-	font-weight: 500;
-	font-style: normal;
-}
-
 @include font-face("Quicksand", Quicksand-Light, 300, normal);
 @include font-face("Quicksand", Quicksand-Regular, 400, normal);
 @include font-face("Quicksand", Quicksand-Medium, 500, normal);
 @include font-face("Quicksand", Quicksand-Bold, 700, normal);
-
-// Internet fonts
-
-// Icon fonts
-@import url("https://use.fontawesome.com/releases/v5.7.2/css/all.css");

@@ -20,7 +20,6 @@
 		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
-		<!-- <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css"> -->
 		<link rel="stylesheet" href="css/libs.min.css"/>
 		<link rel="stylesheet" href="css/main.min.css"/>
 
@@ -110,8 +109,8 @@
 								</ul>
 							</nav>
 			
-							<form class="form form--search" action="#">
-								<input class="form__input" type="search" placeholder="Search product here...">
+							<form class="form form--search" name="header-form" action="#">
+								<input class="form__input" name="header-input" type="search" placeholder="Search product here...">
 								<button class="btn btn--blue btn--search">
 									<span class="lnr lnr-magnifier"></span>
 								</button>
@@ -152,9 +151,9 @@
 			<section class="search-box">
 				<div class="container">
 					<div class="search-box__inner">
-						<form class="search-box__form" action="#">
-							<input class="search-box__input" type="search" placeholder="Search your products...">
-							<select class="search-box__select" name="" id="">
+						<form class="search-box__form" name="search-box__form" action="#">
+							<input class="search-box__input" name="search-box__input" type="search" placeholder="Search your products...">
+							<select class="search-box__select" name="search-box__select">
 								<option class="search-box__option" value="All Categories">All Categories</option>
 								<option class="search-box__option" value="Plugins">Plugins</option>
 								<option class="search-box__option" value="WordPress">WordPress</option>
