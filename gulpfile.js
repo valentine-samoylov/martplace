@@ -98,8 +98,8 @@ function cssLibs() {
 	return gulp.src([
 		'node_modules/normalize.css/normalize.css',
 		'node_modules/linearicons/dist/web-font/style.css',
-		'node_modules/swiper/swiper-bundle.css'
-
+		'node_modules/swiper/swiper-bundle.css',
+		'node_modules/rateyo/src/jquery.rateyo.css'
 	])
 		.pipe(concat('libs.min.css'))
 		.pipe(cssmin())
@@ -126,7 +126,9 @@ function js() {
 
 function jsLibs() {
 	return gulp.src([
-		'node_modules/swiper/swiper-bundle.js'
+		'node_modules/swiper/swiper-bundle.js',
+		'node_modules/rateyo/src/jquery.rateyo.js',
+		'node_modules/mixitup/dist/mixitup.js'
 	])
 		.pipe(concat('libs.min.js'))
 		.pipe(uglify())

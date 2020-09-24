@@ -38,29 +38,32 @@
 								<button class="btn btn--lg btn--blue">
 									Become a Seller
 								</button>
-								<ul class="profile__list">
+								<ul class="profile__actions">
 									<li class="profile__item">
-										<a class="profile__link" href="#">
-											<span class="profile__icon lnr lnr-alarm"></span>
-											<span class="profile__badge profile__badge--red">25</span>
+										<a class="profile__btn icon-btn" href="#">
+											Notifications
+											<span class="profile__icon icon-btn__symbol lnr lnr-alarm"></span>
+											<span class="profile__notification-badge profile__notification-badge--red">25</span>
 										</a>
 									</li>
 									<li class="profile__item">
-										<a class="profile__link" href="#">
-											<span class="profile__icon lnr lnr-envelope"></span>
-											<span class="profile__badge profile__badge--green">6</span>
+										<a class="profile__btn icon-btn" href="#">
+											Messages
+											<span class="profile__icon icon-btn__symbol lnr lnr-envelope"></span>
+											<span class="profile__notification-badge profile__notification-badge--green">6</span>
 										</a>
 									</li>
 									<li class="profile__item">
-										<a class="profile__link" href="#">
-											<span class="profile__icon lnr lnr-cart"></span>
-											<span class="profile__badge profile__badge--blue">2</span>
+										<a class="profile__btn icon-btn" href="#">
+											Cart
+											<span class="profile__icon icon-btn__symbol lnr lnr-cart"></span>
+											<span class="profile__notification-badge profile__notification-badge--blue">2</span>
 										</a>
 									</li>
 								</ul>
 								<div class="profile__box">
 									<a class="profile__user" href="#">
-										<img class="profile__user-img" src="images/profile/profile-img.jpg" alt="">
+										<img class="profile__user-img" src="images/content/profile-img.jpg" alt="">
 									</a>
 									<div class="profile__details">
 										<a class="profile__name" href="#">
@@ -82,27 +85,27 @@
 							<nav class="nav-menu">
 								<ul class="nav-menu__list">
 									<li class="nav-menu__item">
-										<a class="nav-menu__link" a href="#">
+										<a class="nav-menu__link link" a href="#">
 											home
 										</a>
 									</li>
 									<li class="nav-menu__item">
-										<a class="nav-menu__link" a href="#">
+										<a class="nav-menu__link link" a href="#">
 											all products
 										</a>
 									</li>
 									<li class="nav-menu__item">
-										<a class="nav-menu__link" a href="#">
+										<a class="nav-menu__link link" a href="#">
 											wordpress
 										</a>
 									</li>
 									<li class="nav-menu__item">
-										<a class="nav-menu__link" a href="#">
+										<a class="nav-menu__link link" a href="#">
 											features
 										</a>
 									</li>
 									<li class="nav-menu__item">
-										<a class="nav-menu__link" a href="#">
+										<a class="nav-menu__link link" a href="#">
 											pages
 										</a>
 									</li>
@@ -110,7 +113,8 @@
 							</nav>
 			
 							<form class="form form--search" name="header-form" action="#">
-								<input class="form__input" name="header-input" type="search" placeholder="Search product here...">
+								<label class="form__label">
+									<input class="form__input" name="header-input" type="search" placeholder="Search product here..." required></label>
 								<button class="btn btn--blue btn--search">
 									<span class="lnr lnr-magnifier"></span>
 								</button>
@@ -124,7 +128,7 @@
 			
 
 			<!-- Intro -->
-			<section class="intro">
+			<section class="intro" style="background-image: url(images/intro-bg.jpg);">
 				<div class="container">
 					<div class="intro__inner">
 						<div class="intro__title">
@@ -136,10 +140,10 @@
 						<p class="intro__text">
 							MartPlace is the most powerful, & customizable template for Easy Digital Downloads Products
 						</p>
-						<a class="btn btn--xl btn--white btn--intro" href="#" >
+						<a class="btn btn--xxl btn--white" href="#" >
 							View All Products
 						</a>
-						<a class="btn btn--xl btn--transparent" href="#" >
+						<a class="btn btn--xxl btn--transparent" href="#" >
 							Popular Products
 						</a>
 					</div>
@@ -152,7 +156,9 @@
 				<div class="container">
 					<div class="search-box__inner">
 						<form class="search-box__form" name="search-box__form" action="#">
-							<input class="search-box__input" name="search-box__input" type="search" placeholder="Search your products...">
+							<label class="search-box__label">
+								<input class="search-box__input" name="search-box__input" type="search" placeholder="Search your products..." required>
+							</label>
 							<select class="search-box__select" name="search-box__select">
 								<option class="search-box__option" value="All Categories">All Categories</option>
 								<option class="search-box__option" value="Plugins">Plugins</option>
@@ -209,46 +215,509 @@
 			</section>
 			<!-- /Features -->
 
-			<div class="section" id="featured-products">
+			<!-- Weekly products -->
+			<section class="section" id="weekly-products">
 				<div class="container">
 					<div class="section__header">
 						<div class="section__title">
 							Weekly Featured Products
 						</div>
+						<div class="section__slider-controls">
+							<button type="button" class="section__slider-btn section__slider-btn--weekly section__slider-btn--prev">Prev</button>
+							<button type="button" class="section__slider-btn section__slider-btn--weekly section__slider-btn--next">Next</button>
+						</div>
 					</div>
-					<div class="section__inner">
-						
+					<div class="weekly swiper-container">
+						<div class="weekly__slider swiper-wrapper">
+
+							<article class="weekly__card product-card swiper-slide">
+								<figure class="product-card__aside product-card__aside--weekly">
+									<img class="product-card__img" src="images/content/weekly-card-01.jpg">
+									<figcaption class="product-card__overlay">
+										<a class="btn btn--xl btn--transparent" href="#">
+											More Info
+										</a>
+										<a class="btn btn--xl btn--white" href="#">
+											Live Demo
+										</a>
+									</figcaption>
+								</figure>
+								<div class="product-card__wrapper">
+									<div class="product-card__body product-card__body--wide">
+										<a class="product-card__title product-card__title--weekly" href="#">
+											One Page Resume Template
+										</a>
+										<div class="product-card__info">
+											<a class="product-card__user" href="#">
+												<img class="product-card__user-img product-card__img--weekly" src="images/content/user-img-01.jpg" alt="">
+												<span class="product-card__user-name">
+													AazzTech
+												</span>
+											</a>
+											<a class="product-card__category" href="#"><span class="icon icmn icmn-wp"></span>WordPress</a>
+										</div>
+										<p class="product-card__text">
+											Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue justo ut scelerisque.
+										</p>
+										<ul class="product-card__categories">
+											<li class="product-card__category">
+												<a class="product-card__tag-link btn btn--xs btn--gray" href="#">
+													website
+												</a>
+											</li>
+											<li class="product-card__category">
+												<a class="product-card__tag-link btn btn--xs btn--gray" href="#">
+													plugin
+												</a>
+											</li>
+											<li class="product-card__category">
+												<a class="product-card__tag-link btn btn--xs btn--gray" href="#">
+													landing page
+												</a>
+											</li>
+										</ul>
+									</div>
+									<div class="product-card__footer product-card__footer--wide">
+										<span class="product-card__footer-group">
+											<a class="product-card__price btn btn--md btn--blue" href="#">
+												<span class="product-card__currency">$</span> 10 - <span class="product-card__currency">$</span>50
+											</a>
+											<a class="product-card__stat product-card__stat--likes icon-btn" href="#"><span class="product-card__stat-icon icon lnr lnr-heart"></span>46</a>
+											<a class="product-card__stat product-card__stat--sold icon-btn" href="#"><span class="product-card__stat-icon icon lnr lnr-cart"></span>634</a>
+										</span>
+										<span class="product-card__rating" id="item-rating"></span>
+									</div>
+								</div>
+							</article>
+
+							<article class="weekly__card product-card swiper-slide">
+								<figure class="product-card__aside product-card__aside--weekly">
+									<img class="product-card__img" src="images/content/weekly-card-02.jpg">
+									<figcaption class="product-card__overlay">
+										<a class="btn btn--xl btn--transparent" href="#">
+											More Info
+										</a>
+										<a class="btn btn--xl btn--white" href="#">
+											Live Demo
+										</a>
+									</figcaption>
+								</figure>
+								<div class="product-card__wrapper">
+									<div class="product-card__body product-card__body--wide">
+										<a class="product-card__title product-card__title--weekly" href="#">
+											Dust - Personal Portfolio Template
+										</a>
+										<div class="product-card__info">
+											<a class="product-card__user" href="#">
+												<img class="product-card__user-img product-card__img--weekly" src="images/content/user-img-02.jpg" alt="">
+												<span class="product-card__user-name">
+													Coder-Lab
+												</span>
+											</a>
+											<a class="product-card__category" href="#"><i class="icon fab fa-html5"></i>HTML</a>
+										</div>
+										<p class="product-card__text">
+											Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue justo ut scelerisque.
+										</p>
+										<ul class="product-card__categories">
+											<li class="product-card__category">
+												<a class="product-card__tag-link btn btn--xs btn--gray" href="#">
+													website
+												</a>
+											</li>
+											<li class="product-card__category">
+												<a class="product-card__tag-link btn btn--xs btn--gray" href="#">
+													landing page
+												</a>
+											</li>
+											<li class="product-card__category">
+												<a class="product-card__tag-link btn btn--xs btn--gray" href="#">
+													HTML
+												</a>
+											</li>
+										</ul>
+									</div>
+									<div class="product-card__footer product-card__footer--wide">
+										<span class="product-card__footer-group">
+											<a class="product-card__price btn btn--md btn--blue" href="#">
+												<span class="product-card__currency">$</span>10
+											</a>
+											<a class="product-card__stat product-card__stat--likes icon-btn" href="#"><span class="product-card__stat-icon icon lnr lnr-heart"></span>57</a>
+											<a class="product-card__stat product-card__stat--sold icon-btn" href="#"><span class="product-card__stat-icon icon lnr lnr-cart"></span>481</a>
+										</span>
+										<span class="product-card__rating" id="item-rating"></span>
+									</div>
+								</div>
+							</article>
+
+							<article class="weekly__card product-card swiper-slide">
+								<figure class="product-card__aside product-card__aside--weekly">
+									<img class="product-card__img" src="images/content/weekly-card-03.jpg">
+									<figcaption class="product-card__overlay">
+										<a class="btn btn--xl btn--transparent" href="#">
+											More Info
+										</a>
+										<a class="btn btn--xl btn--white" href="#">
+											Live Demo
+										</a>
+									</figcaption>
+								</figure>
+								<div class="product-card__wrapper">
+									<div class="product-card__body product-card__body--wide">
+										<a class="product-card__title product-card__title--weekly" href="#">
+											Dust - Personal Portfolio Template
+										</a>
+										<div class="product-card__info">
+											<a class="product-card__user" href="#">
+												<img class="product-card__user-img product-card__img--weekly" src="images/content/user-img-04.jpg" alt="">
+												<span class="product-card__user-name">
+													EchoTheme
+												</span>
+											</a>
+											<a class="product-card__category" href="#"><i class="icon fab fa-html5"></i>HTML</a>
+										</div>
+										<p class="product-card__text">
+											Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue justo ut scelerisque.
+										</p>
+										<ul class="product-card__categories">
+											<li class="product-card__category">
+												<a class="product-card__tag-link btn btn--xs btn--gray" href="#">
+													website
+												</a>
+											</li>
+											<li class="product-card__category">
+												<a class="product-card__tag-link btn btn--xs btn--gray" href="#">
+													landing page
+												</a>
+											</li>
+											<li class="product-card__category">
+												<a class="product-card__tag-link btn btn--xs btn--gray" href="#">
+													HTML
+												</a>
+											</li>
+										</ul>
+									</div>
+									<div class="product-card__footer product-card__footer--wide">
+										<span class="product-card__footer-group">
+											<a class="product-card__price btn btn--md btn--blue" href="#">
+												<span class="product-card__currency">$</span>12
+											</a>
+											<a class="product-card__stat product-card__stat--likes icon-btn" href="#"><span class="product-card__stat-icon icon lnr lnr-heart"></span>39</a>
+											<a class="product-card__stat product-card__stat--sold icon-btn" href="#"><span class="product-card__stat-icon icon lnr lnr-cart"></span>254</a>
+										</span>
+										<span class="product-card__rating" id="item-rating"></span>
+									</div>
+								</div>
+							</article>
+
+						</div>
 					</div>
 				</div>
-			</div>
+			</section>
+			<!-- /Weekly products -->
 
-			<div class="section" id="newest-products">
+			<!-- Newest products -->
+			<section class="section section--newest" id="newest-products">
 				<div class="container">
-					<div class="section__header">
+					<div class="section__header section__header--newest">
 						<div class="section__title">
 							Newest Release Products
 						</div>
+						<div class="filter">
+							<label class="filter__label" for="#filter__btn">Filter by:</label>
+							<button class="filter__btn icon-btn" type="button" id="filter__btn"><span class="filter__btn-icon icmn icmn-menu"></span>Menu</button>
+							<ul class="filter__dropdown">
+								<li class="filter__item"><button class="filter__option" data-filter=".trending">Trending items</button></li>
+								<li class="filter__item"><button class="filter__option" data-sort="seller:desc">Best seller</button></li>
+								<li class="filter__item"><button class="filter__option" data-sort="item-rating:desc">Best rating</button></li>
+								<li class="filter__item"><button class="filter__option" data-sort="price:asc">Low price</button></li>
+								<li class="filter__item"><button class="filter__option" data-sort="price:desc">High price</button></li>
+							</ul>
+						</div>
 					</div>
-					<div class="section__inner">
+					<div class="newest-products">
+						<form class="newest-products__categories">
+							<button class="btn btn--md btn--gray" type="button" data-filter="all">
+								Plugins
+							</button>
+							<button class="btn btn--md btn--gray" type="button" data-filter=".word-press">
+								WordPress
+							</button>
+							<button class="btn btn--md btn--gray" type="button" data-filter=".site-template">
+								Site Template
+							</button>
+							<button class="btn btn--md btn--gray" type="button" data-filter=".psd-template">
+								PSD Template
+							</button>
+							<button class="btn btn--md btn--gray" type="button" data-filter=".joomla">
+								Joomla
+							</button>
+							<button class="btn btn--md btn--gray" type="button" data-filter=".ui">
+								User Interface
+							</button>
+							<button class="btn btn--md btn--gray" type="button" data-filter=".landing-page">
+								Landing Page
+							</button>
+							<button class="btn btn--md btn--gray" type="button" data-filter=".software">
+								Software
+							</button>
+						</form>
 						
+						<div class="newest-products__items">
+	
+							<article class="product-card mix ui word-press" data-seller="4.67" data-price="20" data-rating="">
+								<figure class="product-card__aside product-card__aside--regular">
+									<img class="product-card__img" src="images/content/newest-card-01.jpg">
+									<figcaption class="product-card__overlay">
+										<a class="btn btn--xl btn--transparent" href="#">
+											More Info
+										</a>
+										<a class="btn btn--xl btn--white" href="#">
+											Live Demo
+										</a>
+									</figcaption>
+								</figure>
+								<div class="product-card__body">
+									<a class="product-card__title" href="#">
+										E-commerce Shopping Cart
+									</a>
+									<div class="product-card__info">
+										<a class="product-card__user" href="#">
+											<img class="product-card__user-img" src="images/content/user-img-03.jpg" alt="">
+											<span class="product-card__user-name">
+												Theme-Valley
+											</span>
+										</a>
+										<a class="product-card__category" href="#"><span class="icon icmn icmn-wp"></span>Plugin</a>
+									</div>
+									<p class="product-card__text">
+										Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue.
+									</p>
+								</div>
+								<div class="product-card__footer">
+									<span class="product-card__footer-group">
+										<a class="product-card__price btn btn--sm btn--light-blue" href="#"><span class="product-card__currency">$</span>20</a>
+										<a class="product-card__stat product-card__stat--likes icon-btn" href="#"><span class="product-card__stat-icon icon lnr lnr-heart"></span>90</a>
+									</span>
+									<a class="product-card__stat product-card__stat--sold icon-btn" href="#"><span class="product-card__stat-icon icon lnr lnr-cart"></span>246</a>
+								</div>
+							</article>
+	
+							<article class="product-card mix landing-page psd-template" data-seller="4.9" data-price="18" data-rating="">
+								<figure class="product-card__aside product-card__aside--regular">
+									<img class="product-card__img" src="images/content/newest-card-02.jpg">
+									<figcaption class="product-card__overlay">
+										<a class="btn btn--xl btn--transparent" href="#">
+											More Info
+										</a>
+										<a class="btn btn--xl btn--white" href="#">
+											Live Demo
+										</a>
+									</figcaption>
+								</figure>
+								<div class="product-card__body">
+									<a class="product-card__title" href="#">
+										Marketify Coffee Shop
+									</a>
+									<div class="product-card__info">
+										<a class="product-card__user" href="#">
+											<img class="product-card__user-img" src="images/content/user-img-04.jpg" alt="">
+											<span class="product-card__user-name">
+												EchoTheme
+											</span>
+										</a>
+										<a class="product-card__category" href="#"><span class="icon icmn icmn-psd"></span>PSD</a>
+									</div>
+									<p class="product-card__text">
+										Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue.
+									</p>
+								</div>
+								<div class="product-card__footer">
+									<span class="product-card__footer-group">
+										<a class="product-card__price btn btn--sm btn--light-blue" href="#"><span class="product-card__currency">$</span>18</a>
+										<a class="product-card__stat product-card__stat--likes icon-btn" href="#"><span class="product-card__stat-icon icon lnr lnr-heart"></span>46</a>
+									</span>
+									<a class="product-card__stat product-card__stat--sold icon-btn" href="#"><span class="product-card__stat-icon icon lnr lnr-cart"></span>634</a>
+								</div>
+							</article>
+	
+							<article class="product-card mix site-template trending" data-seller="4.84" data-price="10" data-rating="4.5">
+								<figure class="product-card__aside product-card__aside--regular">
+									<img class="product-card__img" src="images/content/newest-card-03.jpg">
+									<figcaption class="product-card__overlay">
+										<a class="btn btn--xl btn--transparent" href="#">
+											More Info
+										</a>
+										<a class="btn btn--xl btn--white" href="#">
+											Live Demo
+										</a>
+									</figcaption>
+								</figure>
+								<div class="product-card__body">
+									<a class="product-card__title" href="#">
+										Bryson - Portfolio Template
+									</a>
+									<div class="product-card__info">
+										<a class="product-card__user" href="#">
+											<img class="product-card__user-img" src="images/content/user-img-05.jpg" alt="">
+											<span class="product-card__user-name">
+												Artcorner
+											</span>
+										</a>
+										<a class="product-card__category" href="#"><span class="icon icmn icmn-html-five"></span>HTML</a>
+									</div>
+									<p class="product-card__text">
+										Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue.
+									</p>
+								</div>
+								<div class="product-card__footer">
+									<span class="product-card__footer-group">
+										<a class="product-card__price btn btn--sm btn--light-blue" href="#">
+											<span class="product-card__currency">$</span>10</a>
+										<a class="product-card__stat product-card__stat--likes icon-btn" href="#"><span class="product-card__stat-icon icon lnr lnr-heart"></span>56</a>
+										<span class="product-card__rating" id="rateo">(05)</span>
+									</span>
+									<a class="product-card__stat product-card__stat--sold icon-btn" href="#"><span class="product-card__stat-icon icon lnr lnr-cart"></span>68</a>
+								</div>
+							</article>
+								
+							<article class="product-card mix ui word-press" data-seller="4.80" data-price="10" data-rating="4.5">
+								<figure class="product-card__aside product-card__aside--regular">
+									<img class="product-card__img" src="images/content/newest-card-04.jpg">
+									<figcaption class="product-card__overlay">
+										<a class="btn btn--xl btn--transparent" href="#">
+											More Info
+										</a>
+										<a class="btn btn--xl btn--white" href="#">
+											Live Demo
+										</a>
+									</figcaption>
+								</figure>
+								<div class="product-card__body">
+									<a class="product-card__title" href="#">
+										E-commerce Shopping Cart
+									</a>
+									<div class="product-card__info">
+										<a class="product-card__user" href="#">
+											<img class="product-card__user-img" src="images/content/user-img-06.jpg" alt="">
+											<span class="product-card__user-name">
+												Design-Hub
+											</span>
+										</a>
+										<a class="product-card__category" href="#"><span class="icon icmn icmn-wp"></span>Plugin</a>
+									</div>
+									<p class="product-card__text">
+										Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue.
+									</p>
+								</div>
+								<div class="product-card__footer">
+									<span class="product-card__footer-group">
+										<a class="product-card__price btn btn--sm btn--light-blue" href="#"><span class="product-card__currency">$</span>10 - 50</a>
+										<a class="product-card__stat product-card__stat--likes icon-btn" href="#"><span class="product-card__stat-icon icon lnr lnr-heart"></span>90</a>
+										<span class="product-card__rating" id="rateo"></span>
+									</span>
+									<a class="product-card__stat product-card__stat--sold icon-btn" href="#"><span class="product-card__stat-icon icon lnr lnr-cart"></span>45</a>
+								</div>
+							</article>
+	
+							<article class="product-card mix landing-page psd-template trending" data-seller="4.99" data-price="10" data-rating="">
+								<figure class="product-card__aside product-card__aside--regular">
+									<img class="product-card__img" src="images/content/newest-card-05.jpg">
+									<figcaption class="product-card__overlay">
+										<a class="btn btn--xl btn--transparent" href="#">
+											More Info
+										</a>
+										<a class="btn btn--xl btn--white" href="#">
+											Live Demo
+										</a>
+									</figcaption>
+								</figure>
+								<div class="product-card__body">
+									<a class="product-card__title" href="#">
+										Marketify Coffee Shop
+									</a>
+									<div class="product-card__info">
+										<a class="product-card__user" href="#">
+											<img class="product-card__user-img" src="images/content/user-img-01.jpg" alt="">
+											<span class="product-card__user-name">
+												AazzTech
+											</span>
+										</a>
+										<a class="product-card__category" href="#"><span class="icon icmn icmn-psd"></span>PSD</a>
+									</div>
+									<p class="product-card__text">
+										Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue.
+									</p>
+								</div>
+								<div class="product-card__footer">
+									<span class="product-card__footer-group">
+										<a class="product-card__price btn btn--sm btn--light-blue" href="#"><span class="product-card__currency">$</span>10 - 50</a>
+										<a class="product-card__stat product-card__stat--likes icon-btn" href="#"><span class="product-card__stat-icon icon lnr lnr-heart"></span>48</a>
+									</span>
+									<a class="product-card__stat product-card__stat--sold icon-btn" href="#"><span class="product-card__stat-icon icon lnr lnr-cart"></span>50</a>
+								</div>
+							</article>
+	
+							<article class="product-card mix site-template trending" data-seller="4.85" data-price="10" data-rating="4.5">
+								<figure class="product-card__aside product-card__aside--regular">
+									<img class="product-card__img" src="images/content/newest-card-06.jpg">
+									<figcaption class="product-card__overlay">
+										<a class="btn btn--xl btn--transparent" href="#">
+											More Info
+										</a>
+										<a class="btn btn--xl btn--white" href="#">
+											Live Demo
+										</a>
+									</figcaption>
+								</figure>
+								<div class="product-card__body">
+									<a class="product-card__title" href="#">
+										Bryson - Portfolio Template
+									</a>
+									<div class="product-card__info">
+										<a class="product-card__user" href="#">
+											<img class="product-card__user-img" src="images/content/user-img-02.jpg" alt="">
+											<span class="product-card__user-name">
+												Coder-Lab
+											</span>
+										</a>
+										<a class="product-card__category" href="#"><span class="icon icmn icmn-html-five"></span>HTML</a>
+									</div>
+									<p class="product-card__text">
+										Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue.
+									</p>
+								</div>
+								<div class="product-card__footer">
+									<span class="product-card__footer-group">
+										<a class="product-card__price btn btn--sm btn--light-blue" href="#"><span class="product-card__currency">$</span>10</a>
+										<a class="product-card__stat product-card__stat--likes icon-btn" href="#"><span class="product-card__stat-icon icon lnr lnr-heart"></span>56</a>
+										<span class="product-card__rating" id="rateo"></span>
+									</span>
+									<a class="product-card__stat product-card__stat--sold icon-btn" href="#"><span class="product-card__stat-icon icon lnr lnr-cart"></span>68</a>
+								</div>
+							</article>
+	
+						</div>
 					</div>
+					<button class="btn btn--centered btn--xxl btn--blue">All New Products</button>
 				</div>
-			</div>
+			</section>
+			<!-- /Newest products -->
 
-			<div class="section" id="followers-feed">
+			<!-- Followers feed -->
+			<section class="section" id="followers-feed">
 				<div class="container">
 					<div class="section__header">
 						<div class="section__title">
 							Your Followers Feed
 						</div>
 					</div>
-					<div class="section__inner">
-						
-					</div>
+					
 				</div>
-			</div>
+			</section>
+			<!-- /Followers feed -->
 
-			
+
 		</main>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
