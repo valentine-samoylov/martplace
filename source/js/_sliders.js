@@ -1,11 +1,20 @@
 // Weekly Product
-var weeklyProduct = new Swiper(".swiper-container", {
+var weeklyProduct = new Swiper(".js-weekly-slider", {
 	loop: true,
 	effect: "flip",
-	coverflowEffect: {
-		rotate: 10,
-		slideShadows: false,
+	navigation: {
+		prevEl: ".section__slider-btn--fuchsia.section__slider-btn--prev",
+		nextEl: ".section__slider-btn--fuchsia.section__slider-btn--next",
 	},
+});
+
+var followersFeed = new Swiper(".js-feed-slider", {
+	slidesPerView: 3,
+	slidesPerScrol: 1,
+	spaceBetween: 30,
+	loop: true,
+	slideShadows: true,
+	
 
 	navigation: {
 		prevEl: ".section__slider-btn--prev",

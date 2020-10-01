@@ -1,0 +1,19 @@
+.sr-only {
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	width: 0;
+}
+
+.fw-bold {
+	display: block;
+	font-weight: 700;
+}
+
+.txt-blue {
+	color: $azure-blue;
+}
+
+.txt-fuchsia {
+	color: $fuchsia-blue;
+}

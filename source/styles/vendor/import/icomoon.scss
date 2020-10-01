@@ -1,16 +1,16 @@
 $icomoon-font-family: "Icomoon" !default;
 $icomoon-font-path: "../fonts";
 
-$icmn-menu: "\e902";
-$icmn-psd: "\e900";
-$icmn-wp: "\e901";
-$icmn-google: "\ea88";
-$icmn-facebook: "\ea90";
-$icmn-twitter: "\ea96";
-$icmn-dribbble: "\eaa7";
-$icmn-linkedin2: "\eaca";
-$icmn-pinterest: "\ead1";
-$icmn-html-five: "\eae4";
+$icn-menu: "\e902";
+$icn-psd: "\e900";
+$icn-wp: "\e901";
+$icn-google: "\ea88";
+$icn-facebook: "\ea90";
+$icn-twitter: "\ea96";
+$icn-dribbble: "\eaa7";
+$icn-linkedin2: "\eaca";
+$icn-pinterest: "\ead1";
+$icn-html-five: "\eae4";
 
 @font-face {
 	font-family: "#{$icomoon-font-family}";
@@ -28,7 +28,7 @@ $icmn-html-five: "\eae4";
 	font-display: block;
 }
 
-.icmn {
+.icn {
 	/* use !important to prevent issues with browser extensions that change fonts */
 	font-family: "#{$icomoon-font-family}";
 	speak: never;
@@ -43,53 +43,53 @@ $icmn-html-five: "\eae4";
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.icmn-menu {
+.icn-menu {
 	&:before {
-		content: $icmn-menu;
+		content: $icn-menu;
 	}
 }
-.icmn-psd {
+.icn-psd {
 	&:before {
-		content: $icmn-psd;
+		content: $icn-psd;
 	}
 }
-.icmn-wp {
+.icn-wp {
 	&:before {
-		content: $icmn-wp;
+		content: $icn-wp;
 	}
 }
-.icmn-google {
+.icn-google {
 	&:before {
-		content: $icmn-google;
+		content: $icn-google;
 	}
 }
-.icmn-facebook {
+.icn-facebook {
 	&:before {
-		content: $icmn-facebook;
+		content: $icn-facebook;
 	}
 }
-.icmn-twitter {
+.icn-twitter {
 	&:before {
-		content: $icmn-twitter;
+		content: $icn-twitter;
 	}
 }
-.icmn-dribbble {
+.icn-dribbble {
 	&:before {
-		content: $icmn-dribbble;
+		content: $icn-dribbble;
 	}
 }
-.icmn-linkedin2 {
+.icn-linkedin2 {
 	&:before {
-		content: $icmn-linkedin2;
+		content: $icn-linkedin2;
 	}
 }
-.icmn-pinterest {
+.icn-pinterest {
 	&:before {
-		content: $icmn-pinterest;
+		content: $icn-pinterest;
 	}
 }
-.icmn-html-five {
+.icn-html-five {
 	&:before {
-		content: $icmn-html-five;
+		content: $icn-html-five;
 	}
 }

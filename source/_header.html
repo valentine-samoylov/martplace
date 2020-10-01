@@ -1,95 +1,98 @@
 
 <header class="header">
-	<div class="header__row header__row--top-menu">
+	<div class="header__row header__row--top">
 		<div class="container">
 			<div class="header__inner">
-				<a class="logo logo--header" href="#">
-					<img class="logo__img" src="images/logo.png" alt="MartPlace">
-				</a>
-				<div class="profile">
-					<button class="btn btn--lg btn--blue">
+				<div class="header__box">
+					<a class="header__logo logo" href="#">
+						<img class="logo__img" src="images/logo.png" alt="MartPlace">
+					</a>
+					<a class="header__btn btn btn--blue" href="#">
 						Become a Seller
-					</button>
+					</a>
+				</div>
+				<div class="profile">
 					<ul class="profile__actions">
 						<li class="profile__item">
-							<a class="profile__btn icon-btn" href="#">
-								Notifications
-								<span class="profile__icon icon-btn__symbol lnr lnr-alarm"></span>
-								<span class="profile__notification-badge profile__notification-badge--red">25</span>
+							<a class="profile__btn" href="#">
+								<span class="sr-only">Notifications</span>
+								<span class="profile__icon lnr lnr-alarm"></span>
+								<span class="profile__count profile__count--red">25</span>
 							</a>
 						</li>
 						<li class="profile__item">
-							<a class="profile__btn icon-btn" href="#">
-								Messages
-								<span class="profile__icon icon-btn__symbol lnr lnr-envelope"></span>
-								<span class="profile__notification-badge profile__notification-badge--green">6</span>
+							<a class="profile__btn" href="#">
+								<span class="sr-only">Messages</span>
+								<span class="profile__icon lnr lnr-envelope"></span>
+								<span class="profile__count profile__count--green">6</span>
 							</a>
 						</li>
 						<li class="profile__item">
-							<a class="profile__btn icon-btn" href="#">
-								Cart
-								<span class="profile__icon icon-btn__symbol lnr lnr-cart"></span>
-								<span class="profile__notification-badge profile__notification-badge--blue">2</span>
+							<a class="profile__btn" href="#">
+								<span class="sr-only">Cart</span>
+								<span class="profile__icon lnr lnr-cart"></span>
+								<span class="profile__count profile__count--blue">2</span>
 							</a>
 						</li>
 					</ul>
-					<div class="profile__box">
-						<a class="profile__user" href="#">
-							<img class="profile__user-img" src="images/content/profile-img.jpg" alt="">
-						</a>
-						<div class="profile__details">
-							<a class="profile__name" href="#">
+					<a class="profile__user user" href="#">
+						<img class="profile__img user__img" src="images/content/profile-img.jpg" alt="User Photo">
+						<span class="profile__details">
+							<span class="profile__name">
 								Taofiq Hakim
-							</a>
-							<a href="" class="profile__amount">
+							</span>
+							<span class="profile__balance">
 								<span class="profile__currency">$</span>20.45
-							</a>
-						</div>
-					</div>
+							</span>
+						</span>
+					</a>
 				</div>
 			</div>
 		</div>
 	</div>
 	
-	<div class="header__row header__row--bottom-menu">
+	<div class="header__row header__row--bottom">
 		<div class="container">
 			<div class="header__inner">
-				<nav class="nav-menu">
-					<ul class="nav-menu__list">
-						<li class="nav-menu__item">
-							<a class="nav-menu__link link" a href="#">
+				<nav class="header__menu">
+					<ul class="menu">
+						<li class="menu__item">
+							<a class="menu__link link" a href="#">
 								home
 							</a>
 						</li>
-						<li class="nav-menu__item">
-							<a class="nav-menu__link link" a href="#">
+						<li class="menu__item">
+							<a class="menu__link link" a href="#">
 								all products
 							</a>
 						</li>
-						<li class="nav-menu__item">
-							<a class="nav-menu__link link" a href="#">
+						<li class="menu__item">
+							<a class="menu__link link" a href="#">
 								wordpress
 							</a>
 						</li>
-						<li class="nav-menu__item">
-							<a class="nav-menu__link link" a href="#">
+						<li class="menu__item">
+							<a class="menu__link link" a href="#">
 								features
 							</a>
 						</li>
-						<li class="nav-menu__item">
-							<a class="nav-menu__link link" a href="#">
+						<li class="menu__item">
+							<a class="menu__link link" a href="#">
 								pages
 							</a>
 						</li>
 					</ul>
 				</nav>
 
-				<form class="form form--search" name="header-form" action="#">
-					<label class="form__label">
-						<input class="form__input" name="header-input" type="search" placeholder="Search product here..." required></label>
-					<button class="btn btn--blue btn--search">
-						<span class="lnr lnr-magnifier"></span>
-					</button>
+				<form class="header__form form" name="header-form" action="#">
+					<label class="form__label" for="#header-input">
+						<span class="sr-only">Search product here...</span>
+						<input class="form__input" name="header-input" type="search" placeholder="Search product here..." required/>
+						<button class="form__btn btn btn--blue" type="submit">
+							<span class="lnr lnr-magnifier"></span>
+							<span class="sr-only">Search</span>
+						</button>
+					</label>
 				</form>
 			</div>
 		</div>
