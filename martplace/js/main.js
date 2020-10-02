@@ -12,7 +12,7 @@ $(".section-filter__btn").click(function () {
 	});
 });
 
-var mixer = mixitup('.newest-products__items');
+var mixer = mixitup('.newest__items');
 
 //<Counter>====================================================================================
 // $(window).scroll(testScroll);
@@ -63,15 +63,30 @@ var weeklyProduct = new Swiper(".js-weekly-slider", {
 
 var followersFeed = new Swiper(".js-feed-slider", {
 	slidesPerView: 3,
-	slidesPerScrol: 1,
+	slidesPerScroll: 1,
 	spaceBetween: 30,
 	loop: true,
 	slideShadows: true,
-	
 
 	navigation: {
 		prevEl: ".section__slider-btn--prev",
 		nextEl: ".section__slider-btn--next",
+	},
+});
+
+var reviews = new Swiper(".js-reviews-slider", {
+	slidesPerView: 2,
+	slidesPerScroll: 1,
+	spaceBetween: 30,
+	loop: true,
+	slideShadows: true,
+	fadeEffect: {
+		crossFade: true,
+	},
+
+	navigation: {
+		prevEl: ".reviews__slider-btn--prev",
+		nextEl: ".reviews__slider-btn--next",
 	},
 });
 

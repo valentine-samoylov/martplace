@@ -372,10 +372,6 @@
 // Section
 .section {
 	padding: 120px 0;
-	background-color: #eff1f5;
-	&--newest {
-		background-color: #f6f7fb;
-	}
 	&__header {
 		position: relative;
 		display: flex;
@@ -386,9 +382,6 @@
 		box-shadow: 0 2px 4px rgba(108, 111, 115, 0.1);
 		border-radius: 4px;
 		background-color: $white;
-		&--newest {
-			margin-bottom: 30px;
-		}
 	}
 	&__title {
 		font-size: 30px;
@@ -446,9 +439,6 @@
 			box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 		}
 	}
-	&__slider {
-		overflow: visible;
-	}
 	&__heading {
 		margin-bottom: 25px;
 		font-size: 36px;
@@ -464,7 +454,15 @@
 	}
 }
 
-// Weekly card
+// Weekly
+.weekly {
+	background-color: #eff1f5;
+	&__slider {
+		overflow: visible;
+	}
+}
+
+// Weekly-card
 .weekly-card {
 	display: flex;
 	max-width: 100%;
@@ -596,10 +594,16 @@
 }
 
 // Newest
-.newest-products {
-	width: 100%;
-	margin-bottom: 59px;
-	// overflow: hidden;
+.newest {
+	background-color: #f6f7fb;
+	&__header {
+		margin-bottom: 30px;
+	}
+	&__products {
+		width: 100%;
+		margin-bottom: 59px;
+		// overflow: hidden;
+	}
 	&__categories {
 		margin-bottom: 51px;
 		padding: 30px;
@@ -607,8 +611,11 @@
 		border-radius: 4px;
 		font-size: 0;
 		background-color: $white;
-		& > .btn + .btn {
-			margin-left: 9px;
+	}
+	&__btn {
+		margin-right: 9px;
+		&:last-child {
+			margin-right: 0;
 		}
 	}
 	&__items {
@@ -621,7 +628,9 @@
 // Feed
 .feed {
 	padding-bottom: 90px;
+	background-color: #eff1f5;
 	&__slider {
+		margin: 0 -2px;
 		padding: 0 2px;
 	}
 }
@@ -679,7 +688,6 @@
 .reason {
 	padding-top: 115px;
 	padding-bottom: 119px;
-	background-color: $white;
 	&__inner {
 		display: flex;
 		flex-wrap: wrap;
@@ -687,6 +695,7 @@
 	}
 }
 
+// Reason-card
 .reason-card {
 	position: relative;
 	width: calc((100% - 90px) / 3);
@@ -778,3 +787,123 @@
 		}
 	}
 }
+
+// Reviews
+.reviews {
+	padding-top: 115px;
+	&__slider {
+		margin: -50px -50px 0;
+		padding: 50px 50px 60px;
+	}
+	&__slider-btn {
+		position: absolute;
+		top: 50%;
+		z-index: 1;
+		width: 50px;
+		height: 50px;
+		border: none;
+		border-radius: 50%;
+		background-color: $white;
+		box-shadow: 0 4px 15px rgba(67, 67, 67, 0.15);
+		transform: translateY(-50%);
+		outline: transparent;
+		cursor: pointer;
+		transition: all 0.3s ease 0s;
+		&::before {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			display: block;
+			width: 14px;
+			height: 14px;
+			font-family: $linear-icons;
+			font-size: 14px;
+			color: $azure-blue;
+			transform: translate(-50%, -50%);
+			transition: all 0.3s ease 0s;
+		}
+		&--prev {
+			left: 35px;
+			&::before {
+				content: "\e875";
+			}
+		}
+		&--next {
+			right: 35px;
+			&::before {
+				content: "\e876";
+			}
+		}
+		&:hover {
+			background-color: rgba($white, 0.7);
+			backdrop-filter: blur(3px);
+			&:hover::before {
+			color: $fuchsia-blue;
+			}
+		}
+		&:active::before {
+			text-shadow: 0px 2px 2px rgba(150, 150, 150, 0.8);
+		}
+	}
+}
+
+// Review-card
+.review-card {
+	max-width: 555px;
+	padding: 50px 40px 40px 38px;
+	border-left: 2px solid $azure-blue;
+	border-radius: 1px;
+	border-top-right-radius: 4px;
+	box-shadow: 0 2px 50px rgba(0, 0, 0, 0.08);
+	&.swiper-slide {
+		opacity: 0;
+	}
+	&.swiper-slide-active,
+	&.swiper-slide-next {
+		opacity: 1;
+	}
+	&__text {
+		font-size: 16px;
+		line-height: 30px;
+	}
+	&__header {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 20px;
+	}
+	&__author {
+		color: $emperor-gray;
+	}
+	&__img {
+		width: 80px;
+		height: 80px;
+		margin-right: 19px;
+	}
+	&__name {
+		display: block;
+		margin-bottom: 14px;
+		font-size: 20px;
+		color: $deep-black;
+	}
+	&__position {
+		display: block;
+		font-size: 16px;
+	}
+	&__icon {
+		position: absolute;
+		top: 2px;
+		right: 1px;
+		width: 57px;
+		height: 57px;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	&__text {
+		height: 125px;
+		margin: 0;
+		overflow-y: auto;
+	}
+}
+

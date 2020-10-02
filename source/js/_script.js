@@ -11,7 +11,7 @@ $(".section-filter__btn").click(function () {
 	});
 });
 
-var mixer = mixitup('.newest-products__items');
+var mixer = mixitup('.newest__items');
 
 //<Counter>====================================================================================
 // $(window).scroll(testScroll);
