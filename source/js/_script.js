@@ -1,4 +1,5 @@
-$(".prod-card__rating").rateYo({
+// rateYo
+$(".product-card__rating").rateYo({
 	normalFill: "#ececec",
 	ratedFill: "#ffc000",
 	starWidth: "15px",
@@ -11,6 +12,7 @@ $(".section-filter__btn").click(function () {
 	});
 });
 
+// Mixitup
 var mixer = mixitup('.newest__items');
 
 //<Counter>====================================================================================

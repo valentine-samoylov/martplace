@@ -201,7 +201,7 @@ body {
 }
 
 // Product card
-.prod-card {
+.product-card {
 	width: calc((100% - 90px) / 3);
 	margin: 0 30px 31px 0;
 	border-radius: 4px;
@@ -215,7 +215,7 @@ body {
 		margin: 0;
 		overflow: hidden;
 		font-size: 0;
-		&:hover .prod-card__overlay {
+		&:hover .product-card__overlay {
 			transform: translate(0, 0);
 		}
 	}
@@ -346,7 +346,7 @@ body {
 		&--buy {
 			color: $azure-blue;
 		}
-		&--like > .prod-card__icon {
+		&--like > .product-card__icon {
 			color: $fuchsia-blue;
 		}
 	}

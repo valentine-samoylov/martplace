@@ -1,5 +1,6 @@
 $(function(){
-$(".prod-card__rating").rateYo({
+// rateYo
+$(".product-card__rating").rateYo({
 	normalFill: "#ececec",
 	ratedFill: "#ffc000",
 	starWidth: "15px",
@@ -12,6 +13,7 @@ $(".section-filter__btn").click(function () {
 	});
 });
 
+// Mixitup
 var mixer = mixitup('.newest__items');
 
 //<Counter>====================================================================================
@@ -61,29 +63,24 @@ var weeklyProduct = new Swiper(".js-weekly-slider", {
 	},
 });
 
+// Followers Feed
 var followersFeed = new Swiper(".js-feed-slider", {
+	loop: true,
 	slidesPerView: 3,
 	slidesPerScroll: 1,
 	spaceBetween: 30,
-	loop: true,
-	slideShadows: true,
-
 	navigation: {
 		prevEl: ".section__slider-btn--prev",
 		nextEl: ".section__slider-btn--next",
 	},
 });
 
+// Clients Feedback (Reviews)
 var reviews = new Swiper(".js-reviews-slider", {
+	loop: true,
 	slidesPerView: 2,
 	slidesPerScroll: 1,
 	spaceBetween: 30,
-	loop: true,
-	slideShadows: true,
-	fadeEffect: {
-		crossFade: true,
-	},
-
 	navigation: {
 		prevEl: ".reviews__slider-btn--prev",
 		nextEl: ".reviews__slider-btn--next",

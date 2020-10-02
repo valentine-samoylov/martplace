@@ -823,13 +823,13 @@
 			transition: all 0.3s ease 0s;
 		}
 		&--prev {
-			left: 35px;
+			left: 25px;
 			&::before {
 				content: "\e875";
 			}
 		}
 		&--next {
-			right: 35px;
+			right: 25px;
 			&::before {
 				content: "\e876";
 			}
@@ -838,7 +838,7 @@
 			background-color: rgba($white, 0.7);
 			backdrop-filter: blur(3px);
 			&:hover::before {
-			color: $fuchsia-blue;
+				color: $fuchsia-blue;
 			}
 		}
 		&:active::before {
@@ -907,3 +907,100 @@
 	}
 }
 
+// Latest News
+.latest-news {
+	padding-top: 115px;
+	background-color: #eff1f5;
+	&__inner {
+		display: flex;
+		margin-right: -30px;
+	}
+}
+
+// News Card
+.news-card {
+	width: calc((100% - 90px) / 3);
+	margin: 0 30px 0 0;
+	border-radius: 4px;
+	background-color: $white;
+	box-shadow: 0 2px 50px rgba(0, 0, 0, 0.08);
+	overflow: hidden;
+	&__img {
+		display: block;
+		width: 100%;
+		height: 230px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+
+	&__body {
+		padding: 24px 21px 24px 28px;
+	}
+
+	&__title {
+		margin-bottom: 20px;
+		font-size: 22px;
+		line-height: 28px;
+		font-weight: 500;
+		color: $deep-black;
+	}
+
+	&__text {
+		margin: 0;
+		padding-right: 10px;
+		color: $emperor-gray;
+		font-size: 16px;
+		line-height: 30px;
+	}
+
+	&__footer {
+		display: flex;
+		padding: 10px 28px 8px;
+		border-top: 1px solid #ececec;
+		color: #7e7e7e;
+	}
+
+	&__time {
+		position: relative;
+		display: block;
+		width: 50%;
+		padding-left: 24px;
+		padding: 10px 0 15px 24px;
+		border-right: 1px solid #ececec;
+		&::before {
+			color: $azure-blue;
+			content: "\e864";
+		}
+	}
+
+	&__stats {
+		display: flex;
+		justify-content: space-between;
+		width: 50%;
+		padding: 10px 0 10px 33px;
+	}
+
+	&__stat {
+		position: relative;
+		padding-left: 23px;
+		&--comments::before {
+			content: "\e83f";
+		}
+		&--views::before {
+			content: "\e81b";
+		}
+	}
+
+	&__time::before,
+	&__stat::before {
+		position: absolute;
+		top: 50%;
+		left: 1px;
+		display: block;
+		width: 16px;
+		height: 16px;
+		font-family: $linear-icons;
+		transform: translateY(-50%);
+	}
+}
