@@ -34,7 +34,8 @@ body {
 	font-size: 15px;
 	line-height: 1;
 	-webkit-font-smoothing: antialiased;
-	&._lock {
+
+	&.lock {
 		overflow: hidden;
 	}
 }
@@ -53,22 +54,33 @@ body {
 	@media (max-width: $md1+px) {
 		max-width: 970px;
 	}
+
 	@media (max-width: $md2+px) {
 		// max-width: 750px;
 		max-width: none;
 		padding: 0 15px;
 	}
+
 	@media (max-width: $md3+px) {
 		max-width: none;
 		padding: 0 15px;
 	}
+
 	@media (max-width: $md4+px) {
 		max-width: none;
 		padding: 0 15px;
 	}
+
 	@media (max-width: $md5+px) {
 		max-width: none;
 		padding: 0 15px;
+	}
+}
+
+// Logo
+.logo {
+	&__img {
+		max-height: 50px;
 	}
 }
 
@@ -83,50 +95,48 @@ body {
 	outline: transparent;
 	cursor: pointer;
 	transition: all 0.3s ease 0s;
-	&.mixitup-control-active {
-		background-color: $azure-blue;
-		color: $white;
-	}
+
 	&--centered {
 		display: block;
 		margin: 0 auto;
 	}
+
 	&--sm {
 		padding: 6px 16px 7px 16px;
 		border-radius: 16px;
 		font-weight: 500;
 	}
+
 	&--md {
 		padding: 8px 20px 9px 20px;
 		border-radius: 16px;
 		font-weight: 500;
 	}
+
 	&--lg {
 		padding: 15px 28px;
 		font-weight: 500;
 		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 		border-radius: 23px;
-		&.btn--transparent {
-			padding: 14px 27px;
-		}
 	}
+
 	&--xl {
 		padding: 19px 32px 20px;
 		border-radius: 28px;
 		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 		font-size: 16px;
-		&.btn--transparent {
-			padding: 18px 31px 19px;
-		}
 	}
+
 	&--transparent {
 		border: 1px solid $white;
 		color: $white;
 	}
+
 	&--white {
 		background-color: $white;
 		color: $azure-blue;
 	}
+
 	&--transparent:hover,
 	&--white:hover {
 		border-color: rgba($white, 0.2);
@@ -134,28 +144,37 @@ body {
 		color: $white;
 		backdrop-filter: blur(3px);
 	}
+
 	&--transparent:focus,
-	&--white:focus,
-	&--gray:focus {
-		box-shadow: 0 0 0 3px rgba($athens-gray, 0.6);
+	&--white:focus {
+		box-shadow: 0 0 0 3px rgba($white, 0.5);
 	}
+
 	&--gray {
 		background-color: #f1f3f6;
 		color: #747b86;
+		&:focus {
+			box-shadow: 0 0 0 3px rgba($oslo-gray, 0.3);
+		}
 	}
+
 	&--blue {
 		background-color: $azure-blue;
 		color: $white;
+
 		&:focus {
 			box-shadow: 0 0 0 3px rgba($azure-blue, 0.5);
 		}
+
 		&:hover {
 			background-color: adjust-hue($azure-blue, 5%);
 		}
 	}
+
 	&:hover {
 		box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.15);
 	}
+
 	&:active {
 		box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 	}
@@ -165,6 +184,7 @@ body {
 .user {
 	display: flex;
 	align-items: center;
+
 	&__img {
 		border-radius: 50%;
 		object-fit: cover;
@@ -176,6 +196,7 @@ body {
 	width: 100%;
 	max-width: 360px;
 	position: relative;
+
 	&__input {
 		width: 100%;
 		padding: 12px 95px 13px 25px;
@@ -184,13 +205,16 @@ body {
 		color: $oslo-gray;
 		outline: transparent;
 		transition: border-color 0.3s ease 0s;
+
 		&::placeholder {
 			color: $oslo-gray;
 		}
+
 		&:focus {
 			border-color: rgba($azure-blue, 0.5);
 		}
 	}
+
 	&__btn {
 		position: absolute;
 		top: 0;
@@ -206,19 +230,21 @@ body {
 	margin: 0 30px 31px 0;
 	border-radius: 4px;
 	box-shadow: 0 2px 4px rgba(108, 111, 115, 0.1);
-	// box-shadow: 0 2px 4px red;
 	background-color: $white;
 	overflow: hidden;
+
 	&__aside {
 		position: relative;
 		height: 230px;
 		margin: 0;
 		overflow: hidden;
 		font-size: 0;
+
 		&:hover .product-card__overlay {
 			transform: translate(0, 0);
 		}
 	}
+
 	&__img {
 		position: absolute;
 		top: 0;
@@ -227,6 +253,7 @@ body {
 		height: 100%;
 		object-fit: cover;
 	}
+
 	&__overlay {
 		position: absolute;
 		right: 0;
@@ -248,15 +275,23 @@ body {
 		transform: translateY(100%);
 		transition: all 0.5s 0s;
 	}
+
 	&__btn {
 		margin-right: 11px;
+
+		&--transparent {
+			padding: 14px 27px;
+		}
+
 		&:last-child {
 			margin-right: 0;
 		}
 	}
+
 	&__body {
 		padding: 28px 30px 27px 30px;
 	}
+
 	&__title {
 		display: block;
 		max-width: 300px;
@@ -268,30 +303,37 @@ body {
 		overflow: hidden;
 		color: $deep-black;
 	}
+
 	&__info {
 		display: flex;
 		flex-direction: row;
 		align-items: center;
 		margin-bottom: 27px;
 	}
+
 	&__user {
 		margin-right: 19px;
 		color: $deep-black;
 	}
+
 	&__user-img {
 		width: 28px;
 		height: 28px;
 		margin-right: 9px;
 	}
+
 	&__user-name {
 		max-width: 130px;
 	}
+
 	&__category {
 		color: $fuchsia-blue;
 	}
+
 	&__category-icon {
 		margin-right: 9px;
 	}
+
 	&__text {
 		height: 90px;
 		margin: 0;
@@ -300,17 +342,20 @@ body {
 		color: $emperor-gray;
 		overflow-y: auto;
 	}
+
 	&__tags {
 		display: flex;
 		padding-top: 28px;
 		align-items: center;
 	}
+
 	&__tag {
 		margin-right: 7px;
 		&:last-child {
 			margin-right: 0;
 		}
 	}
+
 	&__footer {
 		display: inline-flex;
 		justify-content: space-between;
@@ -319,11 +364,13 @@ body {
 		padding: 15px 30px 16px 30px;
 		border-top: 1px solid #ececec;
 	}
+
 	&__footer-group {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 	}
+
 	&__price {
 		margin-right: 14px;
 		padding: 7px 17px 8px 17px;
@@ -332,6 +379,7 @@ body {
 		background-color: rgba($azure-blue, 0.1);
 		color: $azure-blue;
 	}
+
 	&__action {
 		margin-right: 16px;
 		padding: 0;
@@ -340,19 +388,29 @@ body {
 		color: $emperor-gray;
 		outline: transparent;
 		cursor: pointer;
+		transition: all 0.3s ease 0s;
 		&:last-child {
 			margin-right: 0;
 		}
+
 		&--buy {
 			color: $azure-blue;
 		}
+
 		&--like > .product-card__icon {
 			color: $fuchsia-blue;
 		}
+
+		&:hover .product-card__icon{
+			transform: scale(1.2);
+		}
 	}
+
 	&__icon {
+		display: inline-block;
 		margin-right: 6px;
 	}
+
 	&__rating {
 		display: inline-block;
 		padding: 0;

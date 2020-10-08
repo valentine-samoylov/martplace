@@ -1,5 +1,4 @@
 $icomoon-font-family: "Icomoon" !default;
-$icomoon-font-path: "../fonts";
 
 $icn-menu: "\e902";
 $icn-psd: "\e900";
@@ -12,21 +11,7 @@ $icn-linkedin2: "\eaca";
 $icn-pinterest: "\ead1";
 $icn-html-five: "\eae4";
 
-@font-face {
-	font-family: "#{$icomoon-font-family}";
-	src: url("#{$icomoon-font-path}/#{$icomoon-font-family}.eot?eo3fnu");
-	src: url("#{$icomoon-font-path}/#{$icomoon-font-family}.eot?eo3fnu#iefix")
-			format("embedded-opentype"),
-		url("#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?eo3fnu")
-			format("truetype"),
-		url("#{$icomoon-font-path}/#{$icomoon-font-family}.woff?eo3fnu")
-			format("woff"),
-		url("#{$icomoon-font-path}/#{$icomoon-font-family}.svg?eo3fnu##{$icomoon-font-family}")
-			format("svg");
-	font-weight: normal;
-	font-style: normal;
-	font-display: block;
-}
+@include font-face("Icomoon", Icomoon, 400, normal, block);
 
 .icn {
 	/* use !important to prevent issues with browser extensions that change fonts */

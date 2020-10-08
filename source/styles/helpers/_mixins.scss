@@ -10,18 +10,6 @@
 	}
 }
 
-// @mixin font-face($font_name, $file_name, $weight, $style) {
-// 	@font-face {
-// 		font-family: $font_name;
-// 		font-display: swap;
-// 		src: url("../fonts/#{$file_name}.ttf") format("truetype"),
-// 			url("../fonts/#{$file_name}.woff") format("woff"),
-// 			url("../fonts/#{$file_name}.woff2") format("woff2");
-// 		font-weight: #{$weight};
-// 		font-style: #{$style};
-// 	}
-// }
-
 @mixin font-size($font-size, $line-height: normal, $letter-spacing: normal) {
 	font-size: $font-size * 1px;
 	// font-size: $font-size * 0.1rem;
@@ -38,4 +26,9 @@
 	} @else {
 		letter-spacing: $letter-spacing;
 	}
+}
+
+@mixin flexbox() {
+	display: flex;
+	font-size: 0;
 }
