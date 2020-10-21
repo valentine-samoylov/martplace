@@ -1,5 +1,20 @@
 @charset "UTF-8";
 
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.d-flex-jcc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .sr-only {
   display: block;
   font-size: 0;
@@ -8,7 +23,6 @@
 }
 
 .fw-bold {
-  display: block;
   font-weight: 700;
 }
 
@@ -146,11 +160,7 @@
   font-display: block;
 }
 
-html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
+html,
 *,
 *::before,
 *::after {
@@ -166,7 +176,6 @@ body,
 }
 
 a {
-  display: inline-block;
   text-decoration: none;
 }
 
@@ -839,6 +848,7 @@ body.lock {
   position: relative;
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .hero::before {
@@ -1071,6 +1081,7 @@ body.lock {
   margin-bottom: 31px;
   background-repeat: no-repeat;
   background-position: center;
+  background-size: contain;
 }
 
 .feature-card__title {
@@ -1317,6 +1328,7 @@ body.lock {
   -webkit-transition: 0.3s all 0s;
   -o-transition: 0.3s all 0s;
   transition: 0.3s all 0s;
+  cursor: pointer;
 }
 
 .section-filter__btn::before {
