@@ -8,8 +8,6 @@
 	}
 
 	&__inner {
-		display: flex;
-		justify-content: space-between;
 		margin: 0 -15px;
 	}
 
@@ -56,6 +54,7 @@
 	}
 
 	&__contact-link {
+		display: inline-block;
 		position: relative;
 		padding-left: 29px;
 		line-height: 26px;
@@ -110,18 +109,17 @@
 			text-shadow: 0px 2px 2px rgba($azure-blue, 0.5);
 		}
 	}
-}
 
-// Footer form
-.footer-form {
-	margin-bottom: 48px;
+	&__form {
+		margin-bottom: 48px;
+	}
 
 	&__input {
 		padding: 15px 65px 16px 30px;
 		border-radius: 25px;
 	}
 
-	&__btn {
+	&__submit-btn {
 		padding: 17px 31px 18px 31px;
 		border-radius: 25px;
 	}
@@ -129,9 +127,6 @@
 
 // Social
 .social {
-	display: flex;
-	align-items: center;
-
 	&__item {
 		margin-right: 13px;
 
@@ -141,46 +136,14 @@
 	}
 
 	&__link {
-		position: relative;
+		display: inline-block;
 		width: 42px;
 		height: 42px;
 		border-radius: 50%;
-		font-size: 16px;
-		color: $white;
-
-		&--facebook {
-			background-color: #395799;
-		}
-
-		&--twitter {
-			background-color: #19b2f5;
-		}
-
-		&--google {
-			background-color: #f05b44;
-		}
-
-		&--pinterest {
-			background-color: #9c0c1c;
-		}
-
-		&--linkedin {
-			background-color: #0da6be;
-		}
-
-		&--dribble {
-			background-color: #ea4c89;
-		}
+		transition: opacity 0.3s ease 0s;
 
 		&:hover {
-			opacity: 0.8;
+			opacity: 0.7;
 		}
-	}
-
-	&__icon {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
 	}
 }

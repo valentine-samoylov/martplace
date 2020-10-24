@@ -28,10 +28,10 @@
 			
 			<!-- Header -->
 			<header class="header">
-				<div class="header__row header__row--top">
+				<div class="header__row header__row--top d-flex ai-c">
 					<div class="container">
-						<div class="header__inner">
-							<div class="header__box">
+						<div class="header__inner d-flex jc-sb ai-c">
+							<div class="header__box d-flex jc-sb ai-c">
 								<a class="header__logo logo" href="#">
 									<img class="logo__img" src="images/logo/logo.png" alt="MartPlace">
 								</a>
@@ -39,8 +39,8 @@
 									Become a Seller
 								</a>
 							</div>
-							<div class="profile">
-								<ul class="profile__actions">
+							<div class="profile d-flex jc-c ai-c">
+								<ul class="profile__actions d-flex ai-c">
 									<li class="profile__item">
 										<a class="profile__btn" href="#">
 											<span class="sr-only">Notifications</span>
@@ -79,11 +79,11 @@
 					</div>
 				</div>
 				
-				<div class="header__row header__row--bottom">
+				<div class="header__row header__row--bottom d-flex ai-c">
 					<div class="container">
-						<div class="header__inner">
+						<div class="header__inner d-flex jc-sb ai-c">
 							<nav class="header__menu">
-								<ul class="menu">
+								<ul class="menu d-flex ai-c">
 									<li class="menu__item">
 										<a class="menu__link link" a href="#">
 											home
@@ -112,10 +112,10 @@
 								</ul>
 							</nav>
 			
-							<form class="header__form form" name="header-form" action="#">
+							<form class="header__form form" id="header-form" action="#">
 								<label class="form__label" for="#header-input">
 									<span class="sr-only">Search product here...</span>
-									<input class="form__input" name="header-input" type="search" placeholder="Search product here..." required/>
+									<input class="form__input" id="header-input" type="search" placeholder="Search product here..." required/>
 									<button class="form__btn btn btn--blue" type="submit">
 										<span class="lnr lnr-magnifier"></span>
 										<span class="sr-only">Search</span>
@@ -159,7 +159,7 @@
 				<section class="search-box">
 					<div class="container">
 						<div class="search-box__inner">
-							<form class="search-box__form" name="search-box__form" action="#">
+							<form class="search-box__form d-flex jc-c aic-c" name="search-box__form" action="#">
 								<label class="search-box__label">
 									<span class="sr-only">Search product here...</span>
 									<input class="search-box__input" name="search-box__input" type="search" placeholder="Search your products..." required>
@@ -188,33 +188,33 @@
 				<!-- Features -->
 				<section class="features">
 					<div class="container">
-						<div class="features__inner">
-							<div class="feature-card">
-								<div class="feature-card__img" style="background-image: url(images/ui/features-01.png);"></div>
-								<div class="feature-card__title">
+						<div class="features__inner d-flex jc-sb">
+							<div class="features__card">
+								<div class="features__img" style="background-image: url(images/ui/features-01.png);"></div>
+								<div class="features__title">
 									Best UX Research
 								</div>
-								<p class="feature-card__text">
+								<p class="features__text">
 									Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet diam congue is laoreet elit metus.
 								</p>
 							</div>
 	
-							<div class="feature-card">
-								<div class="feature-card__img" style="background-image: url(images/ui/features-02.png);"></div>
-								<div class="feature-card__title">
+							<div class="features__card">
+								<div class="features__img" style="background-image: url(images/ui/features-02.png);"></div>
+								<div class="features__title">
 									Fully Responsive
 								</div>
-								<p class="feature-card__text">
+								<p class="features__text">
 									Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet diam congue is laoreet elit metus.
 								</p>
 							</div>
 	
-							<div class="feature-card">
-								<div class="feature-card__img" style="background-image: url(images/ui/features-03.png);"></div>
-								<div class="feature-card__title">
+							<div class="features__card">
+								<div class="features__img" style="background-image: url(images/ui/features-03.png);"></div>
+								<div class="features__title">
 									Buy & Sell Easily
 								</div>
-								<p class="feature-card__text">
+								<p class="features__text">
 									Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet diam congue is laoreet elit metus.
 								</p>
 							</div>
@@ -224,14 +224,14 @@
 				</section>
 				<!-- /Features -->
 	
-				<!-- Weekly products -->
-				<section class="weekly section">
+				<!-- Featured products -->
+				<section class="featured section">
 					<div class="container">
-						<div class="section__header">
+						<div class="section__header d-flex jc-sb ai-c">
 							<div class="section__title">
 								Weekly Featured Products
 							</div>
-							<div class="section__slider-controls">
+							<div class="section__slider-controls d-flex jc-sb ai-c">
 								<button type="button" class="section__slider-btn section__slider-btn--fuchsia section__slider-btn--prev">
 									<span class="sr-only">Prev</span>
 								</button>
@@ -241,13 +241,13 @@
 							</div>
 						</div>
 
-						<div class="weekly__slider swiper-container js-weekly-slider">
-							<div class="weekly__wrapper swiper-wrapper">
+						<div class="featured__slider swiper-container js-featured-slider">
+							<div class="featured__wrapper swiper-wrapper">
 	
-								<article class="weekly-card product-card swiper-slide">
-									<div class="weekly-card__aside product-card__aside">
-										<img class="product-card__img" src="images/content/weekly-card-01.jpg" alt="Product Image">
-										<div class="product-card__overlay">
+								<article class="featured-card d-flex product-card swiper-slide">
+									<div class="featured-card__aside product-card__aside">
+										<img class="product-card__img" src="images/content/featured-card-01.jpg" alt="Product Image">
+										<div class="product-card__overlay d-flex jc-c ai-c">
 											<a class="product-card__btn product-card__btn--transparent btn btn--lg btn--transparent" href="#">
 												More Info
 											</a>
@@ -256,24 +256,24 @@
 											</a>
 										</div>
 									</div>
-									<div class="weekly-card__wrapper">
-										<div class="weekly-card__body product-card__body">
-											<a class="weekly-card__title product-card__title" href="#">
+									<div class="featured-card__wrapper">
+										<div class="featured-card__body product-card__body">
+											<a class="featured-card__title product-card__title" href="#">
 												One Page Resume Template
 											</a>
-											<div class="product-card__info">
-												<a class="weekly-card__user product-card__user user" href="#">
-													<img class="weekly-card__user-img product-card__user-img user__img" src="images/content/user-img-02.jpg" alt="Author Image">
+											<div class="product-card__info d-flex ai-c">
+												<a class="featured-card__user product-card__user user" href="#">
+													<img class="featured-card__user-img product-card__user-img user__img" src="images/content/user-img-02.jpg" alt="Author Image">
 													<span class="product-card__user-name">
 														AazzTech
 													</span>
 												</a>
 												<a class="product-card__category" href="#"><i class="product-card__category-icon icn icn-wp"></i>WordPress</a>
 											</div>
-											<p class="weekly-card__text product-card__text">
+											<p class="featured-card__text product-card__text">
 												Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue justo ut scelerisque.
 											</p>
-											<ul class="product-card__tags">
+											<ul class="product-card__tags d-flex ai-c">
 												<li class="product-card__tag">
 													<a class="product-card__tag-link btn btn--sm btn--gray" href="#">
 														website
@@ -291,16 +291,16 @@
 												</li>
 											</ul>
 										</div>
-										<div class="weekly-card__footer product-card__footer">
-											<span class="product-card__footer-group">
-												<span class="weekly-card__price product-card__price">
+										<div class="featured-card__footer product-card__footer d-flex jc-sb ai-c">
+											<span class="product-card__footer-group d-flex jc-c ai-c">
+												<span class="featured-card__price product-card__price">
 													<span class="product-card__currency">$</span> 10 - <span class="product-card__currency">$</span>50
 												</span>
-												<button class="weekly-card__action product-card__action product-card__action--like" type="button">
-													<span class="weekly-card__icon product-card__icon lnr lnr-heart"></span>46
+												<button class="featured-card__action product-card__action product-card__action--like" type="button">
+													<span class="featured-card__icon product-card__icon lnr lnr-heart"></span>46
 												</button>
-												<button class="weekly-card__action product-card__action product-card__action--buy" type="button">
-													<span class="weekly-card__icon product-card__icon lnr lnr-cart"></span>634
+												<button class="featured-card__action product-card__action product-card__action--buy" type="button">
+													<span class="featured-card__icon product-card__icon lnr lnr-cart"></span>634
 												</button>
 											</span>
 											<span class="product-card__rating"></span>
@@ -308,10 +308,10 @@
 									</div>
 								</article>
 	
-								<article class="weekly-card product-card swiper-slide">
-									<div class="weekly-card__aside product-card__aside">
-										<img class="product-card__img" src="images/content/weekly-card-02.jpg" alt="Product Image">
-										<div class="product-card__overlay">
+								<article class="featured-card d-flex product-card swiper-slide">
+									<div class="featured-card__aside product-card__aside">
+										<img class="product-card__img" src="images/content/featured-card-02.jpg" alt="Product Image">
+										<div class="product-card__overlay d-flex jc-c ai-c">
 											<a class="product-card__btn product-card__btn--transparent btn btn--lg btn--transparent" href="#">
 												More Info
 											</a>
@@ -320,24 +320,24 @@
 											</a>
 										</div>
 									</div>
-									<div class="weekly-card__wrapper">
-										<div class="weekly-card__body product-card__body">
-											<a class="weekly-card__title product-card__title" href="#">
+									<div class="featured-card__wrapper">
+										<div class="featured-card__body product-card__body">
+											<a class="featured-card__title product-card__title" href="#">
 												Persona - Personal Portfolio Template
 											</a>
-											<div class="product-card__info">
-												<a class="weekly-card__user product-card__user user" href="#">
-													<img class="weekly-card__user-img product-card__user-img user__img" src="images/content/user-img-03.jpg" alt="Author Image">
+											<div class="product-card__info d-flex ai-c">
+												<a class="featured-card__user product-card__user user" href="#">
+													<img class="featured-card__user-img product-card__user-img user__img" src="images/content/user-img-03.jpg" alt="Author Image">
 													<span class="product-card__user-name">
 														Coder-Lab
 													</span>
 												</a>
 												<a class="product-card__category" href="#"><i class="product-card__category-icon icn icn-html-five"></i>HTML</a>
 											</div>
-											<p class="weekly-card__text product-card__text">
+											<p class="featured-card__text product-card__text">
 												Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue justo ut scelerisque.
 											</p>
-											<ul class="product-card__tags">
+											<ul class="product-card__tags d-flex ai-c">
 												<li class="product-card__tag">
 													<a class="product-card__tag-link btn btn--sm btn--gray" href="#">
 														website
@@ -355,16 +355,16 @@
 												</li>
 											</ul>
 										</div>
-										<div class="weekly-card__footer product-card__footer">
-											<span class="product-card__footer-group">
-												<span class="weekly-card__price product-card__price">
+										<div class="featured-card__footer product-card__footer d-flex jc-sb ai-c">
+											<span class="product-card__footer-group d-flex jc-c ai-c">
+												<span class="featured-card__price product-card__price">
 													<span class="product-card__currency">$</span>10
 												</span>
-												<button class="weekly-card__action product-card__action product-card__action--like" type="button">
-													<span class="weekly-card__icon product-card__icon lnr lnr-heart"></span>57
+												<button class="featured-card__action product-card__action product-card__action--like" type="button">
+													<span class="featured-card__icon product-card__icon lnr lnr-heart"></span>57
 												</button>
-												<button class="weekly-card__action product-card__action product-card__action--buy" type="button">
-													<span class="weekly-card__icon product-card__icon lnr lnr-cart"></span>481
+												<button class="featured-card__action product-card__action product-card__action--buy" type="button">
+													<span class="featured-card__icon product-card__icon lnr lnr-cart"></span>481
 												</button>
 											</span>
 											<span class="product-card__rating"></span>
@@ -372,10 +372,10 @@
 									</div>
 								</article>
 	
-								<article class="weekly-card product-card swiper-slide">
-									<div class="weekly-card__aside product-card__aside">
-										<img class="product-card__img" src="images/content/weekly-card-03.jpg" alt="Product Image">
-										<div class="product-card__overlay">
+								<article class="featured-card d-flex product-card swiper-slide">
+									<div class="featured-card__aside product-card__aside">
+										<img class="product-card__img" src="images/content/featured-card-03.jpg" alt="Product Image">
+										<div class="product-card__overlay d-flex jc-c ai-c">
 											<a class="product-card__btn product-card__btn--transparent btn btn--lg btn--transparent" href="#">
 												More Info
 											</a>
@@ -384,24 +384,24 @@
 											</a>
 										</div>
 									</div>
-									<div class="weekly-card__wrapper">
-										<div class="weekly-card__body product-card__body">
-											<a class="weekly-card__title product-card__title" href="#">
+									<div class="featured-card__wrapper">
+										<div class="featured-card__body product-card__body">
+											<a class="featured-card__title product-card__title" href="#">
 												Dust - Personal Portfolio Template
 											</a>
-											<div class="product-card__info">
-												<a class="weekly-card__user product-card__user user" href="#">
-													<img class="weekly-card__user-img product-card__user-img user__img" src="images/content/user-img-05.jpg" alt="Author Image">
+											<div class="product-card__info d-flex ai-c">
+												<a class="featured-card__user product-card__user user" href="#">
+													<img class="featured-card__user-img product-card__user-img user__img" src="images/content/user-img-05.jpg" alt="Author Image">
 													<span class="product-card__user-name">
 														EchoTheme
 													</span>
 												</a>
 												<a class="product-card__category" href="#"><i class="product-card__category-icon icn icn-html-five"></i>HTML</a>
 											</div>
-											<p class="weekly-card__text product-card__text">
+											<p class="featured-card__text product-card__text">
 												Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue justo ut scelerisque.
 											</p>
-											<ul class="product-card__tags">
+											<ul class="product-card__tags d-flex ai-c">
 												<li class="product-card__tag">
 													<a class="product-card__tag-link btn btn--sm btn--gray" href="#">
 														website
@@ -419,16 +419,16 @@
 												</li>
 											</ul>
 										</div>
-										<div class="weekly-card__footer product-card__footer">
-											<span class="product-card__footer-group">
-												<span class="weekly-card__price product-card__price">
+										<div class="featured-card__footer product-card__footer d-flex jc-sb ai-c">
+											<span class="product-card__footer-group d-flex jc-c ai-c">
+												<span class="featured-card__price product-card__price">
 													<span class="product-card__currency">$</span>12
 												</span>
-												<button class="weekly-card__action product-card__action product-card__action--like" type="button">
-													<span class="weekly-card__icon product-card__icon lnr lnr-heart"></span>39
+												<button class="featured-card__action product-card__action product-card__action--like" type="button">
+													<span class="featured-card__icon product-card__icon lnr lnr-heart"></span>39
 												</button>
-												<button class="weekly-card__action product-card__action product-card__action--buy" type="button">
-													<span class="weekly-card__icon product-card__icon lnr lnr-cart"></span>254
+												<button class="featured-card__action product-card__action product-card__action--buy" type="button">
+													<span class="featured-card__icon product-card__icon lnr lnr-cart"></span>254
 												</button>
 											</span>
 											<span class="product-card__rating"></span>
@@ -440,25 +440,25 @@
 						</div>
 					</div>
 				</section>
-				<!-- /Weekly products -->
+				<!-- /Featured products -->
 	
 				<!-- Newest products -->
 				<section class="newest section">
 					<div class="container">
-						<div class="newest__header section__header">
+						<div class="newest__header section__header d-flex jc-sb ai-c">
 							<div class="section__title">
 								Newest Release Products
 							</div>
-							<div class="section-filter">
-								<button class="section-filter__btn" type="button">
+							<div class="newest__filter d-flex ai-c">
+								<button class="newest__filter-btn" type="button">
 									Filter by:
 								</button>
-								<ul class="section-filter__dropdown">
-									<li class="section-filter__item"><button class="section-filter__option" data-filter=".trending">Trending items</button></li>
-									<li class="section-filter__item"><button class="section-filter__option" data-sort="seller:desc">Best seller</button></li>
-									<li class="section-filter__item"><button class="section-filter__option" data-sort="item-rating:desc">Best rating</button></li>
-									<li class="section-filter__item"><button class="section-filter__option" data-sort="price:asc">Low price</button></li>
-									<li class="section-filter__item"><button class="section-filter__option" data-sort="price:desc">High price</button></li>
+								<ul class="newest__dropdown">
+									<li class="newest__filter-item"><button class="newest__filter-option" data-filter=".trending">Trending items</button></li>
+									<li class="newest__filter-item"><button class="newest__filter-option" data-sort="seller:desc">Best seller</button></li>
+									<li class="newest__filter-item"><button class="newest__filter-option" data-sort="item-rating:desc">Best rating</button></li>
+									<li class="newest__filter-item"><button class="newest__filter-option" data-sort="price:asc">Low price</button></li>
+									<li class="newest__filter-item"><button class="newest__filter-option" data-sort="price:desc">High price</button></li>
 								</ul>
 							</div>
 						</div>
@@ -493,12 +493,12 @@
 							<!-- New Products Items -->
 							<div class="newest__items">
 		
-								<div class="newest__wrapper js-newest-mixitup">
+								<div class="newest__wrapper d-flex fxw-w js-newest-mixitup">
 
 									<article class="product-card mix ui word-press" data-seller="4.67" data-price="20" data-rating="">
 										<div class="product-card__aside">
 											<img class="product-card__img" src="images/content/newest-card-01.jpg" alt="Product Image">
-											<div class="product-card__overlay">
+											<div class="product-card__overlay d-flex jc-c ai-c">
 												<a class="product-card__btn product-card__btn--transparent btn btn--lg btn--transparent" href="#">
 													More Info
 												</a>
@@ -511,7 +511,7 @@
 											<a class="product-card__title" href="#">
 												E-commerce Shopping Cart
 											</a>
-											<div class="product-card__info">
+											<div class="product-card__info d-flex ai-c">
 												<a class="product-card__user user" href="#">
 													<img class="product-card__user-img user__img" src="images/content/user-img-04.jpg" alt="Author Image">
 													<span class="product-card__user-name">
@@ -524,8 +524,8 @@
 												Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue.
 											</p>
 										</div>
-										<div class="product-card__footer">
-											<span class="product-card__footer-group">
+										<div class="product-card__footer d-flex jc-sb ai-c">
+											<span class="product-card__footer-group d-flex jc-c ai-c">
 												<span class="product-card__price"><span class="product-card__currency">$</span>20</span>
 												<button class="product-card__action product-card__action--like" type="button">
 													<span class="product-card__icon lnr lnr-heart"></span>90
@@ -540,7 +540,7 @@
 									<article class="product-card mix landing-page psd-template" data-seller="4.9" data-price="18" data-rating="">
 										<div class="product-card__aside">
 											<img class="product-card__img" src="images/content/newest-card-02.jpg" alt="Product Image">
-											<div class="product-card__overlay">
+											<div class="product-card__overlay d-flex jc-c ai-c">
 												<a class="product-card__btn product-card__btn--transparent btn btn--lg btn--transparent" href="#">
 													More Info
 												</a>
@@ -553,7 +553,7 @@
 											<a class="product-card__title" href="#">
 												Marketify Coffee Shop
 											</a>
-											<div class="product-card__info">
+											<div class="product-card__info d-flex ai-c">
 												<a class="product-card__user user" href="#">
 													<img class="product-card__user-img user__img" src="images/content/user-img-05.jpg" alt="Author Image">
 													<span class="product-card__user-name">
@@ -566,8 +566,8 @@
 												Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue.
 											</p>
 										</div>
-										<div class="product-card__footer">
-											<span class="product-card__footer-group">
+										<div class="product-card__footer d-flex jc-sb ai-c">
+											<span class="product-card__footer-group d-flex jc-c ai-c">
 												<span class="product-card__price"><span class="product-card__currency">$</span>18</span>
 												<button class="product-card__action product-card__action--like" type="button">
 													<span class="product-card__icon lnr lnr-heart"></span>46
@@ -582,7 +582,7 @@
 									<article class="product-card mix site-template trending" data-seller="4.84" data-price="10" data-rating="4.5">
 										<div class="product-card__aside">
 											<img class="product-card__img" src="images/content/newest-card-03.jpg" alt="Product Image">
-											<div class="product-card__overlay">
+											<div class="product-card__overlay d-flex jc-c ai-c">
 												<a class="product-card__btn product-card__btn--transparent btn btn--lg btn--transparent" href="#">
 													More Info
 												</a>
@@ -595,7 +595,7 @@
 											<a class="product-card__title" href="#">
 												Bryson - Portfolio Template
 											</a>
-											<div class="product-card__info">
+											<div class="product-card__info d-flex ai-c">
 												<a class="product-card__user user" href="#">
 													<img class="product-card__user-img user__img" src="images/content/user-img-06.jpg" alt="Author Image">
 													<span class="product-card__user-name">
@@ -608,8 +608,8 @@
 												Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue.
 											</p>
 										</div>
-										<div class="product-card__footer">
-											<span class="product-card__footer-group">
+										<div class="product-card__footer d-flex jc-sb ai-c">
+											<span class="product-card__footer-group d-flex jc-c ai-c">
 												<span class="product-card__price">
 													<span class="product-card__currency">$</span>10</span>
 												<button class="product-card__action product-card__action--like" type="button">
@@ -626,7 +626,7 @@
 									<article class="product-card mix ui word-press" data-seller="4.80" data-price="10" data-rating="4.5">
 										<div class="product-card__aside">
 											<img class="product-card__img" src="images/content/newest-card-04.jpg" alt="Product Image">
-											<div class="product-card__overlay">
+											<div class="product-card__overlay d-flex jc-c ai-c">
 												<a class="product-card__btn product-card__btn--transparent btn btn--lg btn--transparent" href="#">
 													More Info
 												</a>
@@ -639,7 +639,7 @@
 											<a class="product-card__title" href="#">
 												E-commerce Shopping Cart
 											</a>
-											<div class="product-card__info">
+											<div class="product-card__info d-flex ai-c">
 												<a class="product-card__user user" href="#">
 													<img class="product-card__user-img user__img" src="images/content/user-img-07.jpg" alt="Author Image">
 													<span class="product-card__user-name">
@@ -652,8 +652,8 @@
 												Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue.
 											</p>
 										</div>
-										<div class="product-card__footer">
-											<span class="product-card__footer-group">
+										<div class="product-card__footer d-flex jc-sb ai-c">
+											<span class="product-card__footer-group d-flex jc-c ai-c">
 												<span class="product-card__price"><span class="product-card__currency">$</span>10 - 50</span>
 												<button class="product-card__action product-card__action--like" type="button">
 													<span class="product-card__icon lnr lnr-heart"></span>90
@@ -669,7 +669,7 @@
 									<article class="product-card mix landing-page psd-template trending" data-seller="4.99" data-price="10" data-rating="">
 										<div class="product-card__aside">
 											<img class="product-card__img" src="images/content/newest-card-05.jpg" alt="Product Image">
-											<div class="product-card__overlay">
+											<div class="product-card__overlay d-flex jc-c ai-c">
 												<a class="product-card__btn product-card__btn--transparent btn btn--lg btn--transparent" href="#">
 													More Info
 												</a>
@@ -682,7 +682,7 @@
 											<a class="product-card__title" href="#">
 												Marketify Coffee Shop
 											</a>
-											<div class="product-card__info">
+											<div class="product-card__info d-flex ai-c">
 												<a class="product-card__user user" href="#">
 													<img class="product-card__user-img user__img" src="images/content/user-img-02.jpg" alt="Author Image">
 													<span class="product-card__user-name">
@@ -695,8 +695,8 @@
 												Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue.
 											</p>
 										</div>
-										<div class="product-card__footer">
-											<span class="product-card__footer-group">
+										<div class="product-card__footer d-flex jc-sb ai-c">
+											<span class="product-card__footer-group d-flex jc-c ai-c">
 												<span class="product-card__price"><span class="product-card__currency">$</span>10 - 50</span>
 												<button class="product-card__action product-card__action--like" type="button"><span class="product-card__icon lnr lnr-heart"></span>48</button>
 											</span>
@@ -707,7 +707,7 @@
 									<article class="product-card mix site-template trending" data-seller="4.85" data-price="10" data-rating="4.5">
 										<div class="product-card__aside">
 											<img class="product-card__img" src="images/content/newest-card-06.jpg" alt="Product Image">
-											<div class="product-card__overlay">
+											<div class="product-card__overlay d-flex jc-c ai-c">
 												<a class="product-card__btn product-card__btn--transparent btn btn--lg btn--transparent" href="#">
 													More Info
 												</a>
@@ -720,7 +720,7 @@
 											<a class="product-card__title" href="#">
 												Bryson - Portfolio Template
 											</a>
-											<div class="product-card__info">
+											<div class="product-card__info d-flex ai-c">
 												<a class="product-card__user user" href="#">
 													<img class="product-card__user-img user__img" src="images/content/user-img-03.jpg" alt="Author Image">
 													<span class="product-card__user-name">
@@ -733,8 +733,8 @@
 												Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue.
 											</p>
 										</div>
-										<div class="product-card__footer">
-											<span class="product-card__footer-group">
+										<div class="product-card__footer d-flex jc-sb ai-c">
+											<span class="product-card__footer-group d-flex jc-c ai-c">
 												<span class="product-card__price"><span class="product-card__currency">$</span>10</span>
 												<button class="product-card__action product-card__action--like" type="button">
 													<span class="product-card__icon lnr lnr-heart"></span>56
@@ -761,11 +761,11 @@
 				<!-- Followers feed -->
 				<section class="section feed">
 					<div class="container">
-						<div class="section__header">
+						<div class="section__header d-flex jc-sb ai-c">
 							<div class="section__title">
 								Your Followers Feed
 							</div>
-							<div class="section__slider-controls">
+							<div class="section__slider-controls d-flex jc-sb ai-c">
 								<button type="button" class="section__slider-btn section__slider-btn--prev">
 									<span class="sr-only">Prev</span>
 								</button>
@@ -780,7 +780,7 @@
 								<article class="product-card swiper-slide">
 									<div class="product-card__aside">
 										<img class="product-card__img" src="images/content/newest-card-01.jpg" alt="Product Image">
-										<div class="product-card__overlay">
+										<div class="product-card__overlay d-flex jc-c ai-c">
 											<a class="product-card__btn product-card__btn--transparent btn btn--lg btn--transparent" href="#">
 												More Info
 											</a>
@@ -793,7 +793,7 @@
 										<a class="product-card__title" href="#">
 											E-commerce Shopping Cart
 										</a>
-										<div class="product-card__info">
+										<div class="product-card__info d-flex ai-c">
 											<a class="product-card__user user" href="#">
 												<img class="product-card__user-img user__img" src="images/content/user-img-04.jpg" alt="Author Image">
 												<span class="product-card__user-name">
@@ -806,8 +806,8 @@
 											Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue.
 										</p>
 									</div>
-									<div class="product-card__footer">
-										<span class="product-card__footer-group">
+									<div class="product-card__footer d-flex jc-sb ai-c">
+										<span class="product-card__footer-group d-flex jc-c ai-c">
 											<span class="product-card__price"><span class="product-card__currency">$</span>20</span>
 											<button class="product-card__action product-card__action--like" type="button">
 												<span class="product-card__icon lnr lnr-heart"></span>90
@@ -822,7 +822,7 @@
 								<article class="product-card swiper-slide">
 									<div class="product-card__aside">
 										<img class="product-card__img" src="images/content/newest-card-02.jpg" alt="Product Image">
-										<div class="product-card__overlay">
+										<div class="product-card__overlay d-flex jc-c ai-c">
 											<a class="product-card__btn product-card__btn--transparent btn btn--lg btn--transparent" href="#">
 												More Info
 											</a>
@@ -835,7 +835,7 @@
 										<a class="product-card__title" href="#">
 											Marketify Coffee Shop
 										</a>
-										<div class="product-card__info">
+										<div class="product-card__info d-flex ai-c">
 											<a class="product-card__user user" href="#">
 												<img class="product-card__user-img user__img" src="images/content/user-img-05.jpg" alt="Author Image">
 												<span class="product-card__user-name">
@@ -848,8 +848,8 @@
 											Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue.
 										</p>
 									</div>
-									<div class="product-card__footer">
-										<span class="product-card__footer-group">
+									<div class="product-card__footer d-flex jc-sb ai-c">
+										<span class="product-card__footer-group d-flex jc-c ai-c">
 											<span class="product-card__price"><span class="product-card__currency">$</span>18</span>
 											<button class="product-card__action product-card__action--like" type="button">
 												<span class="product-card__icon lnr lnr-heart"></span>46
@@ -864,7 +864,7 @@
 								<article class="product-card swiper-slide">
 									<div class="product-card__aside">
 										<img class="product-card__img" src="images/content/newest-card-03.jpg" alt="Product Image">
-										<div class="product-card__overlay">
+										<div class="product-card__overlay d-flex jc-c ai-c">
 											<a class="product-card__btn product-card__btn--transparent btn btn--lg btn--transparent" href="#">
 												More Info
 											</a>
@@ -877,7 +877,7 @@
 										<a class="product-card__title" href="#">
 											Bryson - Portfolio Template
 										</a>
-										<div class="product-card__info">
+										<div class="product-card__info d-flex ai-c">
 											<a class="product-card__user user" href="#">
 												<img class="product-card__user-img user__img" src="images/content/user-img-06.jpg" alt="Author Image">
 												<span class="product-card__user-name">
@@ -890,8 +890,8 @@
 											Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue.
 										</p>
 									</div>
-									<div class="product-card__footer">
-										<span class="product-card__footer-group">
+									<div class="product-card__footer d-flex jc-sb ai-c">
+										<span class="product-card__footer-group d-flex jc-c ai-c">
 											<span class="product-card__price">
 												<span class="product-card__currency">$</span>10</span>
 											<button class="product-card__action product-card__action--like" type="button">
@@ -908,7 +908,7 @@
 								<article class="product-card swiper-slide">
 									<div class="product-card__aside">
 										<img class="product-card__img" src="images/content/newest-card-04.jpg" alt="Product Image">
-										<div class="product-card__overlay">
+										<div class="product-card__overlay d-flex jc-c ai-c">
 											<a class="product-card__btn product-card__btn--transparent btn btn--lg btn--transparent" href="#">
 												More Info
 											</a>
@@ -921,7 +921,7 @@
 										<a class="product-card__title" href="#">
 											E-commerce Shopping Cart
 										</a>
-										<div class="product-card__info">
+										<div class="product-card__info d-flex ai-c">
 											<a class="product-card__user user" href="#">
 												<img class="product-card__user-img user__img" src="images/content/user-img-07.jpg" alt="Author Image">
 												<span class="product-card__user-name">
@@ -934,8 +934,8 @@
 											Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue.
 										</p>
 									</div>
-									<div class="product-card__footer">
-										<span class="product-card__footer-group">
+									<div class="product-card__footer d-flex jc-sb ai-c">
+										<span class="product-card__footer-group d-flex jc-c ai-c">
 											<span class="product-card__price"><span class="product-card__currency">$</span>10 - 50</span>
 											<button class="product-card__action product-card__action--like" type="button">
 												<span class="product-card__icon lnr lnr-heart"></span>90
@@ -951,7 +951,7 @@
 								<article class="product-card swiper-slide">
 									<div class="product-card__aside">
 										<img class="product-card__img" src="images/content/newest-card-05.jpg" alt="Product Image">
-										<div class="product-card__overlay">
+										<div class="product-card__overlay d-flex jc-c ai-c">
 											<a class="product-card__btn product-card__btn--transparent btn btn--lg btn--transparent" href="#">
 												More Info
 											</a>
@@ -964,7 +964,7 @@
 										<a class="product-card__title" href="#">
 											Marketify Coffee Shop
 										</a>
-										<div class="product-card__info">
+										<div class="product-card__info d-flex ai-c">
 											<a class="product-card__user user" href="#">
 												<img class="product-card__user-img user__img" src="images/content/user-img-02.jpg" alt="Author Image">
 												<span class="product-card__user-name">
@@ -977,8 +977,8 @@
 											Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue.
 										</p>
 									</div>
-									<div class="product-card__footer">
-										<span class="product-card__footer-group">
+									<div class="product-card__footer d-flex jc-sb ai-c">
+										<span class="product-card__footer-group d-flex jc-c ai-c">
 											<span class="product-card__price"><span class="product-card__currency">$</span>10 - 50</span>
 											<button class="product-card__action product-card__action--like" type="button"><span class="product-card__icon lnr lnr-heart"></span>48</button>
 										</span>
@@ -989,7 +989,7 @@
 								<article class="product-card swiper-slide">
 									<div class="product-card__aside">
 										<img class="product-card__img" src="images/content/newest-card-06.jpg" alt="Product Image">
-										<div class="product-card__overlay">
+										<div class="product-card__overlay d-flex jc-c ai-c">
 											<a class="product-card__btn product-card__btn--transparent btn btn--lg btn--transparent" href="#">
 												More Info
 											</a>
@@ -1002,7 +1002,7 @@
 										<a class="product-card__title" href="#">
 											Bryson - Portfolio Template
 										</a>
-										<div class="product-card__info">
+										<div class="product-card__info d-flex ai-c">
 											<a class="product-card__user user" href="#">
 												<img class="product-card__user-img user__img" src="images/content/user-img-03.jpg" alt="Author Image">
 												<span class="product-card__user-name">
@@ -1015,8 +1015,8 @@
 											Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue.
 										</p>
 									</div>
-									<div class="product-card__footer">
-										<span class="product-card__footer-group">
+									<div class="product-card__footer d-flex jc-sb ai-c">
+										<span class="product-card__footer-group d-flex jc-c ai-c">
 											<span class="product-card__price"><span class="product-card__currency">$</span>10</span>
 											<button class="product-card__action product-card__action--like" type="button">
 												<span class="product-card__icon lnr lnr-heart"></span>56
@@ -1039,23 +1039,23 @@
 				<!-- Stats -->
 				<section class="stats">
 					<div class="container">
-						<div class="stats__inner">
-							<div class="stats__item">
+						<div class="stats__inner d-flex jc-sb ai-c">
+							<div class="stats__item d-flex jc-c ai-c fd-c">
 								<div class="stats__img" style="background-image: url(images/ui/stats-briefcase.svg);"></div>
 								<span class="stats__number stats__number--yellow">38,436</span>
 								<div class="stats__text">items for sale</div>
 							</div>
-							<div class="stats__item">
+							<div class="stats__item d-flex jc-c ai-c fd-c">
 								<div class="stats__img" style="background-image: url(images/ui/stats-cloud-download.svg);"></div>
 								<span class="stats__number stats__number--blue">3,736</span>
 								<div class="stats__text">total sales</div>
 							</div>
-							<div class="stats__item">
+							<div class="stats__item d-flex jc-c ai-c fd-c">
 								<div class="stats__img" style="background-image: url(images/ui/stats-smile.svg);"></div>
 								<span class="stats__number stats__number--green">2,736</span>
 								<div class="stats__text">happy customers</div>
 							</div>
-							<div class="stats__item">
+							<div class="stats__item d-flex jc-c ai-c fd-c">
 								<div class="stats__img" style="background-image: url(images/ui/stats-users.svg);"></div>
 								<span class="stats__number stats__number--red">25,736</span>
 								<div class="stats__text">members</div>
@@ -1074,9 +1074,9 @@
 						<div class="section__subheading">
 							Laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats. Lid est laborum dolo rumes fugats untras.
 						</div>
-						<div class="reason__inner">
+						<div class="reason__inner d-flex fxw-w">
 
-							<div class="reason-card">
+							<div class="reason-card d-flex jc-c ai-c fd-c">
 								<div class="reason-card__number">
 									01
 								</div>
@@ -1089,7 +1089,7 @@
 								</p>
 							</div>
 
-							<div class="reason-card">
+							<div class="reason-card d-flex jc-c ai-c fd-c">
 								<div class="reason-card__number">
 									02
 								</div>
@@ -1102,7 +1102,7 @@
 								</p>
 							</div>
 
-							<div class="reason-card">
+							<div class="reason-card d-flex jc-c ai-c fd-c">
 								<div class="reason-card__number">
 									03
 								</div>
@@ -1115,7 +1115,7 @@
 								</p>
 							</div>
 
-							<div class="reason-card">
+							<div class="reason-card d-flex jc-c ai-c fd-c">
 								<div class="reason-card__number">
 									04
 								</div>
@@ -1128,7 +1128,7 @@
 								</p>
 							</div>
 
-							<div class="reason-card">
+							<div class="reason-card d-flex jc-c ai-c fd-c">
 								<div class="reason-card__number">
 									05
 								</div>
@@ -1141,7 +1141,7 @@
 								</p>
 							</div>
 
-							<div class="reason-card">
+							<div class="reason-card d-flex jc-c ai-c fd-c">
 								<div class="reason-card__number">
 									06
 								</div>
@@ -1161,8 +1161,8 @@
 
 				<!-- Sell-buy -->
 				<section class="sell-buy">
-					<div class="sell-buy__inner">
-						<div class="sell-buy__col" style="background-image: url(images/bg/sell-buy-bg-01.jpg);">
+					<div class="sell-buy__inner d-flex fxw-w">
+						<div class="sell-buy__col d-flex jc-c ai-c fd-c" style="background-image: url(images/bg/sell-buy-bg-01.jpg);">
 							<div class="sell-buy__img" style="background-image: url(images/ui/sell-buy-01.svg); background-size: 120px, 101px;"></div>
 							<div class="sell-buy__title">
 								Sell Your Products
@@ -1170,12 +1170,12 @@
 							<p class="sell-buy__text">
 								Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet diamcongue is laoreet elit metus.
 							</p>
-							<button class="sell-buy__btn btn btn--xl btn--white">
+							<a class="sell-buy__btn btn btn--xl btn--white" href="#">
 								Become an Author
-							</button>
+							</a>
 						</div>
 
-						<div class="sell-buy__col" style="background-image: url(images/bg/sell-buy-bg-02.jpg);">
+						<div class="sell-buy__col d-flex jc-c ai-c fd-c" style="background-image: url(images/bg/sell-buy-bg-02.jpg);">
 							<div class="sell-buy__img" style="background-image: url(images/ui/sell-buy-02.svg); background-size: 100px, 100px;"></div>
 							<div class="sell-buy__title">
 								Start Shopping Today
@@ -1183,9 +1183,9 @@
 							<p class="sell-buy__text">
 								Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet diamcongue is laoreet elit metus.
 							</p>
-							<button class="sell-buy__btn sell-buy__btn--wide btn btn--xl btn--white">
+							<a class="sell-buy__btn sell-buy__btn--wide btn btn--xl btn--white" href="#">
 								Start Shopping
-							</button>
+							</a>
 						</div>
 					</div>
 				</section>
@@ -1204,7 +1204,7 @@
 							<div class="reviews__wrapper swiper-wrapper">
 
 								<div class="review-card swiper-slide">
-									<div class="review-card__header">
+									<div class="review-card__header d-flex jc-sb ai-c">
 										<a class="review-card__author user" href="#">
 											<img class="review-card__img user__img" src="images/content/user-img-01.jpg" alt="User Photo">
 											<span class="review-card__details">
@@ -1224,7 +1224,7 @@
 								</div>
 
 								<div class="review-card swiper-slide">
-									<div class="review-card__header">
+									<div class="review-card__header d-flex jc-sb ai-c">
 										<a class="review-card__author user" href="#">
 											<img class="review-card__img user__img" src="images/content/user-img-08.jpg" alt="User Photo">
 											<span class="review-card__details">
@@ -1244,7 +1244,7 @@
 								</div>
 
 								<div class="review-card swiper-slide">
-									<div class="review-card__header">
+									<div class="review-card__header d-flex jc-sb ai-c">
 										<a class="review-card__author user" href="#">
 											<img class="review-card__img user__img" src="images/content/user-img-09.jpg" alt="User Photo">
 											<span class="review-card__details">
@@ -1264,7 +1264,7 @@
 								</div>
 
 								<div class="review-card swiper-slide">
-									<div class="review-card__header">
+									<div class="review-card__header d-flex jc-sb ai-c">
 										<a class="review-card__author user" href="#">
 											<img class="review-card__img user__img" src="images/content/user-img-10.jpg" alt="User Photo">
 											<span class="review-card__details">
@@ -1287,7 +1287,7 @@
 							<button class="reviews__slider-btn reviews__slider-btn--prev"></button>
 							<button class="reviews__slider-btn reviews__slider-btn--next"></button>
 						</div>
-						<button class="btn btn--centered btn--xl btn--blue">View All Reviews</button>
+						<a class="btn btn--centered btn--xl btn--blue" href="#">View All Reviews</a>
 					</div>
 				</section>
 				<!-- /Reviews -->
@@ -1301,7 +1301,7 @@
 						<div class="section__subheading">
 							Laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats. Lid est laborum dolo rumes fugats untras.
 						</div>
-						<div class="latest-news__inner">
+						<div class="latest-news__inner d-flex">
 
 							<article class="news-card">
 								<a class="news-card__img" href="#" style="background-image: url(images/content/latest-news-card-01.jpg)"></a>
@@ -1313,11 +1313,11 @@
 										Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue.
 									</p>
 								</div>
-								<div class="news-card__footer">
+								<div class="news-card__footer d-flex ai-c">
 									<time class="news-card__time">
 										24 Feb 2017
 									</time>
-									<div class="news-card__stats">
+									<div class="news-card__stats d-flex jc-sb">
 										<span class="news-card__stat-link news-card__stat-link--comments">
 											45
 										</span>
@@ -1338,11 +1338,11 @@
 										Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
 									</p>
 								</div>
-								<div class="news-card__footer">
+								<div class="news-card__footer d-flex ai-c">
 									<time class="news-card__time">
 										15 Mar 2017
 									</time>
-									<div class="news-card__stats">
+									<div class="news-card__stats d-flex jc-sb">
 										<span class="news-card__stat-link news-card__stat-link--comments">
 											45
 										</span>
@@ -1363,11 +1363,11 @@
 										Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue.
 									</p>
 								</div>
-								<div class="news-card__footer">
+								<div class="news-card__footer d-flex ai-c">
 									<time class="news-card__time">
 										20 Dec 2016
 									</time>
-									<div class="news-card__stats">
+									<div class="news-card__stats d-flex jc-sb">
 										<span class="news-card__stat-link news-card__stat-link--comments">
 											45
 										</span>
@@ -1377,25 +1377,23 @@
 									</div>
 								</div>
 							</article>
-							
-						</div>
 
+						</div>
 					</div>
-					
 				</section>
 				<!-- /Latest news -->
 
 				<!-- Benefits -->
 				<section class="benefits">
 					<div class="container">
-						<div class="benefits__inner">
-							<div class="benefits__col">
+						<div class="benefits__inner d-flex">
+							<div class="benefits__col d-flex jc-c ai-c fd-c">
 								<div class="benefits__img" style="background-image: url(images/ui/ui-money-back.png); background-size: 150px, 120px;"></div>
 								<div class="benefits__tagline">
 									30 Days Money Back <span class="txt-blue">Guarantee</span>
 								</div>
 							</div>
-							<div class="benefits__col">
+							<div class="benefits__col d-flex jc-c ai-c fd-c">
 								<div class="benefits__img" style="background-image: url(images/ui/ui-support.png); background-size: 155px, 117px;"></div>
 								<div class="benefits__tagline">
 									Fast and Friendly <span class="txt-fuchsia">Support</span>
@@ -1409,7 +1407,7 @@
 				<!-- Join -->
 				<section class="join">
 					<div class="container">
-						<div class="join__inner">
+						<div class="join__inner d-flex jc-c ai-c fd-c">
 							<div class="join__heading">
 								Ready to Join Our Marketplace!
 							</div>
@@ -1435,7 +1433,7 @@
 
 					<div class="container">
 
-						<div class="footer__inner">
+						<div class="footer__inner d-flex jc-sb">
 
 							<div class="footer__col footer__col--contacts">
 
@@ -1691,17 +1689,17 @@
 
 			
 
-								<form class="footer-form form" name="footer-form" action="#">
+								<form class="footer__form form" id="footer-form" action="#">
 
 									<label class="form__label" for="#footer-input">
 
 										<span class="sr-only">Enter your email here...</span>
 
-										<input class="footer-form__input form__input" name="footer-input" type="email"
+										<input class="footer__input form__input" id="footer-input" type="email"
 
 											placeholder="Enter email" required />
 
-										<button class="footer-form__btn form__btn btn btn--blue" type="submit">
+										<button class="footer__submit-btn form__btn btn btn--blue" type="submit">
 
 											Submit
 
@@ -1713,65 +1711,41 @@
 
 			
 
-								<ul class="social">
+								<ul class="social d-flex ai-c">
 
 									<li class="social__item">
 
-										<a class="social__link social__link--facebook" href="#">
-
-											<i class="social__icon icn icn-facebook"></i>
-
-										</a>
+										<a class="social__link" style="background-image: url(images/ui/social-icon-facebook.png);" href="#"></a>
 
 									</li>
 
 									<li class="social__item">
 
-										<a class="social__link social__link--twitter" href="#">
-
-											<i class="social__icon icn icn-twitter"></i>
-
-										</a>
+										<a class="social__link" style="background-image: url(images/ui/social-icon-twitter.png);" href="#"></a>
 
 									</li>
 
 									<li class="social__item">
 
-										<a class="social__link social__link--google" href="#">
-
-											<i class="social__icon icn icn-google"></i>
-
-										</a>
+										<a class="social__link" style="background-image: url(images/ui/social-icon-google.png);" href="#"></a>
 
 									</li>
 
 									<li class="social__item">
 
-										<a class="social__link social__link--pinterest" href="#">
-
-											<i class="social__icon icn icn-pinterest"></i>
-
-										</a>
+										<a class="social__link" style="background-image: url(images/ui/social-icon-pinterest.png);" href="#"></a>
 
 									</li>
 
 									<li class="social__item">
 
-										<a class="social__link social__link--linkedin" href="#">
-
-											<i class="social__icon icn icn-linkedin2"></i>
-
-										</a>
+										<a class="social__link" style="background-image: url(images/ui/social-icon-linkedin.png);" href="#"></a>
 
 									</li>
 
 									<li class="social__item">
 
-										<a class="social__link social__link--dribble" href="#">
-
-											<i class="social__icon icn icn-dribbble"></i>
-
-										</a>
+										<a class="social__link" style="background-image: url(images/ui/social-icon-dribble.png);" href="#"></a>
 
 									</li>
 

@@ -40,6 +40,7 @@
 		margin-bottom: 36px;
 		font-size: 60px;
 		line-height: 70px;
+		text-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
 	}
 
 	&__text {
@@ -72,9 +73,6 @@
 		top: 0;
 		left: 0;
 		z-index: 1;
-		display: flex;
-		justify-content: center;
-		align-items: center;
 		width: 100%;
 		padding: 40px;
 		border-radius: 6px;
@@ -172,24 +170,18 @@
 .features {
 	padding: 186px 0 121px;
 
-	&__inner {
-		display: flex;
-		justify-content: space-between;
-	}
-}
+	&__card {
+		max-width: 360px;
+		position: relative;
+		padding: 41px 30px 45px;
+		border-radius: 4px;
+		text-align: center;
+		transition: all 0.3s ease 0s;
 
-// Feature-card
-.feature-card {
-	max-width: 360px;
-	position: relative;
-	padding: 41px 30px 45px;
-	border-radius: 4px;
-	text-align: center;
-	transition: all 0.3s ease 0s;
-
-	&:hover {
-		background-color: $white;
-		box-shadow: 0 2px 50px rgba(0, 0, 0, 0.08);
+		&:hover {
+			background-color: $white;
+			box-shadow: 0 2px 50px rgba(0, 0, 0, 0.08);
+		}
 	}
 
 	&__img {
@@ -224,9 +216,6 @@
 
 	&__header {
 		position: relative;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
 		margin-bottom: 50px;
 		padding: 32px 30px 33px 29px;
 		box-shadow: 0 2px 4px rgba(108, 111, 115, 0.1);
@@ -238,13 +227,6 @@
 		font-size: 30px;
 		line-height: 1.5;
 		color: $deep-black;
-	}
-
-	&__slider-controls {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		font-size: 0;
 	}
 
 	&__slider-btn {
@@ -329,8 +311,8 @@
 	}
 }
 
-// Weekly
-.weekly {
+// Featured
+.featured {
 	background-color: #eff1f5;
 
 	&__slider {
@@ -338,9 +320,8 @@
 	}
 }
 
-// Weekly-card
-.weekly-card {
-	display: flex;
+// Featured-card
+.featured-card {
 	max-width: 100%;
 	margin: 0;
 	box-shadow: 0 2px 30px rgba(147, 155, 168, 0.1);
@@ -402,14 +383,20 @@
 	}
 }
 
-// Section Filter
-.section-filter {
-	position: relative;
-	display: flex;
-	align-items: center;
-	color: #747b86;
+// Newest
+.newest {
+	background-color: #f6f7fb;
 
-	&__btn {
+	&__header {
+		margin-bottom: 30px;
+	}
+
+	&__filter {
+		position: relative;
+		color: #747b86;
+	}
+
+	&__filter-btn {
 		position: relative;
 		padding: 5px 28px 5px 0;
 		border: none;
@@ -469,13 +456,13 @@
 		}
 	}
 
-	&__item {
+	&__filter-item {
 		&:last-child {
 			margin-bottom: 0;
 		}
 	}
 
-	&__option {
+	&__filter-option {
 		padding: 5px 0;
 		border: none;
 		background-color: transparent;
@@ -489,15 +476,6 @@
 		&:active {
 			text-shadow: 0px 2px 2px rgba(150, 150, 150, 0.5);
 		}
-	}
-}
-
-// Newest
-.newest {
-	background-color: #f6f7fb;
-
-	&__header {
-		margin-bottom: 30px;
 	}
 
 	&__products {
@@ -534,8 +512,6 @@
 	}
 
 	&__wrapper {
-		display: flex;
-		flex-wrap: wrap;
 		margin: 0 -30px -31px 0;
 		margin: -4px -34px -35px -4px;
 		padding: 4px;
@@ -559,17 +535,10 @@
 	background-color: #212225;
 
 	&__inner {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
 		margin: 0 -15px;
 	}
 
 	&__item {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
 		width: 15%;
 		padding: 9px 15px 12px 15px;
 		padding: 15px;
@@ -618,8 +587,6 @@
 	overflow: hidden;
 
 	&__inner {
-		display: flex;
-		flex-wrap: wrap;
 		padding: 50px;
 		margin: -50px -80px -81px -50px;
 	}
@@ -630,10 +597,6 @@
 	position: relative;
 	width: calc((100% - 90px) / 3);
 	margin: 0 30px 31px 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
 	padding: 50px 30px 53px;
 	border-radius: 4px;
 	box-shadow: 0 2px 50px rgba(0, 0, 0, 0.08);
@@ -680,16 +643,7 @@
 .sell-buy {
 	color: $white;
 
-	&__inner {
-		display: flex;
-		flex-wrap: wrap;
-	}
-
 	&__col {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
 		padding: 90px 0 100px;
 		width: 50%;
 		background-repeat: no-repeat;
@@ -831,9 +785,6 @@
 
 	&__header {
 		position: relative;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
 		margin-bottom: 20px;
 	}
 
@@ -883,7 +834,6 @@
 	overflow: hidden;
 
 	&__inner {
-		display: flex;
 		margin-right: -30px;
 		margin: -50px -80px -50px -50px;
 		padding: 50px;
@@ -929,7 +879,6 @@
 	}
 
 	&__footer {
-		display: flex;
 		padding: 10px 28px 8px;
 		border-top: 1px solid #ececec;
 		color: #7e7e7e;
@@ -950,8 +899,6 @@
 	}
 
 	&__stats {
-		display: flex;
-		justify-content: space-between;
 		width: 50%;
 		padding: 10px 0 10px 33px;
 	}
@@ -986,7 +933,6 @@
 .benefits {
 	&__inner {
 		position: relative;
-		display: flex;
 
 		&::before {
 			position: absolute;
@@ -1002,10 +948,6 @@
 	}
 
 	&__col {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
 		width: 50%;
 		padding: 44px 0 64px;
 		padding-left: 0px;
@@ -1032,13 +974,6 @@
 	padding: 105px 0 110px 0;
 	background-image: linear-gradient(to left, #0d3ef2 0%, #7221a0 100%);
 	color: $white;
-
-	&__inner {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-	}
 
 	&__heading {
 		margin-bottom: 25px;

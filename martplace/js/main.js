@@ -9,15 +9,15 @@ $(".product-card__rating").rateYo({
 	readOnly: true,
 });
 
-$(".section-filter__btn").click(function () {
-	$(".section-filter__dropdown").slideToggle("slow", function () {});
+$(".newest__filter-btn").click(function () {
+	$(".newest__dropdown").slideToggle("slow", function () {});
 });
 
 // Mixitup
 var mixer = mixitup(".js-newest-mixitup");
 
 // Weekly Product
-var weeklyProduct = new Swiper(".js-weekly-slider", {
+var featuredProducts = new Swiper(".js-featured-slider", {
 	loop: true,
 	effect: "flip",
 	navigation: {

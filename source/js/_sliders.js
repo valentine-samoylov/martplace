@@ -1,5 +1,5 @@
 // Weekly Product
-var weeklyProduct = new Swiper(".js-weekly-slider", {
+var featuredProducts = new Swiper(".js-featured-slider", {
 	loop: true,
 	effect: "flip",
 	navigation: {

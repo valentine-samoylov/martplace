@@ -2,9 +2,24 @@
 	display: flex;
 }
 
-.d-flex-jcc {
-	display: flex;
+.jc-c {
 	justify-content: center;
+}
+
+.jc-sb {
+	justify-content: space-between;
+}
+
+.ai-c {
+	align-items: center;
+}
+
+.fd-c {
+	flex-direction: column;
+}
+
+.fxw-w {
+	flex-wrap: wrap;
 }
 
 .sr-only {

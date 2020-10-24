@@ -78,6 +78,7 @@ body {
 
 // Logo
 .logo {
+	display: inline-block;
 	&__img {
 		max-height: 50px;
 	}
@@ -93,6 +94,7 @@ body {
 	background-color: transparent;
 	outline: transparent;
 	cursor: pointer;
+	white-space: nowrap;
 	transition: all 0.3s ease 0s;
 
 	&--centered {
@@ -183,7 +185,6 @@ body {
 .user {
 	display: flex;
 	align-items: center;
-
 	&__img {
 		border-radius: 50%;
 		object-fit: cover;
@@ -257,15 +258,16 @@ body {
 		position: absolute;
 		right: 0;
 		bottom: 0;
-		display: flex;
-		justify-content: center;
-		align-items: center;
 		margin: 0;
 		padding: 15px;
 		width: 100%;
 		height: 100%;
 		font-size: 0;
-		background-image: linear-gradient(to left, $azure-blue 0%, $fuchsia-blue 100%);
+		background-image: linear-gradient(
+			to left,
+			$azure-blue 0%,
+			$fuchsia-blue 100%
+		);
 		opacity: 1;
 		transform: translateY(100%);
 		transition: all 0.5s 0s;
@@ -300,9 +302,6 @@ body {
 	}
 
 	&__info {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
 		margin-bottom: 27px;
 	}
 
@@ -339,9 +338,7 @@ body {
 	}
 
 	&__tags {
-		display: flex;
 		padding-top: 28px;
-		align-items: center;
 	}
 
 	&__tag {
@@ -352,18 +349,9 @@ body {
 	}
 
 	&__footer {
-		display: inline-flex;
-		justify-content: space-between;
-		align-items: center;
 		width: 100%;
 		padding: 15px 30px 16px 30px;
 		border-top: 1px solid #ececec;
-	}
-
-	&__footer-group {
-		display: flex;
-		justify-content: center;
-		align-items: center;
 	}
 
 	&__price {
