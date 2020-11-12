@@ -1,0 +1,50 @@
+// Stats
+.stats {
+	padding: 79px 0 82px;
+	background-color: #212225;
+
+	&__inner {
+		margin: 0 -15px;
+	}
+
+	&__item {
+		width: 15%;
+		padding: 9px 15px 12px 15px;
+		padding: 15px;
+		text-align: center;
+	}
+
+	&__img {
+		width: 48px;
+		height: 48px;
+		margin-bottom: 42px;
+		background-repeat: no-repeat;
+		background-size: 48px, 48px;
+	}
+
+	&__number {
+		margin-bottom: 15px;
+		font-size: 36px;
+
+		&--yellow {
+			color: #feb71d;
+		}
+
+		&--blue {
+			color: #58c9e9;
+		}
+
+		&--green {
+			color: #77de51;
+		}
+
+		&--red {
+			color: #ff6a6d;
+		}
+	}
+
+	&__text {
+		font-size: 18px;
+		color: $white;
+	}
+}

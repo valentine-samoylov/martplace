@@ -1,0 +1,21 @@
+// Join
+.join {
+	padding: 105px 0 110px 0;
+	background-image: linear-gradient(to left, #0d3ef2 0%, #7221a0 100%);
+	text-align: center;
+	color: $white;
+
+	&__heading {
+		margin-bottom: 25px;
+		font-size: 36px;
+	}
+
+	&__subheading {
+		margin-bottom: 51px;
+		font-size: 18px;
+	}
+
+	&__btn {
+		padding: 19px 43px 20px;
+	}
+}

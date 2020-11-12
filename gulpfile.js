@@ -1,9 +1,30 @@
 
 
-let project_folder = require("path").basename(__dirname);
-let source_folder = "source";
 
-let fs = require('fs');
+let { src, dest } = require('gulp'),
+	fs = require('fs'),
+	gulp = require('gulp'),
+	browsersync = require("browser-sync").create(),
+	fileinclude = require('gulp-file-include'),
+	concat = require('gulp-concat'),
+	rename = require("gulp-rename"),
+	del = require("del"),
+	scss = require("gulp-sass"),
+	autoprefixer = require("gulp-autoprefixer"),
+	group_media = require("gulp-group-css-media-queries"),
+	clean_css = require("gulp-clean-css"),
+	cssmin = require('gulp-cssmin'),
+	uglify = require("gulp-uglify-es").default,
+	imagemin = require("gulp-imagemin"),
+	// webp = require('gulp-webp'),
+	// webphtml = require('gulp-webp-html'),
+	// webpcss = require("gulp-webpcss"),
+	svgSprite = require('gulp-svg-sprite'),
+	ttf2woff = require('gulp-ttf2woff'),
+	ttf2woff2 = require('gulp-ttf2woff2');
+
+let project_folder = require("path").basename(__dirname),
+	source_folder = "source";
 
 let path = {
 	build: {
@@ -14,39 +35,20 @@ let path = {
 		fonts: project_folder + "/fonts/",
 	},
 	src: {
-		html: [source_folder + "/*.html", "!" + source_folder + "/_*.html"],
+		html: [source_folder + "/views/pages/*.html", "!" + source_folder + "/**/_*.html"],
 		css: source_folder + "/styles/main.scss",
 		js: source_folder + "/js/main.js",
 		img: source_folder + "/images/**/*.{jpg,png,svg,gif,ico,webp}",
-		fonts: source_folder + "/fonts/*.{ttf,otf,woff,woff2}",
+		fonts: source_folder + "/fonts/*.ttf",
 	},
 	watch: {
-		html: source_folder + "/**/*.html",
+		html: source_folder + "/views/**/*.html",
 		css: source_folder + "/styles/**/*.scss",
 		js: source_folder + "/js/**/*.js",
 		img: source_folder + "/images/**/*.{jpg,png,svg,gif,ico,webp}"
 	},
 	clean: "./" + project_folder + "/"
 }
-
-let { src, dest } = require('gulp'),
-	gulp = require('gulp'),
-	browsersync = require("browser-sync").create(),
-	include = require('gulp-include'),
-	del = require("del"),
-	scss = require("gulp-sass"),
-	autoprefixer = require("gulp-autoprefixer"),
-	group_media = require("gulp-group-css-media-queries"),
-	clean_css = require("gulp-clean-css"),
-	rename = require("gulp-rename"),
-	uglify = require("gulp-uglify-es").default,
-	imagemin = require("gulp-imagemin"),
-	// webp = require('gulp-webp'),
-	// webphtml = require('gulp-webp-html'),
-	// webpcss = require("gulp-webpcss"),
-	concat = require('gulp-concat'),
-	cssmin = require('gulp-cssmin'),
-	svgSprite = require('gulp-svg-sprite');
 
 function browserSync(params) {
 	browsersync.init({
@@ -60,7 +62,7 @@ function browserSync(params) {
 
 function html() {
 	return src(path.src.html)
-		.pipe(include())
+		.pipe(fileinclude())
 		// .pipe(webphtml())
 		.pipe(dest(path.build.html))
 		.pipe(browsersync.stream())
@@ -97,8 +99,8 @@ function css() {
 function cssLibs() {
 	return gulp.src([
 		'node_modules/normalize.css/normalize.css',
-		'node_modules/linearicons/dist/web-font/style.css',
 		'node_modules/swiper/swiper-bundle.css',
+		'node_modules/overlayscrollbars/css/OverlayScrollbars.css',
 		'node_modules/rateyo/src/jquery.rateyo.css'
 	])
 		.pipe(concat('libs.min.css'))
@@ -109,8 +111,7 @@ function cssLibs() {
 
 function js() {
 	return src(path.src.js)
-		// .pipe(fileinclude())
-		.pipe(include())
+		.pipe(fileinclude())
 		.pipe(dest(path.build.js))
 		.pipe(
 			uglify()
@@ -127,6 +128,7 @@ function js() {
 function jsLibs() {
 	return gulp.src([
 		'node_modules/swiper/swiper-bundle.js',
+		'node_modules/overlayscrollbars/js/jquery.OverlayScrollbars.js',
 		'node_modules/rateyo/src/jquery.rateyo.js',
 		'node_modules/mixitup/dist/mixitup.js'
 	])
@@ -158,9 +160,16 @@ function images() {
 }
 
 function fonts() {
-	return src(path.src.fonts)
+	src(path.src.fonts)
 		.pipe(dest(path.build.fonts));
-};
+	src(path.src.fonts)
+		.pipe(ttf2woff())
+		.pipe(dest(path.build.fonts));
+	return src(path.src.fonts)
+		.pipe(ttf2woff2())
+		.pipe(dest(path.build.fonts))
+		.pipe(browsersync.stream());
+}
 
 gulp.task('svgSprite', function () {
 	return gulp.src([source_folder + '/iconsprite/*.svg'])

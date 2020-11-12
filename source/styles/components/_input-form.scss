@@ -1,0 +1,43 @@
+// Input form
+.input-form {
+	width: 100%;
+	max-width: 360px;
+	position: relative;
+
+	&__text-box {
+		width: 100%;
+		padding: 13px 95px 14px 25px;
+		border: 1px solid $geyser;
+		border-radius: 23px;
+		color: $oslo-gray;
+		outline: transparent;
+		transition: border-color 0.3s ease 0s;
+
+		&::placeholder {
+			color: $oslo-gray;
+		}
+
+		&:focus {
+			border-color: rgba($azure-blue, 0.5);
+		}
+	}
+
+	&__btn {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 70px;
+		height: 46px;
+		border-radius: 23px;
+	}
+
+	&__icon {
+		position: absolute;
+		top: 50%;
+		right: 27px;
+		width: 16px;
+		height: 16px;
+		fill: $white;
+		transform: translateY(-50%);
+	}
+}

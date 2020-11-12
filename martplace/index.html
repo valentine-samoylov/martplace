@@ -1,31 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 	<head>
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<title>MartPlace | Digital Product Marketplace</title>
-		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
-		<link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
-		<link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
-		<link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
-		<link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
-		<link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
-		<link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
-		<link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
-		<link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
-		<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
-		<link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
-		<link rel="stylesheet" href="css/libs.min.css"/>
-		<link rel="stylesheet" href="css/main.min.css"/>
+		<meta name="viewport"
+			content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/images/favicon/favicon.svg" />
+		<link rel="stylesheet" href="css/libs.min.css" />
+		<link rel="stylesheet" href="css/main.min.css" />
 	</head>
-	<body>
 
+	<body>
 		<!-- Wrapper -->
 		<div class="wrapper">
-			
 			<!-- Header -->
 			<header class="header">
 				<div class="header__row header__row--top d-flex ai-c">
@@ -39,38 +28,50 @@
 									Become a Seller
 								</a>
 							</div>
-							<div class="profile d-flex jc-c ai-c">
-								<ul class="profile__actions d-flex ai-c">
-									<li class="profile__item">
-										<a class="profile__btn" href="#">
-											<span class="sr-only">Notifications</span>
-											<span class="profile__icon lnr lnr-alarm"></span>
-											<span class="profile__count profile__count--red">25</span>
+							<div class="header__profile d-flex jc-c ai-c">
+								<ul class="header__actions d-flex ai-c">
+									<li class="header__item">
+										<a class="header__profile-btn" href="#">
+											<svg class="header__btn-icon">
+												<title>
+													Notifications
+												</title>
+												<use xlink:href="#ui-alarm" />
+											</svg>
+											<span class="header__count header__count--red">25</span>
 										</a>
 									</li>
-									<li class="profile__item">
-										<a class="profile__btn" href="#">
-											<span class="sr-only">Messages</span>
-											<span class="profile__icon lnr lnr-envelope"></span>
-											<span class="profile__count profile__count--green">6</span>
+									<li class="header__item">
+										<a class="header__profile-btn" href="#">
+											<svg class="header__btn-icon">
+												<title>
+													Inbox
+												</title>
+												<use xlink:href="#ui-envelope" />
+											</svg>
+											<span class="header__count header__count--green">6</span>
 										</a>
 									</li>
-									<li class="profile__item">
-										<a class="profile__btn" href="#">
-											<span class="sr-only">Cart</span>
-											<span class="profile__icon lnr lnr-cart"></span>
-											<span class="profile__count profile__count--blue">2</span>
+									<li class="header__item">
+										<a class="header__profile-btn" href="#">
+											<svg class="header__btn-icon">
+												<title>
+													Cart
+												</title>
+												<use xlink:href="#ui-cart" />
+											</svg>
+											<span class="header__count header__count--blue">2</span>
 										</a>
 									</li>
 								</ul>
-								<a class="profile__user user" href="#">
-									<img class="profile__img user__img" src="images/content/user-img-01.jpg" alt="User Photo">
-									<span class="profile__details">
-										<span class="profile__name">
+								<a class="header__user user" href="#">
+									<img class="header__img user__avatar" src="images/content/user-img-01.jpg" alt="User Photo">
+									<span class="header__details">
+										<span class="header__user-name">
 											Taofiq Hakim
 										</span>
-										<span class="profile__balance">
-											<span class="profile__currency">$</span>20.45
+										<span class="header__balance">
+											<span class="header__currency">$</span>20.45
 										</span>
 									</span>
 								</a>
@@ -78,7 +79,7 @@
 						</div>
 					</div>
 				</div>
-				
+
 				<div class="header__row header__row--bottom d-flex ai-c">
 					<div class="container">
 						<div class="header__inner d-flex jc-sb ai-c">
@@ -111,119 +112,134 @@
 									</li>
 								</ul>
 							</nav>
-			
-							<form class="header__form form" id="header-form" action="#">
-								<label class="form__label" for="#header-input">
-									<span class="sr-only">Search product here...</span>
-									<input class="form__input" id="header-input" type="search" placeholder="Search product here..." required/>
-									<button class="form__btn btn btn--blue" type="submit">
-										<span class="lnr lnr-magnifier"></span>
-										<span class="sr-only">Search</span>
+
+							<form class="header__form input-form" id="header-form" action="#">
+								<label class="input-form__label" for="#header-input">
+									<input class="input-form__text-box" id="header-input" type="search" placeholder="Search product here..."
+										required aria-label="Search product here..."/>
+									<button class="input-form__btn btn btn--blue" type="submit" aria-label="Search">
+										<svg class="input-form__icon">
+											<use xlink:href="#ui-magnifier" />
+										</svg>
 									</button>
 								</label>
 							</form>
 						</div>
 					</div>
 				</div>
-			
 			</header>
 			<!-- /Header -->
-			
-			
-	
+
 			<!-- Main -->
 			<main class="main">
-	
-				<!-- Intro -->
-				<section class="hero" style="background-image: url(images/bg/hero-bg.jpg);">
-					<div class="container">
-						<div class="hero__inner">
-							<div class="hero__title">
-								Create Your Own <span class="fw-bold">Digital Product Marketplace</span>
+				<!-- Hero -->
+				<section class="hero">
+					<div class="hero__body" style="background-image: url(images/bg/hero-bg.jpg);">
+						<div class="container">
+							<div class="hero__content">
+								<div class="hero__title">
+									Create Your Own <span class="fw-bold d-block">Digital Product Marketplace</span>
+								</div>
+								<p class="hero__tagline">
+									MartPlace is the most powerful, & customizable template for Easy Digital Downloads Products
+								</p>
+								<a class="hero__btn btn btn--xl btn--white" href="#">
+									View All Products
+								</a>
+								<a class="hero__btn hero__btn--transparent btn btn--xl btn--transparent" href="#">
+									Popular Products
+								</a>
 							</div>
-							<p class="hero__text">
-								MartPlace is the most powerful, & customizable template for Easy Digital Downloads Products
-							</p>
-							<a class="hero__btn btn btn--xl btn--white" href="#" >
-								View All Products
-							</a>
-							<a class="hero__btn hero__btn--transparent btn btn--xl btn--transparent" href="#" >
-								Popular Products
-							</a>
+						</div>
+					</div>
+					<div class="hero__search">
+						<div class="container">
+							<div class="hero__inner">
+								<form class="hero__form d-flex jc-c aic-c" name="hero__form" id="hero__form" action="#">
+									<label class="hero__label" for="#hero__input">
+										<input class="hero__input" id="hero__input" type="search" placeholder="Search your products..."
+											required aria-label="Search product here...">
+									</label>
+									<select class="hero__select" name="hero__select">
+										<option value="All Categories">
+											All Categories
+										</option>
+										<option value="Plugins">
+											Plugins
+										</option>
+										<option value="WordPress">
+											WordPress
+										</option>
+										<option value="Site Template">
+											Site Template
+										</option>
+										<option value="PSD Template">
+											PSD Template
+										</option>
+										<option value="Joomla">
+											Joomla
+										</option>
+										<option value="User Interface">
+											User Interface
+										</option>
+										<option value="Landing Page">
+											Landing Page
+										</option>
+										<option value="Software">
+											Software
+										</option>
+									</select>
+									<button class="hero__submit-btn btn btn--blue" type="submit">
+										Search Now
+									</button>
+								</form>
+							</div>
 						</div>
 					</div>
 				</section>
-				<!-- /Intro -->
-	
-				<!-- Search-box -->
-				<section class="search-box">
-					<div class="container">
-						<div class="search-box__inner">
-							<form class="search-box__form d-flex jc-c aic-c" name="search-box__form" action="#">
-								<label class="search-box__label">
-									<span class="sr-only">Search product here...</span>
-									<input class="search-box__input" name="search-box__input" type="search" placeholder="Search your products..." required>
-								</label>
-								<select class="search-box__select" name="search-box__select">
-									<option value="All Categories">All Categories</option>
-									<option value="Plugins">Plugins</option>
-									<option value="WordPress">WordPress</option>
-									<option value="Site Template">Site Template</option>
-									<option value="PSD Template">PSD Template</option>
-									<option value="Joomla">Joomla</option>
+				<!-- /Hero -->
 
-									<option value="User Interface">User Interface</option>
-									<option value="Landing Page">Landing Page</option>
-									<option value="Software">Software</option>
-								</select>
-								<button class="search-box__btn btn btn--blue" type="submit">
-									Search Now
-								</button>
-							</form>
-						</div>
-					</div>
-				</section>
-				<!-- /Search-box -->
-	
 				<!-- Features -->
 				<section class="features">
 					<div class="container">
-						<div class="features__inner d-flex jc-sb">
+						<div class="features__items d-flex jc-sb">
 							<div class="features__card">
 								<div class="features__img" style="background-image: url(images/ui/features-01.png);"></div>
 								<div class="features__title">
 									Best UX Research
 								</div>
 								<p class="features__text">
-									Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet diam congue is laoreet elit metus.
+									Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet
+									diam congue is laoreet elit metus.
 								</p>
 							</div>
-	
+
 							<div class="features__card">
 								<div class="features__img" style="background-image: url(images/ui/features-02.png);"></div>
 								<div class="features__title">
 									Fully Responsive
 								</div>
 								<p class="features__text">
-									Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet diam congue is laoreet elit metus.
+									Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet
+									diam congue is laoreet elit metus.
 								</p>
 							</div>
-	
+
 							<div class="features__card">
 								<div class="features__img" style="background-image: url(images/ui/features-03.png);"></div>
 								<div class="features__title">
 									Buy & Sell Easily
 								</div>
 								<p class="features__text">
-									Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet diam congue is laoreet elit metus.
+									Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet
+									diam congue is laoreet elit metus.
 								</p>
 							</div>
-	
 						</div>
 					</div>
 				</section>
 				<!-- /Features -->
-	
+
 				<!-- Featured products -->
 				<section class="featured section">
 					<div class="container">
@@ -233,215 +249,288 @@
 							</div>
 							<div class="section__slider-controls d-flex jc-sb ai-c">
 								<button type="button" class="section__slider-btn section__slider-btn--fuchsia section__slider-btn--prev">
-									<span class="sr-only">Prev</span>
+									<svg class="section__slider-icon">
+										<title>
+											Previous
+										</title>
+										<use xlink:href="#ui-arrow-prev"/>
+									</svg>
+									
 								</button>
 								<button type="button" class="section__slider-btn section__slider-btn--fuchsia section__slider-btn--next">
-									<span class="sr-only">Next</span>
+									<svg class="section__slider-icon">
+										<title>
+											Next
+										</title>
+										<use xlink:href="#ui-arrow-next"/>
+									</svg>
 								</button>
 							</div>
 						</div>
 
 						<div class="featured__slider swiper-container js-featured-slider">
-							<div class="featured__wrapper swiper-wrapper">
-	
-								<article class="featured-card d-flex product-card swiper-slide">
-									<div class="featured-card__aside product-card__aside">
-										<img class="product-card__img" src="images/content/featured-card-01.jpg" alt="Product Image">
-										<div class="product-card__overlay d-flex jc-c ai-c">
-											<a class="product-card__btn product-card__btn--transparent btn btn--lg btn--transparent" href="#">
+							<div class="featured__items swiper-wrapper">
+
+							<article class="featured__card item-card d-flex swiper-slide">
+									<div class="featured__aside item-card__aside">
+										<img class="item-card__img" src="images/content/featured-card-01.jpg" alt="Product Image">
+										<div class="item-card__overlay d-flex jc-c ai-c">
+											<a class="item-card__btn item-card__btn--transparent btn btn--lg btn--transparent" href="#">
 												More Info
 											</a>
-											<a class="product-card__btn btn btn--lg btn--white" href="#">
+											<a class="item-card__btn btn btn--lg btn--white" href="#">
 												Live Demo
 											</a>
 										</div>
 									</div>
-									<div class="featured-card__wrapper">
-										<div class="featured-card__body product-card__body">
-											<a class="featured-card__title product-card__title" href="#">
+									<div class="featured__wrapper">
+										<div class="featured__body item-card__body">
+											<a class="featured__title item-card__title" href="#">
 												One Page Resume Template
 											</a>
-											<div class="product-card__info d-flex ai-c">
-												<a class="featured-card__user product-card__user user" href="#">
-													<img class="featured-card__user-img product-card__user-img user__img" src="images/content/user-img-02.jpg" alt="Author Image">
-													<span class="product-card__user-name">
+											<div class="item-card__info d-flex ai-c">
+												<a class="featured__user item-card__user user" href="#">
+													<img class="featured__avatar item-card__avatar user__avatar"
+														src="images/content/user-img-02.jpg" alt="Author Image">
+													<span class="item-card__user-name">
 														AazzTech
 													</span>
 												</a>
-												<a class="product-card__category" href="#"><i class="product-card__category-icon icn icn-wp"></i>WordPress</a>
+												<a class="item-card__category d-flex" href="#">
+													<svg class="item-card__category-icon">
+														<use xlink:href="#ui-wp"/>
+													</svg>
+													WordPress
+												</a>
 											</div>
-											<p class="featured-card__text product-card__text">
-												Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue justo ut scelerisque.
+											<p class="featured__text item-card__text">
+												Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam
+												aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
+												leo quam aliquet congue justo ut scelerisque.
+												Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam
+												aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
+												leo quam aliquet congue justo ut scelerisque.
 											</p>
-											<ul class="product-card__tags d-flex ai-c">
-												<li class="product-card__tag">
-													<a class="product-card__tag-link btn btn--sm btn--gray" href="#">
+											<ul class="featured__tags d-flex ai-c">
+												<li class="featured__tag">
+													<a class="btn btn--sm btn--gray" href="#">
 														website
 													</a>
 												</li>
-												<li class="product-card__tag">
-													<a class="product-card__tag-link btn btn--sm btn--gray" href="#">
+												<li class="featured__tag">
+													<a class="btn btn--sm btn--gray" href="#">
 														plugin
 													</a>
 												</li>
-												<li class="product-card__tag">
-													<a class="product-card__tag-link btn btn--sm btn--gray" href="#">
+												<li class="featured__tag">
+													<a class="btn btn--sm btn--gray" href="#">
 														landing page
 													</a>
 												</li>
 											</ul>
 										</div>
-										<div class="featured-card__footer product-card__footer d-flex jc-sb ai-c">
-											<span class="product-card__footer-group d-flex jc-c ai-c">
-												<span class="featured-card__price product-card__price">
-													<span class="product-card__currency">$</span> 10 - <span class="product-card__currency">$</span>50
+										<div class="featured__footer item-card__footer d-flex jc-sb ai-c">
+											<span class="item-card__footer-group d-flex jc-c ai-c">
+												<span class="featured__price item-card__price">
+													<span class="item-card__currency">$</span> 10 - <span class="item-card__currency">$</span>50
 												</span>
-												<button class="featured-card__action product-card__action product-card__action--like" type="button">
-													<span class="featured-card__icon product-card__icon lnr lnr-heart"></span>46
+												<button class="featured__action item-card__action item-card__action--like" type="button">
+													<svg class="item-card__action-icon item-card__action-icon--like">
+														<title>
+															Add to Favorites
+														</title>
+														<use xlink:href="#ui-heart"/>
+													</svg>
+													46
 												</button>
-												<button class="featured-card__action product-card__action product-card__action--buy" type="button">
-													<span class="featured-card__icon product-card__icon lnr lnr-cart"></span>634
+												<button class="featured__action item-card__action item-card__action--buy" type="button">
+													<svg class="item-card__action-icon item-card__action-icon--buy">
+														<title>
+															Add to Cart
+														</title>
+														<use xlink:href="#ui-cart"/>
+													</svg>
+													634
 												</button>
 											</span>
-											<span class="product-card__rating"></span>
+											<span class="item-card__rating"></span>
 										</div>
 									</div>
 								</article>
-	
-								<article class="featured-card d-flex product-card swiper-slide">
-									<div class="featured-card__aside product-card__aside">
-										<img class="product-card__img" src="images/content/featured-card-02.jpg" alt="Product Image">
-										<div class="product-card__overlay d-flex jc-c ai-c">
-											<a class="product-card__btn product-card__btn--transparent btn btn--lg btn--transparent" href="#">
+
+							<article class="featured__card item-card d-flex swiper-slide">
+									<div class="featured__aside item-card__aside">
+										<img class="item-card__img" src="images/content/featured-card-02.jpg" alt="Product Image">
+										<div class="item-card__overlay d-flex jc-c ai-c">
+											<a class="item-card__btn item-card__btn--transparent btn btn--lg btn--transparent" href="#">
 												More Info
 											</a>
-											<a class="product-card__btn btn btn--lg btn--white" href="#">
+											<a class="item-card__btn btn btn--lg btn--white" href="#">
 												Live Demo
 											</a>
 										</div>
 									</div>
-									<div class="featured-card__wrapper">
-										<div class="featured-card__body product-card__body">
-											<a class="featured-card__title product-card__title" href="#">
+									<div class="featured__wrapper">
+										<div class="featured__body item-card__body">
+											<a class="featured__title item-card__title" href="#">
 												Persona - Personal Portfolio Template
 											</a>
-											<div class="product-card__info d-flex ai-c">
-												<a class="featured-card__user product-card__user user" href="#">
-													<img class="featured-card__user-img product-card__user-img user__img" src="images/content/user-img-03.jpg" alt="Author Image">
-													<span class="product-card__user-name">
+											<div class="item-card__info d-flex ai-c">
+												<a class="featured__user item-card__user user" href="#">
+													<img class="featured__avatar item-card__avatar user__avatar"
+														src="images/content/user-img-03.jpg" alt="Author Image">
+													<span class="item-card__user-name">
 														Coder-Lab
 													</span>
 												</a>
-												<a class="product-card__category" href="#"><i class="product-card__category-icon icn icn-html-five"></i>HTML</a>
+												<a class="item-card__category d-flex" href="#">
+													<svg class="item-card__category-icon">
+														<use xlink:href="#ui-html"/>
+													</svg>
+													HTML
+												</a>
 											</div>
-											<p class="featured-card__text product-card__text">
-												Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue justo ut scelerisque.
+											<p class="featured__text item-card__text">
+												Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam
+												aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
+												leo quam aliquet congue justo ut scelerisque.
 											</p>
-											<ul class="product-card__tags d-flex ai-c">
-												<li class="product-card__tag">
-													<a class="product-card__tag-link btn btn--sm btn--gray" href="#">
+											<ul class="featured__tags d-flex ai-c fxw-w">
+												<li class="featured__tag">
+													<a class="btn btn--sm btn--gray" href="#">
 														website
 													</a>
 												</li>
-												<li class="product-card__tag">
-													<a class="product-card__tag-link btn btn--sm btn--gray" href="#">
+												<li class="featured__tag">
+													<a class="btn btn--sm btn--gray" href="#">
 														landing page
 													</a>
 												</li>
-												<li class="product-card__tag">
-													<a class="product-card__tag-link btn btn--sm btn--gray" href="#">
+												<li class="featured__tag">
+													<a class="btn btn--sm btn--gray" href="#">
 														HTML
 													</a>
 												</li>
 											</ul>
 										</div>
-										<div class="featured-card__footer product-card__footer d-flex jc-sb ai-c">
-											<span class="product-card__footer-group d-flex jc-c ai-c">
-												<span class="featured-card__price product-card__price">
-													<span class="product-card__currency">$</span>10
+										<div class="featured__footer item-card__footer d-flex jc-sb ai-c">
+											<span class="item-card__footer-group d-flex jc-c ai-c">
+												<span class="featured__price item-card__price">
+													<span class="item-card__currency">$</span>10
 												</span>
-												<button class="featured-card__action product-card__action product-card__action--like" type="button">
-													<span class="featured-card__icon product-card__icon lnr lnr-heart"></span>57
+												<button class="featured__action item-card__action item-card__action--like" type="button">
+													<svg class="item-card__action-icon item-card__action-icon--like">
+														<title>
+															Add to Favorites
+														</title>
+														<use xlink:href="#ui-heart"/>
+													</svg>
+													57
 												</button>
-												<button class="featured-card__action product-card__action product-card__action--buy" type="button">
-													<span class="featured-card__icon product-card__icon lnr lnr-cart"></span>481
+												<button class="featured__action item-card__action item-card__action--buy" type="button">
+													<svg class="item-card__action-icon item-card__action-icon--buy">
+														<title>
+															Add to Cart
+														</title>
+														<use xlink:href="#ui-cart"/>
+													</svg>
+													481
 												</button>
 											</span>
-											<span class="product-card__rating"></span>
+											<span class="item-card__rating"></span>
 										</div>
 									</div>
 								</article>
-	
-								<article class="featured-card d-flex product-card swiper-slide">
-									<div class="featured-card__aside product-card__aside">
-										<img class="product-card__img" src="images/content/featured-card-03.jpg" alt="Product Image">
-										<div class="product-card__overlay d-flex jc-c ai-c">
-											<a class="product-card__btn product-card__btn--transparent btn btn--lg btn--transparent" href="#">
+
+							<article class="featured__card item-card d-flex swiper-slide">
+									<div class="featured__aside item-card__aside">
+										<img class="item-card__img" src="images/content/featured-card-03.jpg" alt="Product Image">
+										<div class="item-card__overlay d-flex jc-c ai-c">
+											<a class="item-card__btn item-card__btn--transparent btn btn--lg btn--transparent" href="#">
 												More Info
 											</a>
-											<a class="product-card__btn btn btn--lg btn--white" href="#">
+											<a class="item-card__btn btn btn--lg btn--white" href="#">
 												Live Demo
 											</a>
 										</div>
 									</div>
-									<div class="featured-card__wrapper">
-										<div class="featured-card__body product-card__body">
-											<a class="featured-card__title product-card__title" href="#">
+									<div class="featured__wrapper">
+										<div class="featured__body item-card__body">
+											<a class="featured__title item-card__title" href="#">
 												Dust - Personal Portfolio Template
 											</a>
-											<div class="product-card__info d-flex ai-c">
-												<a class="featured-card__user product-card__user user" href="#">
-													<img class="featured-card__user-img product-card__user-img user__img" src="images/content/user-img-05.jpg" alt="Author Image">
-													<span class="product-card__user-name">
+											<div class="item-card__info d-flex ai-c">
+												<a class="featured__user item-card__user user" href="#">
+													<img class="featured__avatar item-card__avatar user__avatar"
+														src="images/content/user-img-05.jpg" alt="Author Image">
+													<span class="item-card__user-name">
 														EchoTheme
 													</span>
 												</a>
-												<a class="product-card__category" href="#"><i class="product-card__category-icon icn icn-html-five"></i>HTML</a>
+												<a class="item-card__category d-flex" href="#">
+													<svg class="item-card__category-icon">
+														<use xlink:href="#ui-html"/>
+													</svg>
+													HTML
+												</a>
 											</div>
-											<p class="featured-card__text product-card__text">
-												Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue justo ut scelerisque.
+											<p class="featured__text item-card__text">
+												Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam
+												aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
+												leo quam aliquet congue justo ut scelerisque.
 											</p>
-											<ul class="product-card__tags d-flex ai-c">
-												<li class="product-card__tag">
-													<a class="product-card__tag-link btn btn--sm btn--gray" href="#">
+											<ul class="featured__tags d-flex ai-c">
+												<li class="featured__tag">
+													<a class="btn btn--sm btn--gray" href="#">
 														website
 													</a>
 												</li>
-												<li class="product-card__tag">
-													<a class="product-card__tag-link btn btn--sm btn--gray" href="#">
+												<li class="featured__tag">
+													<a class="btn btn--sm btn--gray" href="#">
 														landing page
 													</a>
 												</li>
-												<li class="product-card__tag">
-													<a class="product-card__tag-link btn btn--sm btn--gray" href="#">
+												<li class="featured__tag">
+													<a class="btn btn--sm btn--gray" href="#">
 														HTML
 													</a>
 												</li>
 											</ul>
 										</div>
-										<div class="featured-card__footer product-card__footer d-flex jc-sb ai-c">
-											<span class="product-card__footer-group d-flex jc-c ai-c">
-												<span class="featured-card__price product-card__price">
-													<span class="product-card__currency">$</span>12
+										<div class="featured__footer item-card__footer d-flex jc-sb ai-c">
+											<span class="item-card__footer-group d-flex jc-c ai-c">
+												<span class="featured__price item-card__price">
+													<span class="item-card__currency">$</span>12
 												</span>
-												<button class="featured-card__action product-card__action product-card__action--like" type="button">
-													<span class="featured-card__icon product-card__icon lnr lnr-heart"></span>39
+												<button class="featured__action item-card__action item-card__action--like" type="button">
+													<svg class="item-card__action-icon item-card__action-icon--like">
+														<title>
+															Add to Favorites
+														</title>
+														<use xlink:href="#ui-heart"/>
+													</svg>
+													39
 												</button>
-												<button class="featured-card__action product-card__action product-card__action--buy" type="button">
-													<span class="featured-card__icon product-card__icon lnr lnr-cart"></span>254
+												<button class="featured__action item-card__action item-card__action--buy" type="button">
+													<svg class="item-card__action-icon item-card__action-icon--buy">
+														<title>
+															Add to Cart
+														</title>
+														<use xlink:href="#ui-cart"/>
+													</svg>
+													254
 												</button>
 											</span>
-											<span class="product-card__rating"></span>
+											<span class="item-card__rating"></span>
 										</div>
 									</div>
 								</article>
-	
 							</div>
 						</div>
 					</div>
 				</section>
 				<!-- /Featured products -->
-	
+
 				<!-- Newest products -->
 				<section class="newest section">
 					<div class="container">
@@ -449,20 +538,44 @@
 							<div class="section__title">
 								Newest Release Products
 							</div>
-							<div class="newest__filter d-flex ai-c">
+							<div class="newest__filter d-flex jc-sb ai-c">
 								<button class="newest__filter-btn" type="button">
 									Filter by:
+									<svg class="newest__filter-icon">
+										<use xlink:href="#ui-menu" />
+									</svg>
 								</button>
 								<ul class="newest__dropdown">
-									<li class="newest__filter-item"><button class="newest__filter-option" data-filter=".trending">Trending items</button></li>
-									<li class="newest__filter-item"><button class="newest__filter-option" data-sort="seller:desc">Best seller</button></li>
-									<li class="newest__filter-item"><button class="newest__filter-option" data-sort="item-rating:desc">Best rating</button></li>
-									<li class="newest__filter-item"><button class="newest__filter-option" data-sort="price:asc">Low price</button></li>
-									<li class="newest__filter-item"><button class="newest__filter-option" data-sort="price:desc">High price</button></li>
+									<li class="newest__filter-item">
+										<button class="newest__filter-option" data-filter=".trending">
+											Trending items
+										</button>
+									</li>
+									<li class="newest__filter-item">
+										<button class="newest__filter-option" data-sort="seller:desc">
+											Best seller
+										</button>
+									</li>
+									<li class="newest__filter-item">
+										<button class="newest__filter-option" data-sort="item-rating:desc">
+											Best rating
+										</button>
+									</li>
+									<li class="newest__filter-item">
+										<button class="newest__filter-option" data-sort="price:asc">
+											Low price
+										</button>
+									</li>
+									<li class="newest__filter-item">
+										<button class="newest__filter-option" data-sort="price:desc">
+											High price
+										</button>
+									</li>
 								</ul>
 							</div>
 						</div>
-						<div class="newest__products">
+
+						<div class="newest__inner">
 							<div class="newest__categories">
 								<button class="newest__btn btn btn--md btn--gray" type="button" data-filter="all">
 									Plugins
@@ -489,553 +602,793 @@
 									Software
 								</button>
 							</div>
-							
+
 							<!-- New Products Items -->
-							<div class="newest__items">
-		
-								<div class="newest__wrapper d-flex fxw-w js-newest-mixitup">
+							<div class="newest__items d-flex fxw-w js-newest-mixitup">
+								<article class="item-card mix ui word-press" data-seller="4.67" data-price="20" data-rating="">
+									<div class="item-card__aside">
+										<img class="item-card__img" src="images/content/newest-card-01.jpg" alt="Product Image">
+										<div class="item-card__overlay d-flex jc-c ai-c">
+											<a class="item-card__btn item-card__btn--transparent btn btn--lg btn--transparent" href="#">
+												More Info
+											</a>
+											<a class="item-card__btn btn btn--lg btn--white" href="#">
+												Live Demo
+											</a>
+										</div>
+									</div>
+									<div class="item-card__body">
+										<a class="item-card__title" href="#">
+											E-commerce Shopping Cart
+										</a>
+										<div class="item-card__info d-flex ai-c">
+											<a class="item-card__user user" href="#">
+												<img class="item-card__avatar user__avatar" src="images/content/user-img-04.jpg" alt="Author Image">
+												<span class="item-card__user-name">
+													Theme-Valley
+												</span>
+											</a>
+											<a class="item-card__category d-flex" href="#">
+												<svg class="item-card__category-icon">
+													<use xlink:href="#ui-wp" />
+												</svg>
+												Plugin
+											</a>
+										</div>
+										<p class="item-card__text">
+											Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam
+											aliquet congue.
+											Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam
+											aliquet congue.
+										</p>
+									</div>
+									<div class="item-card__footer d-flex jc-sb ai-c">
+										<span class="item-card__footer-group d-flex jc-c ai-c">
+											<span class="item-card__price">
+												<span class="item-card__currency">$</span>20
+											</span>
+											<button class="item-card__action item-card__action--like" type="button">
+												<svg class="item-card__action-icon item-card__action-icon--like">
+													<title>
+														Add to Favorites
+													</title>
+													<use xlink:href="#ui-heart" />
+												</svg>
+												90
+											</button>
+										</span>
+										<button class="item-card__action item-card__action--buy" type="button">
+											<svg class="item-card__action-icon item-card__action-icon--buy">
+												<title>
+													Add to Cart
+												</title>
+												<use xlink:href="#ui-cart" />
+											</svg>
+											246
+										</button>
+									</div>
+								</article>
 
-									<article class="product-card mix ui word-press" data-seller="4.67" data-price="20" data-rating="">
-										<div class="product-card__aside">
-											<img class="product-card__img" src="images/content/newest-card-01.jpg" alt="Product Image">
-											<div class="product-card__overlay d-flex jc-c ai-c">
-												<a class="product-card__btn product-card__btn--transparent btn btn--lg btn--transparent" href="#">
-													More Info
-												</a>
-												<a class="product-card__btn btn btn--lg btn--white" href="#">
-													Live Demo
-												</a>
-											</div>
-										</div>
-										<div class="product-card__body">
-											<a class="product-card__title" href="#">
-												E-commerce Shopping Cart
+								<article class="item-card mix landing-page psd-template" data-seller="4.9" data-price="18" data-rating="">
+									<div class="item-card__aside">
+										<img class="item-card__img" src="images/content/newest-card-02.jpg" alt="Product Image">
+										<div class="item-card__overlay d-flex jc-c ai-c">
+											<a class="item-card__btn item-card__btn--transparent btn btn--lg btn--transparent" href="#">
+												More Info
 											</a>
-											<div class="product-card__info d-flex ai-c">
-												<a class="product-card__user user" href="#">
-													<img class="product-card__user-img user__img" src="images/content/user-img-04.jpg" alt="Author Image">
-													<span class="product-card__user-name">
-														Theme-Valley
-													</span>
-												</a>
-												<a class="product-card__category" href="#"><i class="product-card__category-icon icn icn-wp"></i>Plugin</a>
-											</div>
-											<p class="product-card__text">
-												Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue.
-											</p>
+											<a class="item-card__btn btn btn--lg btn--white" href="#">
+												Live Demo
+											</a>
 										</div>
-										<div class="product-card__footer d-flex jc-sb ai-c">
-											<span class="product-card__footer-group d-flex jc-c ai-c">
-												<span class="product-card__price"><span class="product-card__currency">$</span>20</span>
-												<button class="product-card__action product-card__action--like" type="button">
-													<span class="product-card__icon lnr lnr-heart"></span>90
-												</button>
+									</div>
+									<div class="item-card__body">
+										<a class="item-card__title" href="#">
+											Marketify Coffee Shop
+										</a>
+										<div class="item-card__info d-flex ai-c">
+											<a class="item-card__user user" href="#">
+												<img class="item-card__avatar user__avatar" src="images/content/user-img-05.jpg" alt="Author Image">
+												<span class="item-card__user-name">
+													EchoTheme
+												</span>
+											</a>
+											<a class="item-card__category d-flex" href="#">
+												<svg class="item-card__category-icon">
+													<use xlink:href="#ui-psd" />
+												</svg>
+												PSD
+											</a>
+										</div>
+										<p class="item-card__text">
+											Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam
+											aliquet congue.
+										</p>
+									</div>
+									<div class="item-card__footer d-flex jc-sb ai-c">
+										<span class="item-card__footer-group d-flex jc-c ai-c">
+											<span class="item-card__price">
+												<span class="item-card__currency">$</span>18
 											</span>
-											<button class="product-card__action product-card__action--buy" type="button">
-												<span class="product-card__icon lnr lnr-cart"></span>246
+											<button class="item-card__action item-card__action--like" type="button">
+												<svg class="item-card__action-icon item-card__action-icon--like">
+													<title>
+														Add to Favorites
+													</title>
+													<use xlink:href="#ui-heart" />
+												</svg>
+												46
 											</button>
-										</div>
-									</article>
-			
-									<article class="product-card mix landing-page psd-template" data-seller="4.9" data-price="18" data-rating="">
-										<div class="product-card__aside">
-											<img class="product-card__img" src="images/content/newest-card-02.jpg" alt="Product Image">
-											<div class="product-card__overlay d-flex jc-c ai-c">
-												<a class="product-card__btn product-card__btn--transparent btn btn--lg btn--transparent" href="#">
-													More Info
-												</a>
-												<a class="product-card__btn btn btn--lg btn--white" href="#">
-													Live Demo
-												</a>
-											</div>
-										</div>
-										<div class="product-card__body">
-											<a class="product-card__title" href="#">
-												Marketify Coffee Shop
-											</a>
-											<div class="product-card__info d-flex ai-c">
-												<a class="product-card__user user" href="#">
-													<img class="product-card__user-img user__img" src="images/content/user-img-05.jpg" alt="Author Image">
-													<span class="product-card__user-name">
-														EchoTheme
-													</span>
-												</a>
-												<a class="product-card__category" href="#"><i class="product-card__category-icon icn icn-psd"></i>PSD</a>
-											</div>
-											<p class="product-card__text">
-												Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue.
-											</p>
-										</div>
-										<div class="product-card__footer d-flex jc-sb ai-c">
-											<span class="product-card__footer-group d-flex jc-c ai-c">
-												<span class="product-card__price"><span class="product-card__currency">$</span>18</span>
-												<button class="product-card__action product-card__action--like" type="button">
-													<span class="product-card__icon lnr lnr-heart"></span>46
-												</button>
-											</span>
-											<button class="product-card__action product-card__action--buy" type="button">
-												<span class="product-card__icon lnr lnr-cart"></span>634
-											</button>
-										</div>
-									</article>
-			
-									<article class="product-card mix site-template trending" data-seller="4.84" data-price="10" data-rating="4.5">
-										<div class="product-card__aside">
-											<img class="product-card__img" src="images/content/newest-card-03.jpg" alt="Product Image">
-											<div class="product-card__overlay d-flex jc-c ai-c">
-												<a class="product-card__btn product-card__btn--transparent btn btn--lg btn--transparent" href="#">
-													More Info
-												</a>
-												<a class="product-card__btn btn btn--lg btn--white" href="#">
-													Live Demo
-												</a>
-											</div>
-										</div>
-										<div class="product-card__body">
-											<a class="product-card__title" href="#">
-												Bryson - Portfolio Template
-											</a>
-											<div class="product-card__info d-flex ai-c">
-												<a class="product-card__user user" href="#">
-													<img class="product-card__user-img user__img" src="images/content/user-img-06.jpg" alt="Author Image">
-													<span class="product-card__user-name">
-														Artcorner
-													</span>
-												</a>
-												<a class="product-card__category" href="#"><i class="product-card__category-icon icn icn-html-five"></i>HTML</a>
-											</div>
-											<p class="product-card__text">
-												Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue.
-											</p>
-										</div>
-										<div class="product-card__footer d-flex jc-sb ai-c">
-											<span class="product-card__footer-group d-flex jc-c ai-c">
-												<span class="product-card__price">
-													<span class="product-card__currency">$</span>10</span>
-												<button class="product-card__action product-card__action--like" type="button">
-													<span class="product-card__icon lnr lnr-heart"></span>56
-												</button>
-												<span class="product-card__rating"></span>
-											</span>
-											<button class="product-card__action product-card__action--buy" type="button">
-												<span class="product-card__icon lnr lnr-cart"></span>68
-											</button>
-										</div>
-									</article>
-										
-									<article class="product-card mix ui word-press" data-seller="4.80" data-price="10" data-rating="4.5">
-										<div class="product-card__aside">
-											<img class="product-card__img" src="images/content/newest-card-04.jpg" alt="Product Image">
-											<div class="product-card__overlay d-flex jc-c ai-c">
-												<a class="product-card__btn product-card__btn--transparent btn btn--lg btn--transparent" href="#">
-													More Info
-												</a>
-												<a class="product-card__btn btn btn--lg btn--white" href="#">
-													Live Demo
-												</a>
-											</div>
-										</div>
-										<div class="product-card__body">
-											<a class="product-card__title" href="#">
-												E-commerce Shopping Cart
-											</a>
-											<div class="product-card__info d-flex ai-c">
-												<a class="product-card__user user" href="#">
-													<img class="product-card__user-img user__img" src="images/content/user-img-07.jpg" alt="Author Image">
-													<span class="product-card__user-name">
-														Design-Hub
-													</span>
-												</a>
-												<a class="product-card__category" href="#"><i class="product-card__category-icon icn icn-wp"></i>Plugin</a>
-											</div>
-											<p class="product-card__text">
-												Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue.
-											</p>
-										</div>
-										<div class="product-card__footer d-flex jc-sb ai-c">
-											<span class="product-card__footer-group d-flex jc-c ai-c">
-												<span class="product-card__price"><span class="product-card__currency">$</span>10 - 50</span>
-												<button class="product-card__action product-card__action--like" type="button">
-													<span class="product-card__icon lnr lnr-heart"></span>90
-												</button>
-												<span class="product-card__rating"></span>
-											</span>
-											<button class="product-card__action product-card__action--buy" type="button">
-												<span class="product-card__icon lnr lnr-cart"></span>45
-											</button>
-										</div>
-									</article>
-			
-									<article class="product-card mix landing-page psd-template trending" data-seller="4.99" data-price="10" data-rating="">
-										<div class="product-card__aside">
-											<img class="product-card__img" src="images/content/newest-card-05.jpg" alt="Product Image">
-											<div class="product-card__overlay d-flex jc-c ai-c">
-												<a class="product-card__btn product-card__btn--transparent btn btn--lg btn--transparent" href="#">
-													More Info
-												</a>
-												<a class="product-card__btn btn btn--lg btn--white" href="#">
-													Live Demo
-												</a>
-											</div>
-										</div>
-										<div class="product-card__body">
-											<a class="product-card__title" href="#">
-												Marketify Coffee Shop
-											</a>
-											<div class="product-card__info d-flex ai-c">
-												<a class="product-card__user user" href="#">
-													<img class="product-card__user-img user__img" src="images/content/user-img-02.jpg" alt="Author Image">
-													<span class="product-card__user-name">
-														AazzTech
-													</span>
-												</a>
-												<a class="product-card__category" href="#"><i class="product-card__category-icon icn icn-psd"></i>PSD</a>
-											</div>
-											<p class="product-card__text">
-												Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue.
-											</p>
-										</div>
-										<div class="product-card__footer d-flex jc-sb ai-c">
-											<span class="product-card__footer-group d-flex jc-c ai-c">
-												<span class="product-card__price"><span class="product-card__currency">$</span>10 - 50</span>
-												<button class="product-card__action product-card__action--like" type="button"><span class="product-card__icon lnr lnr-heart"></span>48</button>
-											</span>
-											<button class="product-card__action product-card__action--buy" type="button"><span class="product-card__icon lnr lnr-cart"></span>50</button>
-										</div>
-									</article>
-			
-									<article class="product-card mix site-template trending" data-seller="4.85" data-price="10" data-rating="4.5">
-										<div class="product-card__aside">
-											<img class="product-card__img" src="images/content/newest-card-06.jpg" alt="Product Image">
-											<div class="product-card__overlay d-flex jc-c ai-c">
-												<a class="product-card__btn product-card__btn--transparent btn btn--lg btn--transparent" href="#">
-													More Info
-												</a>
-												<a class="product-card__btn btn btn--lg btn--white" href="#">
-													Live Demo
-												</a>
-											</div>
-										</div>
-										<div class="product-card__body">
-											<a class="product-card__title" href="#">
-												Bryson - Portfolio Template
-											</a>
-											<div class="product-card__info d-flex ai-c">
-												<a class="product-card__user user" href="#">
-													<img class="product-card__user-img user__img" src="images/content/user-img-03.jpg" alt="Author Image">
-													<span class="product-card__user-name">
-														Coder-Lab
-													</span>
-												</a>
-												<a class="product-card__category" href="#"><i class="product-card__category-icon icn icn-html-five"></i>HTML</a>
-											</div>
-											<p class="product-card__text">
-												Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue.
-											</p>
-										</div>
-										<div class="product-card__footer d-flex jc-sb ai-c">
-											<span class="product-card__footer-group d-flex jc-c ai-c">
-												<span class="product-card__price"><span class="product-card__currency">$</span>10</span>
-												<button class="product-card__action product-card__action--like" type="button">
-													<span class="product-card__icon lnr lnr-heart"></span>56
-												</button>
-												<span class="product-card__rating"></span>
-											</span>
-											<button class="product-card__action product-card__action--buy" type="button">
-												<span class="product-card__icon lnr lnr-cart"></span>68
-											</button>
-										</div>
-									</article>
+										</span>
+										<button class="item-card__action item-card__action--buy" type="button">
+											<svg class="item-card__action-icon item-card__action-icon--buy">
+												<title>
+													Add to Cart
+												</title>
+												<use xlink:href="#ui-cart" />
+											</svg>
+											634
+										</button>
+									</div>
+								</article>
 
-								</div>
-		
+								<article class="item-card mix site-template trending" data-seller="4.84" data-price="10" data-rating="4.5">
+									<div class="item-card__aside">
+										<img class="item-card__img" src="images/content/newest-card-03.jpg" alt="Product Image">
+										<div class="item-card__overlay d-flex jc-c ai-c">
+											<a class="item-card__btn item-card__btn--transparent btn btn--lg btn--transparent" href="#">
+												More Info
+											</a>
+											<a class="item-card__btn btn btn--lg btn--white" href="#">
+												Live Demo
+											</a>
+										</div>
+									</div>
+									<div class="item-card__body">
+										<a class="item-card__title" href="#">
+											Bryson - Portfolio Template
+										</a>
+										<div class="item-card__info d-flex ai-c">
+											<a class="item-card__user user" href="#">
+												<img class="item-card__avatar user__avatar" src="images/content/user-img-06.jpg" alt="Author Image">
+												<span class="item-card__user-name">
+													Artcorner
+												</span>
+											</a>
+											<a class="item-card__category d-flex" href="#">
+												<svg class="item-card__category-icon">
+													<use xlink:href="#ui-html" />
+												</svg>
+												HTML
+											</a>
+										</div>
+										<p class="item-card__text">
+											Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam
+											aliquet congue.
+										</p>
+									</div>
+									<div class="item-card__footer d-flex jc-sb ai-c">
+										<span class="item-card__footer-group d-flex jc-c ai-c">
+											<span class="item-card__price">
+												<span class="item-card__currency">$</span>10
+											</span>
+											<button class="item-card__action item-card__action--like" type="button">
+												<svg class="item-card__action-icon item-card__action-icon--like">
+													<title>
+														Add to Favorites
+													</title>
+													<use xlink:href="#ui-heart" />
+												</svg>
+												56
+											</button>
+											<span class="item-card__rating"></span>
+										</span>
+										<button class="item-card__action item-card__action--buy" type="button">
+											<svg class="item-card__action-icon item-card__action-icon--buy">
+												<title>
+													Add to Cart
+												</title>
+												<use xlink:href="#ui-cart" />
+											</svg>
+											68
+										</button>
+									</div>
+								</article>
+
+								<article class="item-card mix ui word-press" data-seller="4.80" data-price="10" data-rating="4.5">
+									<div class="item-card__aside">
+										<img class="item-card__img" src="images/content/newest-card-04.jpg" alt="Product Image">
+										<div class="item-card__overlay d-flex jc-c ai-c">
+											<a class="item-card__btn item-card__btn--transparent btn btn--lg btn--transparent" href="#">
+												More Info
+											</a>
+											<a class="item-card__btn btn btn--lg btn--white" href="#">
+												Live Demo
+											</a>
+										</div>
+									</div>
+									<div class="item-card__body">
+										<a class="item-card__title" href="#">
+											E-commerce Shopping Cart
+										</a>
+										<div class="item-card__info d-flex ai-c">
+											<a class="item-card__user user" href="#">
+												<img class="item-card__avatar user__avatar" src="images/content/user-img-07.jpg" alt="Author Image">
+												<span class="item-card__user-name">
+													Design-Hub
+												</span>
+											</a>
+											<a class="item-card__category d-flex" href="#">
+												<svg class="item-card__category-icon">
+													<use xlink:href="#ui-wp" />
+												</svg>
+												Plugin
+											</a>
+										</div>
+										<p class="item-card__text">
+											Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam
+											aliquet congue.
+										</p>
+									</div>
+									<div class="item-card__footer d-flex jc-sb ai-c">
+										<span class="item-card__footer-group d-flex jc-c ai-c">
+											<span class="item-card__price">
+												<span class="item-card__currency">$</span>10 - 50
+											</span>
+											<button class="item-card__action item-card__action--like" type="button">
+												<svg class="item-card__action-icon item-card__action-icon--like">
+													<title>
+														Add to Favorites
+													</title>
+													<use xlink:href="#ui-heart" />
+												</svg>
+												90
+											</button>
+											<span class="item-card__rating"></span>
+										</span>
+										<button class="item-card__action item-card__action--buy" type="button">
+											<svg class="item-card__action-icon item-card__action-icon--buy">
+												<title>
+													Add to Cart
+												</title>
+												<use xlink:href="#ui-cart" />
+											</svg>
+											45
+										</button>
+									</div>
+								</article>
+
+								<article class="item-card mix landing-page psd-template trending" data-seller="4.99" data-price="10"
+									data-rating="">
+									<div class="item-card__aside">
+										<img class="item-card__img" src="images/content/newest-card-05.jpg" alt="Product Image">
+										<div class="item-card__overlay d-flex jc-c ai-c">
+											<a class="item-card__btn item-card__btn--transparent btn btn--lg btn--transparent" href="#">
+												More Info
+											</a>
+											<a class="item-card__btn btn btn--lg btn--white" href="#">
+												Live Demo
+											</a>
+										</div>
+									</div>
+									<div class="item-card__body">
+										<a class="item-card__title" href="#">
+											Marketify Coffee Shop
+										</a>
+										<div class="item-card__info d-flex ai-c">
+											<a class="item-card__user user" href="#">
+												<img class="item-card__avatar user__avatar" src="images/content/user-img-02.jpg" alt="Author Image">
+												<span class="item-card__user-name">
+													AazzTech
+												</span>
+											</a>
+											<a class="item-card__category d-flex" href="#">
+												<svg class="item-card__category-icon">
+													<use xlink:href="#ui-psd" />
+												</svg>
+												PSD
+											</a>
+										</div>
+										<p class="item-card__text">
+											Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam
+											aliquet congue.
+										</p>
+									</div>
+									<div class="item-card__footer d-flex jc-sb ai-c">
+										<span class="item-card__footer-group d-flex jc-c ai-c">
+											<span class="item-card__price">
+												<span class="item-card__currency">$</span>10 - 50
+											</span>
+											<button class="item-card__action item-card__action--like" type="button">
+												<svg class="item-card__action-icon item-card__action-icon--like">
+													<title>
+														Add to Favorites
+													</title>
+													<use xlink:href="#ui-heart" />
+												</svg>
+												48
+											</button>
+										</span>
+										<button class="item-card__action item-card__action--buy" type="button">
+											<svg class="item-card__action-icon item-card__action-icon--buy">
+												<title>
+													Add to Cart
+												</title>
+												<use xlink:href="#ui-cart" />
+											</svg>
+											50
+										</button>
+									</div>
+								</article>
+
+								<article class="item-card mix site-template trending" data-seller="4.85" data-price="10" data-rating="4.5">
+									<div class="item-card__aside">
+										<img class="item-card__img" src="images/content/newest-card-06.jpg" alt="Product Image">
+										<div class="item-card__overlay d-flex jc-c ai-c">
+											<a class="item-card__btn item-card__btn--transparent btn btn--lg btn--transparent" href="#">
+												More Info
+											</a>
+											<a class="item-card__btn btn btn--lg btn--white" href="#">
+												Live Demo
+											</a>
+										</div>
+									</div>
+									<div class="item-card__body">
+										<a class="item-card__title" href="#">
+											Bryson - Portfolio Template
+										</a>
+										<div class="item-card__info d-flex ai-c">
+											<a class="item-card__user user" href="#">
+												<img class="item-card__avatar user__avatar" src="images/content/user-img-03.jpg" alt="Author Image">
+												<span class="item-card__user-name">
+													Coder-Lab
+												</span>
+											</a>
+											<a class="item-card__category d-flex" href="#">
+												<svg class="item-card__category-icon">
+													<use xlink:href="#ui-html" />
+												</svg>
+												HTML
+											</a>
+										</div>
+										<p class="item-card__text">
+											Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam
+											aliquet congue.
+										</p>
+									</div>
+									<div class="item-card__footer d-flex jc-sb ai-c">
+										<span class="item-card__footer-group d-flex jc-c ai-c">
+											<span class="item-card__price">
+												<span class="item-card__currency">$</span>10
+											</span>
+											<button class="item-card__action item-card__action--like" type="button">
+												<svg class="item-card__action-icon item-card__action-icon--like">
+													<title>
+														Add to Favorites
+													</title>
+													<use xlink:href="#ui-heart" />
+												</svg>
+												56
+											</button>
+											<span class="item-card__rating"></span>
+										</span>
+										<button class="item-card__action item-card__action--buy" type="button">
+											<svg class="item-card__action-icon item-card__action-icon--buy">
+												<title>
+													Add to Cart
+												</title>
+												<use xlink:href="#ui-cart" />
+											</svg>
+											68
+										</button>
+									</div>
+								</article>
 							</div>
 							<!-- /New Products Items -->
 
 						</div>
-						<button class="btn btn--centered btn--xl btn--blue">All New Products</button>
+						<button class="btn btn--center btn--xl btn--blue">
+							All New Products
+						</button>
 					</div>
 				</section>
 				<!-- /Newest products -->
-	
 				<!-- Followers feed -->
-				<section class="section feed">
+				<section class="followers-feed section">
 					<div class="container">
 						<div class="section__header d-flex jc-sb ai-c">
 							<div class="section__title">
 								Your Followers Feed
 							</div>
-							<div class="section__slider-controls d-flex jc-sb ai-c">
+							<div class="section__slider-controls d-flex ai-c">
 								<button type="button" class="section__slider-btn section__slider-btn--prev">
-									<span class="sr-only">Prev</span>
+									<svg class="section__slider-icon">
+										<title>Previous</title>
+										<use xlink:href="#ui-arrow-prev" />
+									</svg>
 								</button>
 								<button type="button" class="section__slider-btn section__slider-btn--next">
-									<span class="sr-only">Next</span>
+									<svg class="section__slider-icon">
+										<title>Next</title>
+										<use xlink:href="#ui-arrow-next" />
+									</svg>
 								</button>
 							</div>
 						</div>
-						<div class="feed__slider swiper-container js-feed-slider">
-							<div class="feed__wrapper swiper-wrapper">
-								
-								<article class="product-card swiper-slide">
-									<div class="product-card__aside">
-										<img class="product-card__img" src="images/content/newest-card-01.jpg" alt="Product Image">
-										<div class="product-card__overlay d-flex jc-c ai-c">
-											<a class="product-card__btn product-card__btn--transparent btn btn--lg btn--transparent" href="#">
+						<div class="followers-feed__slider swiper-container js-followers-feed-slider">
+							<div class="followers-feed__wrapper swiper-wrapper">
+								<article class="item-card swiper-slide">
+									<div class="item-card__aside">
+										<img class="item-card__img" src="images/content/newest-card-01.jpg" alt="Product Image">
+										<div class="item-card__overlay d-flex jc-c ai-c">
+											<a class="item-card__btn item-card__btn--transparent btn btn--lg btn--transparent" href="#">
 												More Info
 											</a>
-											<a class="product-card__btn btn btn--lg btn--white" href="#">
+											<a class="item-card__btn btn btn--lg btn--white" href="#">
 												Live Demo
 											</a>
 										</div>
 									</div>
-									<div class="product-card__body">
-										<a class="product-card__title" href="#">
+									<div class="item-card__body">
+										<a class="item-card__title" href="#">
 											E-commerce Shopping Cart
 										</a>
-										<div class="product-card__info d-flex ai-c">
-											<a class="product-card__user user" href="#">
-												<img class="product-card__user-img user__img" src="images/content/user-img-04.jpg" alt="Author Image">
-												<span class="product-card__user-name">
+										<div class="item-card__info d-flex ai-c">
+											<a class="item-card__user user" href="#">
+												<img class="item-card__avatar user__avatar" src="images/content/user-img-04.jpg" alt="Author Image">
+												<span class="item-card__user-name">
 													Theme-Valley
 												</span>
 											</a>
-											<a class="product-card__category" href="#"><i class="product-card__category-icon icn icn-wp"></i>Plugin</a>
+											<a class="item-card__category d-flex" href="#">
+												<svg class="item-card__category-icon">
+													<use xlink:href="#ui-wp" />
+												</svg>
+												Plugin
+											</a>
 										</div>
-										<p class="product-card__text">
-											Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue.
+										<p class="item-card__text">
+											Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam
+											aliquet congue.
 										</p>
 									</div>
-									<div class="product-card__footer d-flex jc-sb ai-c">
-										<span class="product-card__footer-group d-flex jc-c ai-c">
-											<span class="product-card__price"><span class="product-card__currency">$</span>20</span>
-											<button class="product-card__action product-card__action--like" type="button">
-												<span class="product-card__icon lnr lnr-heart"></span>90
+									<div class="item-card__footer d-flex jc-sb ai-c">
+										<span class="item-card__footer-group d-flex jc-c ai-c">
+											<span class="item-card__price">
+												<span class="item-card__currency">$</span>20
+											</span>
+											<button class="item-card__action item-card__action--like" type="button">
+												<svg class="item-card__action-icon item-card__action-icon--like">
+													<title>
+														Add to Favorites
+													</title>
+													<use xlink:href="#ui-heart" />
+												</svg>
+												90
 											</button>
 										</span>
-										<button class="product-card__action product-card__action--buy" type="button">
-											<span class="product-card__icon lnr lnr-cart"></span>246
-										</button>
-									</div>
-								</article>
-		
-								<article class="product-card swiper-slide">
-									<div class="product-card__aside">
-										<img class="product-card__img" src="images/content/newest-card-02.jpg" alt="Product Image">
-										<div class="product-card__overlay d-flex jc-c ai-c">
-											<a class="product-card__btn product-card__btn--transparent btn btn--lg btn--transparent" href="#">
-												More Info
-											</a>
-											<a class="product-card__btn btn btn--lg btn--white" href="#">
-												Live Demo
-											</a>
-										</div>
-									</div>
-									<div class="product-card__body">
-										<a class="product-card__title" href="#">
-											Marketify Coffee Shop
-										</a>
-										<div class="product-card__info d-flex ai-c">
-											<a class="product-card__user user" href="#">
-												<img class="product-card__user-img user__img" src="images/content/user-img-05.jpg" alt="Author Image">
-												<span class="product-card__user-name">
-													EchoTheme
-												</span>
-											</a>
-											<a class="product-card__category" href="#"><i class="product-card__category-icon icn icn-psd"></i>PSD</a>
-										</div>
-										<p class="product-card__text">
-											Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue.
-										</p>
-									</div>
-									<div class="product-card__footer d-flex jc-sb ai-c">
-										<span class="product-card__footer-group d-flex jc-c ai-c">
-											<span class="product-card__price"><span class="product-card__currency">$</span>18</span>
-											<button class="product-card__action product-card__action--like" type="button">
-												<span class="product-card__icon lnr lnr-heart"></span>46
-											</button>
-										</span>
-										<button class="product-card__action product-card__action--buy" type="button">
-											<span class="product-card__icon lnr lnr-cart"></span>634
-										</button>
-									</div>
-								</article>
-		
-								<article class="product-card swiper-slide">
-									<div class="product-card__aside">
-										<img class="product-card__img" src="images/content/newest-card-03.jpg" alt="Product Image">
-										<div class="product-card__overlay d-flex jc-c ai-c">
-											<a class="product-card__btn product-card__btn--transparent btn btn--lg btn--transparent" href="#">
-												More Info
-											</a>
-											<a class="product-card__btn btn btn--lg btn--white" href="#">
-												Live Demo
-											</a>
-										</div>
-									</div>
-									<div class="product-card__body">
-										<a class="product-card__title" href="#">
-											Bryson - Portfolio Template
-										</a>
-										<div class="product-card__info d-flex ai-c">
-											<a class="product-card__user user" href="#">
-												<img class="product-card__user-img user__img" src="images/content/user-img-06.jpg" alt="Author Image">
-												<span class="product-card__user-name">
-													Artcorner
-												</span>
-											</a>
-											<a class="product-card__category" href="#"><i class="product-card__category-icon icn icn-html-five"></i>HTML</a>
-										</div>
-										<p class="product-card__text">
-											Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue.
-										</p>
-									</div>
-									<div class="product-card__footer d-flex jc-sb ai-c">
-										<span class="product-card__footer-group d-flex jc-c ai-c">
-											<span class="product-card__price">
-												<span class="product-card__currency">$</span>10</span>
-											<button class="product-card__action product-card__action--like" type="button">
-												<span class="product-card__icon lnr lnr-heart"></span>56
-											</button>
-											<span class="product-card__rating"></span>
-										</span>
-										<button class="product-card__action product-card__action--buy" type="button">
-											<span class="product-card__icon lnr lnr-cart"></span>68
-										</button>
-									</div>
-								</article>
-									
-								<article class="product-card swiper-slide">
-									<div class="product-card__aside">
-										<img class="product-card__img" src="images/content/newest-card-04.jpg" alt="Product Image">
-										<div class="product-card__overlay d-flex jc-c ai-c">
-											<a class="product-card__btn product-card__btn--transparent btn btn--lg btn--transparent" href="#">
-												More Info
-											</a>
-											<a class="product-card__btn btn btn--lg btn--white" href="#">
-												Live Demo
-											</a>
-										</div>
-									</div>
-									<div class="product-card__body">
-										<a class="product-card__title" href="#">
-											E-commerce Shopping Cart
-										</a>
-										<div class="product-card__info d-flex ai-c">
-											<a class="product-card__user user" href="#">
-												<img class="product-card__user-img user__img" src="images/content/user-img-07.jpg" alt="Author Image">
-												<span class="product-card__user-name">
-													Design-Hub
-												</span>
-											</a>
-											<a class="product-card__category" href="#"><i class="product-card__category-icon icn icn-wp"></i>Plugin</a>
-										</div>
-										<p class="product-card__text">
-											Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue.
-										</p>
-									</div>
-									<div class="product-card__footer d-flex jc-sb ai-c">
-										<span class="product-card__footer-group d-flex jc-c ai-c">
-											<span class="product-card__price"><span class="product-card__currency">$</span>10 - 50</span>
-											<button class="product-card__action product-card__action--like" type="button">
-												<span class="product-card__icon lnr lnr-heart"></span>90
-											</button>
-											<span class="product-card__rating"></span>
-										</span>
-										<button class="product-card__action product-card__action--buy" type="button">
-											<span class="product-card__icon lnr lnr-cart"></span>
-										</button>
-									</div>
-								</article>
-		
-								<article class="product-card swiper-slide">
-									<div class="product-card__aside">
-										<img class="product-card__img" src="images/content/newest-card-05.jpg" alt="Product Image">
-										<div class="product-card__overlay d-flex jc-c ai-c">
-											<a class="product-card__btn product-card__btn--transparent btn btn--lg btn--transparent" href="#">
-												More Info
-											</a>
-											<a class="product-card__btn btn btn--lg btn--white" href="#">
-												Live Demo
-											</a>
-										</div>
-									</div>
-									<div class="product-card__body">
-										<a class="product-card__title" href="#">
-											Marketify Coffee Shop
-										</a>
-										<div class="product-card__info d-flex ai-c">
-											<a class="product-card__user user" href="#">
-												<img class="product-card__user-img user__img" src="images/content/user-img-02.jpg" alt="Author Image">
-												<span class="product-card__user-name">
-													AazzTech
-												</span>
-											</a>
-											<a class="product-card__category" href="#"><i class="product-card__category-icon icn icn-psd"></i>PSD</a>
-										</div>
-										<p class="product-card__text">
-											Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue.
-										</p>
-									</div>
-									<div class="product-card__footer d-flex jc-sb ai-c">
-										<span class="product-card__footer-group d-flex jc-c ai-c">
-											<span class="product-card__price"><span class="product-card__currency">$</span>10 - 50</span>
-											<button class="product-card__action product-card__action--like" type="button"><span class="product-card__icon lnr lnr-heart"></span>48</button>
-										</span>
-										<button class="product-card__action product-card__action--buy" type="button"><span class="product-card__icon lnr lnr-cart"></span>50</button>
-									</div>
-								</article>
-		
-								<article class="product-card swiper-slide">
-									<div class="product-card__aside">
-										<img class="product-card__img" src="images/content/newest-card-06.jpg" alt="Product Image">
-										<div class="product-card__overlay d-flex jc-c ai-c">
-											<a class="product-card__btn product-card__btn--transparent btn btn--lg btn--transparent" href="#">
-												More Info
-											</a>
-											<a class="product-card__btn btn btn--lg btn--white" href="#">
-												Live Demo
-											</a>
-										</div>
-									</div>
-									<div class="product-card__body">
-										<a class="product-card__title" href="#">
-											Bryson - Portfolio Template
-										</a>
-										<div class="product-card__info d-flex ai-c">
-											<a class="product-card__user user" href="#">
-												<img class="product-card__user-img user__img" src="images/content/user-img-03.jpg" alt="Author Image">
-												<span class="product-card__user-name">
-													Coder-Lab
-												</span>
-											</a>
-											<a class="product-card__category" href="#"><i class="product-card__category-icon icn icn-html-five"></i>HTML</a>
-										</div>
-										<p class="product-card__text">
-											Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue.
-										</p>
-									</div>
-									<div class="product-card__footer d-flex jc-sb ai-c">
-										<span class="product-card__footer-group d-flex jc-c ai-c">
-											<span class="product-card__price"><span class="product-card__currency">$</span>10</span>
-											<button class="product-card__action product-card__action--like" type="button">
-												<span class="product-card__icon lnr lnr-heart"></span>56
-											</button>
-											<span class="product-card__rating"></span>
-										</span>
-										<button class="product-card__action product-card__action--buy" type="button">
-											<span class="product-card__icon lnr lnr-cart"></span>68
+										<button class="item-card__action item-card__action--buy" type="button">
+											<svg class="item-card__action-icon item-card__action-icon--buy">
+												<title>
+													Add to Cart
+												</title>
+												<use xlink:href="#ui-cart" />
+											</svg>
+											246
 										</button>
 									</div>
 								</article>
 
+								<article class="item-card swiper-slide">
+									<div class="item-card__aside">
+										<img class="item-card__img" src="images/content/newest-card-02.jpg" alt="Product Image">
+										<div class="item-card__overlay d-flex jc-c ai-c">
+											<a class="item-card__btn item-card__btn--transparent btn btn--lg btn--transparent" href="#">
+												More Info
+											</a>
+											<a class="item-card__btn btn btn--lg btn--white" href="#">
+												Live Demo
+											</a>
+										</div>
+									</div>
+									<div class="item-card__body">
+										<a class="item-card__title" href="#">
+											Marketify Coffee Shop
+										</a>
+										<div class="item-card__info d-flex ai-c">
+											<a class="item-card__user user" href="#">
+												<img class="item-card__avatar user__avatar" src="images/content/user-img-05.jpg" alt="Author Image">
+												<span class="item-card__user-name">
+													EchoTheme
+												</span>
+											</a>
+											<a class="item-card__category d-flex" href="#">
+												<svg class="item-card__category-icon">
+													<use xlink:href="#ui-psd" />
+												</svg>
+												PSD
+											</a>
+										</div>
+										<p class="item-card__text">
+											Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam
+											aliquet congue.
+										</p>
+									</div>
+									<div class="item-card__footer d-flex jc-sb ai-c">
+										<span class="item-card__footer-group d-flex jc-c ai-c">
+											<span class="item-card__price">
+												<span class="item-card__currency">$</span>18
+											</span>
+											<button class="item-card__action item-card__action--like" type="button">
+												<svg class="item-card__action-icon item-card__action-icon--like">
+													<title>
+														Add to Favorites
+													</title>
+													<use xlink:href="#ui-heart" />
+												</svg>
+												46
+											</button>
+										</span>
+										<button class="item-card__action item-card__action--buy" type="button">
+											<svg class="item-card__action-icon item-card__action-icon--buy">
+												<title>
+													Add to Cart
+												</title>
+												<use xlink:href="#ui-cart" />
+											</svg>
+											634
+										</button>
+									</div>
+								</article>
+
+								<article class="item-card swiper-slide">
+									<div class="item-card__aside">
+										<img class="item-card__img" src="images/content/newest-card-03.jpg" alt="Product Image">
+										<div class="item-card__overlay d-flex jc-c ai-c">
+											<a class="item-card__btn item-card__btn--transparent btn btn--lg btn--transparent" href="#">
+												More Info
+											</a>
+											<a class="item-card__btn btn btn--lg btn--white" href="#">
+												Live Demo
+											</a>
+										</div>
+									</div>
+									<div class="item-card__body">
+										<a class="item-card__title" href="#">
+											Bryson - Portfolio Template
+										</a>
+										<div class="item-card__info d-flex ai-c">
+											<a class="item-card__user user" href="#">
+												<img class="item-card__avatar user__avatar" src="images/content/user-img-06.jpg" alt="Author Image">
+												<span class="item-card__user-name">
+													Artcorner
+												</span>
+											</a>
+											<a class="item-card__category d-flex" href="#">
+												<svg class="item-card__category-icon">
+													<use xlink:href="#ui-html" />
+												</svg>
+												HTML
+											</a>
+										</div>
+										<p class="item-card__text">
+											Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam
+											aliquet congue.
+										</p>
+									</div>
+									<div class="item-card__footer d-flex jc-sb ai-c">
+										<span class="item-card__footer-group d-flex jc-c ai-c">
+											<span class="item-card__price">
+												<span class="item-card__currency">$</span>10
+											</span>
+											<button class="item-card__action item-card__action--like" type="button">
+												<svg class="item-card__action-icon item-card__action-icon--like">
+													<title>
+														Add to Favorites
+													</title>
+													<use xlink:href="#ui-heart" />
+												</svg>
+												56
+											</button>
+											<span class="item-card__rating"></span>
+										</span>
+										<button class="item-card__action item-card__action--buy" type="button">
+											<svg class="item-card__action-icon item-card__action-icon--buy">
+												<title>
+													Add to Cart
+												</title>
+												<use xlink:href="#ui-cart" />
+											</svg>
+											68
+										</button>
+									</div>
+								</article>
+
+								<article class="item-card swiper-slide">
+									<div class="item-card__aside">
+										<img class="item-card__img" src="images/content/newest-card-04.jpg" alt="Product Image">
+										<div class="item-card__overlay d-flex jc-c ai-c">
+											<a class="item-card__btn item-card__btn--transparent btn btn--lg btn--transparent" href="#">
+												More Info
+											</a>
+											<a class="item-card__btn btn btn--lg btn--white" href="#">
+												Live Demo
+											</a>
+										</div>
+									</div>
+									<div class="item-card__body">
+										<a class="item-card__title" href="#">
+											E-commerce Shopping Cart
+										</a>
+										<div class="item-card__info d-flex ai-c">
+											<a class="item-card__user user" href="#">
+												<img class="item-card__avatar user__avatar" src="images/content/user-img-07.jpg" alt="Author Image">
+												<span class="item-card__user-name">
+													Design-Hub
+												</span>
+											</a>
+											<a class="item-card__category d-flex" href="#">
+												<svg class="item-card__category-icon">
+													<use xlink:href="#ui-wp" />
+												</svg>
+												Plugin
+											</a>
+										</div>
+										<p class="item-card__text">
+											Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam
+											aliquet congue.
+										</p>
+									</div>
+									<div class="item-card__footer d-flex jc-sb ai-c">
+										<span class="item-card__footer-group d-flex jc-c ai-c">
+											<span class="item-card__price">
+												<span class="item-card__currency">$</span>10 - 50
+											</span>
+											<button class="item-card__action item-card__action--like" type="button">
+												<svg class="item-card__action-icon item-card__action-icon--like">
+													<use xlink:href="#ui-heart" />
+												</svg>
+												90
+											</button>
+											<span class="item-card__rating"></span>
+										</span>
+										<button class="item-card__action item-card__action--buy" type="button">
+											<svg class="item-card__action-icon item-card__action-icon--buy">
+												<title>
+													Add to Cart
+												</title>
+												<use xlink:href="#ui-cart" />
+											</svg>
+											45
+										</button>
+									</div>
+								</article>
+
+								<article class="item-card swiper-slide">
+									<div class="item-card__aside">
+										<img class="item-card__img" src="images/content/newest-card-05.jpg" alt="Product Image">
+										<div class="item-card__overlay d-flex jc-c ai-c">
+											<a class="item-card__btn item-card__btn--transparent btn btn--lg btn--transparent" href="#">
+												More Info
+											</a>
+											<a class="item-card__btn btn btn--lg btn--white" href="#">
+												Live Demo
+											</a>
+										</div>
+									</div>
+									<div class="item-card__body">
+										<a class="item-card__title" href="#">
+											Marketify Coffee Shop
+										</a>
+										<div class="item-card__info d-flex ai-c">
+											<a class="item-card__user user" href="#">
+												<img class="item-card__avatar user__avatar" src="images/content/user-img-02.jpg" alt="Author Image">
+												<span class="item-card__user-name">
+													AazzTech
+												</span>
+											</a>
+											<a class="item-card__category d-flex" href="#">
+												<svg class="item-card__category-icon">
+													<use xlink:href="#ui-psd" />
+												</svg>
+												PSD
+											</a>
+										</div>
+										<p class="item-card__text">
+											Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam
+											aliquet congue.
+										</p>
+									</div>
+									<div class="item-card__footer d-flex jc-sb ai-c">
+										<span class="item-card__footer-group d-flex jc-c ai-c">
+											<span class="item-card__price">
+												<span class="item-card__currency">$</span>10 - 50
+											</span>
+											<button class="item-card__action item-card__action--like" type="button">
+												<svg class="item-card__action-icon item-card__action-icon--like">
+													<title>
+														Add to Favorites
+													</title>
+													<use xlink:href="#ui-heart" />
+												</svg>
+												48
+											</button>
+										</span>
+										<button class="item-card__action item-card__action--buy" type="button">
+											<svg class="item-card__action-icon item-card__action-icon--buy">
+												<title>
+													Add to Cart
+												</title>
+												<use xlink:href="#ui-cart" />
+											</svg>
+											50
+										</button>
+									</div>
+								</article>
+
+								<article class="item-card swiper-slide">
+									<div class="item-card__aside">
+										<img class="item-card__img" src="images/content/newest-card-06.jpg" alt="Product Image">
+										<div class="item-card__overlay d-flex jc-c ai-c">
+											<a class="item-card__btn item-card__btn--transparent btn btn--lg btn--transparent" href="#">
+												More Info
+											</a>
+											<a class="item-card__btn btn btn--lg btn--white" href="#">
+												Live Demo
+											</a>
+										</div>
+									</div>
+									<div class="item-card__body">
+										<a class="item-card__title" href="#">
+											Bryson - Portfolio Template
+										</a>
+										<div class="item-card__info d-flex ai-c">
+											<a class="item-card__user user" href="#">
+												<img class="item-card__avatar user__avatar" src="images/content/user-img-03.jpg" alt="Author Image">
+												<span class="item-card__user-name">
+													Coder-Lab
+												</span>
+											</a>
+											<a class="item-card__category d-flex" href="#">
+												<svg class="item-card__category-icon">
+													<use xlink:href="#ui-html" />
+												</svg>
+												HTML
+											</a>
+										</div>
+										<p class="item-card__text">
+											Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam
+											aliquet congue.
+										</p>
+									</div>
+									<div class="item-card__footer d-flex jc-sb ai-c">
+										<span class="item-card__footer-group d-flex jc-c ai-c">
+											<span class="item-card__price">
+												<span class="item-card__currency">$</span>10
+											</span>
+											<button class="item-card__action item-card__action--like" type="button">
+												<svg class="item-card__action-icon item-card__action-icon--like">
+													<use xlink:href="#ui-heart" />
+												</svg>
+												56
+											</button>
+											<span class="item-card__rating"></span>
+										</span>
+										<button class="item-card__action item-card__action--buy" type="button">
+											<svg class="item-card__action-icon item-card__action-icon--buy">
+												<title>
+													Add to Cart
+												</title>
+												<use xlink:href="#ui-cart" />
+											</svg>
+											68
+										</button>
+									</div>
+								</article>
 							</div>
 						</div>
-						
 					</div>
 				</section>
 				<!-- /Followers feed -->
-	
 				<!-- Stats -->
 				<section class="stats">
 					<div class="container">
@@ -1072,88 +1425,78 @@
 							Why Choose <span class="txt-blue">MartPlace</span>
 						</div>
 						<div class="section__subheading">
-							Laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats. Lid est laborum dolo rumes fugats untras.
+							Laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats. Lid est laborum
+							dolo rumes fugats untras.
 						</div>
-						<div class="reason__inner d-flex fxw-w">
+						<div class="reason__items d-flex fxw-w">
 
-							<div class="reason-card d-flex jc-c ai-c fd-c">
-								<div class="reason-card__number">
-									01
-								</div>
-								<div class="reason-card__img" style="background-image: url(images/ui/reason-license.svg);"></div>
-								<div class="reason-card__title">
+							<div class="reason__card d-flex jc-c ai-c fd-c">
+								<div class="reason__img" style="background-image: url(images/ui/reason-license.svg);"></div>
+								<div class="reason__title">
 									One Time Payment
 								</div>
-								<p class="reason-card__text">
-									Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet diam congue is laoreet elit metus.
+								<p class="reason__text">
+									Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet
+									diam congue is laoreet elit metus.
+									unc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet
+									diam congue is laoreet elit metus.
 								</p>
 							</div>
 
-							<div class="reason-card d-flex jc-c ai-c fd-c">
-								<div class="reason-card__number">
-									02
-								</div>
-								<div class="reason-card__img" style="background-image: url(images/ui/reason-magic-wand.svg);"></div>
-								<div class="reason-card__title">
+							<div class="reason__card d-flex jc-c ai-c fd-c">
+								<div class="reason__img" style="background-image: url(images/ui/reason-magic-wand.svg);"></div>
+								<div class="reason__title">
 									Quality Products
 								</div>
-								<p class="reason-card__text">
-									Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet diam congue is laoreet elit metus.
+								<p class="reason__text">
+									Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet
+									diam congue is laoreet elit metus.
 								</p>
 							</div>
 
-							<div class="reason-card d-flex jc-c ai-c fd-c">
-								<div class="reason-card__number">
-									03
-								</div>
-								<div class="reason-card__img" style="background-image: url(images/ui/reason-lock.svg);"></div>
-								<div class="reason-card__title">
+							<div class="reason__card d-flex jc-c ai-c fd-c">
+								<div class="reason__img" style="background-image: url(images/ui/reason-lock.svg);"></div>
+								<div class="reason__title">
 									100% Secure Payment
 								</div>
-								<p class="reason-card__text">
-									Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet diam congue is laoreet elit metus.
+								<p class="reason__text">
+									Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet
+									diam congue is laoreet elit metus.
 								</p>
 							</div>
 
-							<div class="reason-card d-flex jc-c ai-c fd-c">
-								<div class="reason-card__number">
-									04
-								</div>
-								<div class="reason-card__img" style="background-image: url(images/ui/reason-chart-bars.svg);"></div>
-								<div class="reason-card__title">
+							<div class="reason__card d-flex jc-c ai-c fd-c">
+								<div class="reason__img" style="background-image: url(images/ui/reason-chart-bars.svg);"></div>
+								<div class="reason__title">
 									Well Organized Code
 								</div>
-								<p class="reason-card__text">
-									Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet diam congue is laoreet elit metus.
+								<p class="reason__text">
+									Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet
+									diam congue is laoreet elit metus.
 								</p>
 							</div>
 
-							<div class="reason-card d-flex jc-c ai-c fd-c">
-								<div class="reason-card__number">
-									05
-								</div>
-								<div class="reason-card__img" style="background-image: url(images/ui/reason-leaf.svg);"></div>
-								<div class="reason-card__title">
+							<div class="reason__card d-flex jc-c ai-c fd-c">
+								<div class="reason__img" style="background-image: url(images/ui/reason-leaf.svg);"></div>
+								<div class="reason__title">
 									Life Time Free Update
 								</div>
-								<p class="reason-card__text">
-									Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet diam congue is laoreet elit metus.
+								<p class="reason__text">
+									Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet
+									diam congue is laoreet elit metus.
 								</p>
 							</div>
 
-							<div class="reason-card d-flex jc-c ai-c fd-c">
-								<div class="reason-card__number">
-									06
-								</div>
-								<div class="reason-card__img" style="background-image: url(images/ui/reason-phone.svg);"></div>
-								<div class="reason-card__title">
+							<div class="reason__card d-flex jc-c ai-c fd-c">
+								<div class="reason__img" style="background-image: url(images/ui/reason-phone.svg);"></div>
+								<div class="reason__title">
 									Fast and Friendly Support
 								</div>
-								<p class="reason-card__text">
-									Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet diam congue is laoreet elit metus.
+								<p class="reason__text">
+									Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet
+									diam congue is laoreet elit metus.
 								</p>
 							</div>
-
 						</div>
 					</div>
 				</section>
@@ -1162,28 +1505,30 @@
 				<!-- Sell-buy -->
 				<section class="sell-buy">
 					<div class="sell-buy__inner d-flex fxw-w">
-						<div class="sell-buy__col d-flex jc-c ai-c fd-c" style="background-image: url(images/bg/sell-buy-bg-01.jpg);">
-							<div class="sell-buy__img" style="background-image: url(images/ui/sell-buy-01.svg); background-size: 120px, 101px;"></div>
+						<div class="sell-buy__col" style="background-image: url(images/bg/sell-buy-bg-01.jpg);">
+							<div class="sell-buy__img" style="background-image: url(images/ui/sell-buy-01.svg);"></div>
 							<div class="sell-buy__title">
 								Sell Your Products
 							</div>
 							<p class="sell-buy__text">
-								Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet diamcongue is laoreet elit metus.
+								Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet
+								diamcongue is laoreet elit metus.
 							</p>
 							<a class="sell-buy__btn btn btn--xl btn--white" href="#">
 								Become an Author
 							</a>
 						</div>
 
-						<div class="sell-buy__col d-flex jc-c ai-c fd-c" style="background-image: url(images/bg/sell-buy-bg-02.jpg);">
-							<div class="sell-buy__img" style="background-image: url(images/ui/sell-buy-02.svg); background-size: 100px, 100px;"></div>
+						<div class="sell-buy__col" style="background-image: url(images/bg/sell-buy-bg-02.jpg);">
+							<div class="sell-buy__img" style="background-image: url(images/ui/sell-buy-02.svg);"></div>
 							<div class="sell-buy__title">
 								Start Shopping Today
 							</div>
 							<p class="sell-buy__text">
-								Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet diamcongue is laoreet elit metus.
+								Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet
+								diamcongue is laoreet elit metus.
 							</p>
-							<a class="sell-buy__btn sell-buy__btn--wide btn btn--xl btn--white" href="#">
+							<a class="sell-buy__btn btn btn--xl btn--white-alt" href="#">
 								Start Shopping
 							</a>
 						</div>
@@ -1191,106 +1536,132 @@
 				</section>
 				<!-- /Sell-buy -->
 
-				<!-- Reviews -->
-				<section class="reviews section">
+				<!-- Feedback -->
+				<section class="feedback section">
 					<div class="container">
-						<div class="section__heading">
-							Our Clients <span class="txt-blue">Feedback</span>
-						</div>
-						<div class="section__subheading">
-							Laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats. Lid est laborum dolo rumes fugats untras.
-						</div>
-						<div class="reviews__slider swiper-container js-reviews-slider">
-							<div class="reviews__wrapper swiper-wrapper">
 
-								<div class="review-card swiper-slide">
-									<div class="review-card__header d-flex jc-sb ai-c">
-										<a class="review-card__author user" href="#">
-											<img class="review-card__img user__img" src="images/content/user-img-01.jpg" alt="User Photo">
-											<span class="review-card__details">
-												<span class="review-card__name">
-													Taofiqul Hakim
-												</span>
-												<span class="review-card__position">
-													Product Designer
-												</span>
-											</span>
-										</a>
-										<div class="review-card__icon" style="background-image: url(images/ui/ui-icon-bubble.svg); background-size: 57px, 51px;"></div>
-									</div>
-									<p class="review-card__text">
-										Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet diam congue is the laoreet elit metus. Nunc placerat mi is id nisi interdum is mollis. Praesent the pharetra, justo ut scelerisque.
-									</p>
-								</div>
-
-								<div class="review-card swiper-slide">
-									<div class="review-card__header d-flex jc-sb ai-c">
-										<a class="review-card__author user" href="#">
-											<img class="review-card__img user__img" src="images/content/user-img-08.jpg" alt="User Photo">
-											<span class="review-card__details">
-												<span class="review-card__name">
-													Saifullah Al Murtafee
-												</span>
-												<span class="review-card__position">
-													Product Designer
-												</span>
-											</span>
-										</a>
-										<div class="review-card__icon" style="background-image: url(images/ui/ui-icon-bubble.svg); background-size: 57px, 51px;"></div>
-									</div>
-									<p class="review-card__text">
-										Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet diam congue is the laoreet elit metus. Nunc placerat mi is id nisi interdum is mollis. Praesent the pharetra, justo ut scelerisque.
-									</p>
-								</div>
-
-								<div class="review-card swiper-slide">
-									<div class="review-card__header d-flex jc-sb ai-c">
-										<a class="review-card__author user" href="#">
-											<img class="review-card__img user__img" src="images/content/user-img-09.jpg" alt="User Photo">
-											<span class="review-card__details">
-												<span class="review-card__name">
-													Jennifer Smith
-												</span>
-												<span class="review-card__position">
-													Product Designer
-												</span>
-											</span>
-										</a>
-										<div class="review-card__icon" style="background-image: url(images/ui/ui-icon-bubble.svg); background-size: 57px, 51px;"></div>
-									</div>
-									<p class="review-card__text">
-										Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet diam congue is the laoreet elit metus. Nunc placerat mi is id nisi interdum is mollis. Praesent the pharetra, justo ut scelerisque.
-									</p>
-								</div>
-
-								<div class="review-card swiper-slide">
-									<div class="review-card__header d-flex jc-sb ai-c">
-										<a class="review-card__author user" href="#">
-											<img class="review-card__img user__img" src="images/content/user-img-10.jpg" alt="User Photo">
-											<span class="review-card__details">
-												<span class="review-card__name">
-													Amanda Stone
-												</span>
-												<span class="review-card__position">
-													Product Designer
-												</span>
-											</span>
-										</a>
-										<div class="review-card__icon" style="background-image: url(images/ui/ui-icon-bubble.svg); background-size: 57px, 51px;"></div>
-									</div>
-									<p class="review-card__text">
-										Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet diam congue is the laoreet elit metus. Nunc placerat mi is id nisi interdum is mollis. Praesent the pharetra, justo ut scelerisque.
-									</p>
-								</div>
-
+						<div class="section__inner d-flex fd-c aic-c">
+							<div class="section__heading">
+								Our Clients <span class="txt-blue">Feedback</span>
 							</div>
-							<button class="reviews__slider-btn reviews__slider-btn--prev"></button>
-							<button class="reviews__slider-btn reviews__slider-btn--next"></button>
+							<div class="section__subheading">
+								Laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats. Lid est laborum
+								dolo rumes fugats untras.
+							</div>
+							<div class="feedback__slider swiper-container js-feedback-slider">
+								<div class="feedback__wrapper swiper-wrapper">
+									<div class="feedback-card swiper-slide">
+										<div class="feedback-card__header d-flex jc-sb ai-c">
+											<a class="feedback-card__author user" href="#">
+												<img class="feedback-card__img user__avatar" src="images/content/user-img-01.jpg" alt="User Photo">
+												<span class="feedback-card__details">
+													<span class="feedback-card__name">
+														Taofiqul Hakim
+													</span>
+													<span class="feedback-card__position">
+														Product Designer
+													</span>
+												</span>
+											</a>
+											<div class="feedback-card__icon"
+												style="background-image: url(images/ui/ui-icon-bubble.svg); background-size: 57px, 51px;"></div>
+										</div>
+										<p class="feedback-card__text">
+											Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam
+											aliquet diam congue is the laoreet elit metus. Nunc placerat mi is id nisi interdum is mollis. Praesent the
+											pharetra, justo ut scelerisque.
+										</p>
+									</div>
+	
+									<div class="feedback-card swiper-slide">
+										<div class="feedback-card__header d-flex jc-sb ai-c">
+											<a class="feedback-card__author user" href="#">
+												<img class="feedback-card__img user__avatar" src="images/content/user-img-08.jpg" alt="User Photo">
+												<span class="feedback-card__details">
+													<span class="feedback-card__name">
+														Saifullah Al Murtafee
+													</span>
+													<span class="feedback-card__position">
+														Product Designer
+													</span>
+												</span>
+											</a>
+											<div class="feedback-card__icon"
+												style="background-image: url(images/ui/ui-icon-bubble.svg); background-size: 57px, 51px;"></div>
+										</div>
+										<p class="feedback-card__text">
+											Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam
+											aliquet diam congue is the laoreet elit metus. Nunc placerat mi is id nisi interdum is mollis. Praesent the
+											pharetra, justo ut scelerisque.
+										</p>
+									</div>
+	
+									<div class="feedback-card swiper-slide">
+										<div class="feedback-card__header d-flex jc-sb ai-c">
+											<a class="feedback-card__author user" href="#">
+												<img class="feedback-card__img user__avatar" src="images/content/user-img-09.jpg" alt="User Photo">
+												<span class="feedback-card__details">
+													<span class="feedback-card__name">
+														Jennifer Smith
+													</span>
+													<span class="feedback-card__position">
+														Product Designer
+													</span>
+												</span>
+											</a>
+											<div class="feedback-card__icon"
+												style="background-image: url(images/ui/ui-icon-bubble.svg); background-size: 57px, 51px;"></div>
+										</div>
+										<p class="feedback-card__text">
+											Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam
+											aliquet diam congue is the laoreet elit metus. Nunc placerat mi is id nisi interdum is mollis. Praesent the
+											pharetra, justo ut scelerisque.
+										</p>
+									</div>
+	
+									<div class="feedback-card swiper-slide">
+										<div class="feedback-card__header d-flex jc-sb ai-c">
+											<a class="feedback-card__author user" href="#">
+												<img class="feedback-card__img user__avatar" src="images/content/user-img-10.jpg" alt="User Photo">
+												<span class="feedback-card__details">
+													<span class="feedback-card__name">
+														Amanda Stone
+													</span>
+													<span class="feedback-card__position">
+														Product Designer
+													</span>
+												</span>
+											</a>
+											<div class="feedback-card__icon"
+												style="background-image: url(images/ui/ui-icon-bubble.svg); background-size: 57px, 51px;"></div>
+										</div>
+										<p class="feedback-card__text">
+											Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam
+											aliquet diam congue is the laoreet elit metus. Nunc placerat mi is id nisi interdum is mollis. Praesent the
+											pharetra, justo ut scelerisque.
+										</p>
+									</div>
+	
+								</div>
+								<button class="feedback__slider-btn feedback__slider-btn--prev">
+									<svg class="feedback__slider-icon">
+										<title>Previous</title>
+										<use xlink:href="#ui-arrow-prev"/>
+									</svg>
+								</button>
+								<button class="feedback__slider-btn feedback__slider-btn--next">
+									<svg class="feedback__slider-icon">
+										<title>Next</title>
+										<use xlink:href="#ui-arrow-next"/>
+									</svg>
+								</button>
+							</div>
+							
+							<a class="btn btn--center btn--xl btn--blue" href="#">View All feedback</a>
 						</div>
-						<a class="btn btn--centered btn--xl btn--blue" href="#">View All Reviews</a>
 					</div>
 				</section>
-				<!-- /Reviews -->
+				<!-- /Feedback -->
 
 				<!-- Latest news -->
 				<section class="latest-news section">
@@ -1299,102 +1670,156 @@
 							Latest <span class="txt-blue">News</span>
 						</div>
 						<div class="section__subheading">
-							Laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats. Lid est laborum dolo rumes fugats untras.
+							Laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats. Lid est laborum
+							dolo rumes fugats untras.
 						</div>
-						<div class="latest-news__inner d-flex">
+						<div class="latest-news__items d-flex">
 
-							<article class="news-card">
-								<a class="news-card__img" href="#" style="background-image: url(images/content/latest-news-card-01.jpg)"></a>
-								<div class="news-card__body">
-									<div class="news-card__title">
+							<article class="latest-news__card item-card">
+								<a class="item-card__aside" href="#">
+									<img class="item-card__img" src="images/content/latest-news-card-01.jpg" alt="Web Design Trends">
+								</a>
+								<div class="item-card__body">
+									<a class="latest-news__card-title item-card__title" href="#">
 										Web Design Trends in 2017
-									</div>
-									<p class="news-card__text">
-										Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue.
+									</a>
+									<p class="item-card__text">
+										Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+										the mattis, leo quam aliquet congue.
 									</p>
 								</div>
-								<div class="news-card__footer d-flex ai-c">
-									<time class="news-card__time">
+								<div class="latest-news__card-footer item-card__footer d-flex jc-sb ai-c">
+									<time class="latest-news__time">
+										<svg class="latest-news__time-icon">
+											<use xlink:href="#ui-clock" />
+										</svg>
 										24 Feb 2017
 									</time>
-									<div class="news-card__stats d-flex jc-sb">
-										<span class="news-card__stat-link news-card__stat-link--comments">
+									<div class="latest-news__stats d-flex jc-sb">
+										<a class="latest-news__stat-link news-card__stat-link--comments" href="#">
+											<svg class="latest-news__stat-icon">
+												<title>
+													Read Comments
+												</title>
+												<use xlink:href="#ui-bubble" />
+											</svg>
 											45
-										</span>
-										<span class="news-card__stat-link news-card__stat-link--views">
+										</a>
+										<a class="latest-news__stat-link news-card__stat-link--views" href="#">
+											<svg class="latest-news__stat-icon">
+												<title>
+													Viewed
+												</title>
+												<use xlink:href="#ui-view" />
+											</svg>
 											345
-										</span>
+										</a>
 									</div>
 								</div>
 							</article>
 
-							<article class="news-card">
-								<a class="news-card__img" href="#" style="background-image: url(images/content/latest-news-card-02.jpg)"></a>
-								<div class="news-card__body">
-									<div class="news-card__title">
+							<article class="latest-news__card item-card">
+								<a class="item-card__aside" href="#">
+									<img class="item-card__img" src="images/content/latest-news-card-02.jpg" alt="Start your own project">
+								</a>
+								<div class="item-card__body">
+									<a class="latest-news__card-title item-card__title" href="#">
 										The best advices to start your own project
-									</div>
-									<p class="news-card__text">
+									</a>
+									<p class="item-card__text">
 										Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
 									</p>
 								</div>
-								<div class="news-card__footer d-flex ai-c">
-									<time class="news-card__time">
+								<div class="latest-news__card-footer item-card__footer d-flex jc-sb ai-c">
+									<time class="latest-news__time">
+										<svg class="latest-news__time-icon">
+											<use xlink:href="#ui-clock" />
+										</svg>
 										15 Mar 2017
 									</time>
-									<div class="news-card__stats d-flex jc-sb">
-										<span class="news-card__stat-link news-card__stat-link--comments">
+									<div class="latest-news__stats d-flex jc-sb">
+										<a class="latest-news__stat-link news-card__stat-link--comments" href="#">
+											<svg class="latest-news__stat-icon">
+												<title>
+													Read Comments
+												</title>
+												<use xlink:href="#ui-bubble" />
+											</svg>
 											45
-										</span>
-										<span class="news-card__stat-link news-card__stat-link--views">
+										</a>
+										<a class="latest-news__stat-link news-card__stat-link--views" href="#">
+											<svg class="latest-news__stat-icon">
+												<title>
+													Viewed
+												</title>
+												<use xlink:href="#ui-view" />
+											</svg>
 											345
-										</span>
+										</a>
 									</div>
 								</div>
 							</article>
 
-							<article class="news-card">
-								<a class="news-card__img" href="#" style="background-image: url(images/content/latest-news-card-03.jpg)"></a>
-								<div class="news-card__body">
-									<div class="news-card__title">
+							<article class="latest-news__card item-card">
+								<a class="item-card__aside" href="#">
+									<img class="item-card__img" src="images/content/latest-news-card-03.jpg" alt="Word Press Related Post Plugin">
+								</a>
+								<div class="item-card__body">
+									<a class="latest-news__card-title item-card__title" href="#">
 										Best Related Post Plugin
-									</div>
-									<p class="news-card__text">
-										Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue.
+									</a>
+									<p class="item-card__text">
+										Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+										the mattis, leo quam aliquet congue.
 									</p>
 								</div>
-								<div class="news-card__footer d-flex ai-c">
-									<time class="news-card__time">
+								<div class="latest-news__card-footer item-card__footer d-flex jc-sb ai-c">
+									<time class="latest-news__time">
+										<svg class="latest-news__time-icon">
+											<use xlink:href="#ui-clock" />
+										</svg>
 										20 Dec 2016
 									</time>
-									<div class="news-card__stats d-flex jc-sb">
-										<span class="news-card__stat-link news-card__stat-link--comments">
+									<div class="latest-news__stats d-flex jc-sb">
+										<a class="latest-news__stat-link news-card__stat-link--comments" href="#">
+											<svg class="latest-news__stat-icon">
+												<title>
+													Read Comments
+												</title>
+												<use xlink:href="#ui-bubble" />
+											</svg>
 											45
-										</span>
-										<span class="news-card__stat-link news-card__stat-link--views">
+										</a>
+										<a class="latest-news__stat-link news-card__stat-link--views" href="#">
+											<svg class="latest-news__stat-icon">
+												<title>
+													Viewed
+												</title>
+												<use xlink:href="#ui-view" />
+											</svg>
 											345
-										</span>
+										</a>
 									</div>
 								</div>
 							</article>
-
 						</div>
 					</div>
 				</section>
 				<!-- /Latest news -->
-
 				<!-- Benefits -->
 				<section class="benefits">
 					<div class="container">
 						<div class="benefits__inner d-flex">
 							<div class="benefits__col d-flex jc-c ai-c fd-c">
-								<div class="benefits__img" style="background-image: url(images/ui/ui-money-back.png); background-size: 150px, 120px;"></div>
+								<div class="benefits__img"
+									style="background-image: url(images/ui/ui-money-back.png); background-size: 150px, 120px;"></div>
 								<div class="benefits__tagline">
 									30 Days Money Back <span class="txt-blue">Guarantee</span>
 								</div>
 							</div>
 							<div class="benefits__col d-flex jc-c ai-c fd-c">
-								<div class="benefits__img" style="background-image: url(images/ui/ui-support.png); background-size: 155px, 117px;"></div>
+								<div class="benefits__img"
+									style="background-image: url(images/ui/ui-support.png); background-size: 155px, 117px;"></div>
 								<div class="benefits__tagline">
 									Fast and Friendly <span class="txt-fuchsia">Support</span>
 								</div>
@@ -1407,7 +1832,7 @@
 				<!-- Join -->
 				<section class="join">
 					<div class="container">
-						<div class="join__inner d-flex jc-c ai-c fd-c">
+						<div class="join__inner">
 							<div class="join__heading">
 								Ready to Join Our Marketplace!
 							</div>
@@ -1421,366 +1846,189 @@
 					</div>
 				</section>
 				<!-- /Join -->
-
 			</main>
 			<!-- /Main -->
 
-			<!-- Footer -->
-
+						<!-- Footer -->
 			<footer class="footer">
-
 				<div class="footer__top">
-
 					<div class="container">
-
 						<div class="footer__inner d-flex jc-sb">
-
 							<div class="footer__col footer__col--contacts">
-
 								<a class="footer__logo logo" href="#">
-
 									<img class="logo__img" src="images/logo/logo-footer.png" alt="MartPlace">
-
 								</a>
-
-			
-
 								<p class="footer__text">
-
 									Nunc placerat mi id nisi interdum they mollis. Praesent pharetra, justo ut scel erisque the
-
 									mattis, leo quam.
-
 								</p>
-
-			
-
 								<address class="footer__contacts">
-
 									<ul class="footer__contacts-list">
-
 										<li class="footer__contacts-item">
-
 											<a class="footer__contact-link" href="tel:+67898752235">
-
-												<i class="footer__contact-icon lnr lnr-phone-handset"></i>Phone: +6789-875-2235
-
+												<svg class="footer__contact-icon">
+													<use xlink:href="#ui-phone" />
+												</svg>
+												Phone: +6789-875-2235
 											</a>
-
 										</li>
-
 										<li class="footer__contacts-item footer__contacts-item--email">
-
 											<a class="footer__contact-link" href="mailto:support@aazztech.com">
-
-												<i class="footer__contact-icon lnr lnr-envelope"></i>support@aazztech.com
-
+												<svg class="footer__contact-icon">
+													<use xlink:href="#ui-envelope" />
+												</svg>
+												support@aazztech.com
 											</a>
-
 										</li>
-
 										<li class="footer__contacts-item">
-
 											<a class="footer__contact-link" href="https://goo.gl/maps/HZ4HkjLDzU2CRJ7C8">
-
-												<i class="footer__contact-icon lnr lnr-map-marker"></i>202 New Hampshire Avenue
-
-												Northwest #100, New York-2573
-
+												<svg class="footer__contact-icon">
+													<use xlink:href="#ui-map-marker" />
+												</svg>
+												202 New Hampshire Avenue Northwest #100, New York-2573
 											</a>
-
 										</li>
-
 									</ul>
-
 								</address>
-
 							</div>
-
-			
 
 							<div class="footer__col footer__col--company">
-
 								<div class="footer__title">
-
 									Our Company
-
 								</div>
-
 								<ul class="footer__list">
-
 									<li class="footer__item">
-
 										<a class="footer__link" href="#">
-
 											About Us
-
 										</a>
-
 									</li>
-
 									<li class="footer__item">
-
 										<a class="footer__link" href="#">
-
 											How It Work
-
 										</a>
-
 									</li>
-
 									<li class="footer__item">
-
 										<a class="footer__link" href="#">
-
 											Affiliates
-
 										</a>
-
 									</li>
-
 									<li class="footer__item">
-
 										<a class="footer__link" href="#">
-
 											Testimonials
-
 										</a>
-
 									</li>
-
 									<li class="footer__item">
-
 										<a class="footer__link" href="#">
-
 											Contact Us
-
 										</a>
-
 									</li>
-
 									<li class="footer__item">
-
 										<a class="footer__link" href="#">
-
 											Copyright Notice
-
-			
-
 										</a>
-
 									</li>
-
 									<li class="footer__item">
-
 										<a class="footer__link" href="#">
-
 											Blog
-
 										</a>
-
 									</li>
-
 								</ul>
-
 							</div>
-
-			
 
 							<div class="footer__col footer__col--support">
-
 								<div class="footer__title">
-
 									Help Support
-
 								</div>
-
 								<ul class="footer__list">
-
 									<li class="footer__item">
-
 										<a class="footer__link" href="#">
-
 											Support Forum
-
 										</a>
-
 									</li>
-
 									<li class="footer__item">
-
 										<a class="footer__link" href="#">
-
 											Terms & Conditions
-
 										</a>
-
 									</li>
-
 									<li class="footer__item">
-
 										<a class="footer__link" href="#">
-
 											Support Policy
-
 										</a>
-
 									</li>
-
 									<li class="footer__item">
-
 										<a class="footer__link" href="#">
-
 											Refund Policy
-
 										</a>
-
 									</li>
-
 									<li class="footer__item">
-
 										<a class="footer__link" href="#">
-
 											FAQs
-
 										</a>
-
 									</li>
-
 									<li class="footer__item">
-
 										<a class="footer__link" href="#">
-
 											Buyers Faq
-
 										</a>
-
 									</li>
-
 									<li class="footer__item">
-
 										<a class="footer__link" href="#">
-
 											Sellers Faq
-
 										</a>
-
 									</li>
-
 								</ul>
-
 							</div>
-
-			
 
 							<div class="footer__col footer__col--newsletter">
-
 								<div class="footer__title">
-
 									Newsletter
-
 								</div>
-
 								<p class="footer__text footer__text--newsletter">
-
 									Subscribe to get the latest news, update and offer information. Don't worry, we won't send spam!
-
 								</p>
-
-			
-
-								<form class="footer__form form" id="footer-form" action="#">
-
-									<label class="form__label" for="#footer-input">
-
-										<span class="sr-only">Enter your email here...</span>
-
-										<input class="footer__input form__input" id="footer-input" type="email"
-
-											placeholder="Enter email" required />
-
-										<button class="footer__submit-btn form__btn btn btn--blue" type="submit">
-
+								<form class="footer__form input-form" id="footer-form" action="#">
+									<label class="input-form__label" for="#footer-input">
+										<input class="footer__input input-form__text-box" id="footer-input" type="email" placeholder="Enter email"
+											required aria-label="Enter your email here..." />
+										<button class="footer__submit-btn input-form__btn btn btn--blue" type="submit">
 											Submit
-
 										</button>
-
 									</label>
-
 								</form>
 
-			
-
 								<ul class="social d-flex ai-c">
-
 									<li class="social__item">
-
 										<a class="social__link" style="background-image: url(images/ui/social-icon-facebook.png);" href="#"></a>
-
 									</li>
-
 									<li class="social__item">
-
 										<a class="social__link" style="background-image: url(images/ui/social-icon-twitter.png);" href="#"></a>
-
 									</li>
-
 									<li class="social__item">
-
 										<a class="social__link" style="background-image: url(images/ui/social-icon-google.png);" href="#"></a>
-
 									</li>
-
 									<li class="social__item">
-
 										<a class="social__link" style="background-image: url(images/ui/social-icon-pinterest.png);" href="#"></a>
-
 									</li>
-
 									<li class="social__item">
-
 										<a class="social__link" style="background-image: url(images/ui/social-icon-linkedin.png);" href="#"></a>
-
 									</li>
-
 									<li class="social__item">
-
 										<a class="social__link" style="background-image: url(images/ui/social-icon-dribble.png);" href="#"></a>
-
 									</li>
-
 								</ul>
-
 							</div>
-
-			
-
 						</div>
-
 					</div>
-
 				</div>
-
-			
 
 				<div class="footer__bottom">
-
 					<div class="container">
-
 						<div class="footer__copyright-text">
-
 							©2017 <a class="footer__copyright-link" href="#">MartPlace</a>. All rights reserved. Created by <a
-
 								class="footer__copyright-link" href="#">AazzTech</a>
-
 						</div>
-
 					</div>
-
 				</div>
-
 			</footer>
-
 			<!-- /Footer -->
 		</div>
 		<!-- /Wrapper -->
@@ -1788,5 +2036,104 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="js/libs.min.js"></script>
 		<script src="js/main.min.js"></script>
+		<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1"
+	xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<defs>
+
+		<symbol id="ui-alarm" viewBox="0 0 32 32">
+			<path d="M26.88 24.162c-1.83-1.374-2.88-3.475-2.88-5.762v-4.8c0-4.021-2.71-7.421-6.4-8.467v-1.133c0-1.323-1.077-2.4-2.4-2.4s-2.4 1.077-2.4 2.4v1.133c-3.69 1.048-6.4 4.446-6.4 8.467v4.8c0 2.286-1.050 4.386-2.88 5.762-0.275 0.206-0.387 0.566-0.278 0.893s0.414 0.547 0.758 0.547h7.28c-0.053 0.262-0.082 0.53-0.082 0.8 0 2.205 1.795 4 4 4s4-1.795 4-4c0-0.269-0.027-0.538-0.080-0.8h7.28c0.344 0 0.65-0.221 0.758-0.547s-0.003-0.686-0.278-0.893zM14.4 4c0-0.442 0.358-0.8 0.8-0.8s0.8 0.358 0.8 0.8v0.837c-0.264-0.024-0.53-0.037-0.8-0.037s-0.536 0.013-0.8 0.037v-0.837zM17.6 26.4c0 1.323-1.077 2.4-2.4 2.4s-2.4-1.077-2.4-2.4c0-0.274 0.048-0.544 0.138-0.8h4.525c0.090 0.256 0.138 0.526 0.138 0.8zM5.987 24c0.408-0.494 0.763-1.034 1.054-1.602 0.637-1.245 0.958-2.59 0.958-3.998v-4.8c0-3.97 3.23-7.2 7.2-7.2s7.2 3.23 7.2 7.2v4.8c0 1.408 0.323 2.754 0.958 3.998 0.291 0.57 0.646 1.107 1.054 1.602h-18.427z">
+			</path>
+		</symbol>
+
+		<symbol id="ui-envelope" viewBox="0 0 32 32">
+			<path d="M28 9.6h-25.6c-1.323 0-2.4 1.077-2.4 2.4v14.4c0 1.323 1.077 2.4 2.4 2.4h25.6c1.323 0 2.4-1.077 2.4-2.4v-14.4c0-1.323-1.077-2.4-2.4-2.4zM28 11.2c0.048 0 0.093 0.005 0.139 0.013l-12.051 8.034c-0.464 0.309-1.31 0.309-1.774 0l-12.051-8.034c0.045-0.008 0.091-0.013 0.139-0.013h25.6zM28 27.2h-25.6c-0.442 0-0.8-0.358-0.8-0.8v-13.706l11.826 7.883c0.498 0.331 1.136 0.498 1.774 0.498s1.277-0.166 1.774-0.498l11.826-7.883v13.706c0 0.442-0.358 0.8-0.8 0.8z">
+			</path>
+		</symbol>
+
+		<symbol id="ui-cart" viewBox="0 0 32 32">
+			<path d="M12.8 32c-1.765 0-3.2-1.435-3.2-3.2s1.435-3.2 3.2-3.2 3.2 1.435 3.2 3.2-1.435 3.2-3.2 3.2zM12.8 27.2c-0.882 0-1.6 0.718-1.6 1.6s0.718 1.6 1.6 1.6 1.6-0.718 1.6-1.6-0.718-1.6-1.6-1.6z">
+			</path>
+			<path
+				d="M24 32c-1.765 0-3.2-1.435-3.2-3.2s1.435-3.2 3.2-3.2 3.2 1.435 3.2 3.2-1.435 3.2-3.2 3.2zM24 27.2c-0.882 0-1.6 0.718-1.6 1.6s0.718 1.6 1.6 1.6 1.6-0.718 1.6-1.6-0.718-1.6-1.6-1.6z">
+			</path>
+			<path d="M28.062 7.147c-0.402-0.475-1.008-0.747-1.662-0.747h-19.589l-0.158-0.954c-0.21-1.259-1.374-2.246-2.653-2.246h-1.6c-0.442 0-0.8 0.358-0.8 0.8s0.358 0.8 0.8 0.8h1.6c0.491 0 0.994 0.426 1.074 0.91l2.674 16.043c0.21 1.259 1.374 2.246 2.653 2.246h16c0.442 0 0.8-0.358 0.8-0.8s-0.358-0.8-0.8-0.8h-16c-0.491 0-0.994-0.426-1.074-0.91l-0.395-2.368 15.944-1.387c1.24-0.107 2.373-1.154 2.578-2.382l1.074-6.443c0.107-0.646-0.061-1.29-0.462-1.763zM26.947 8.646l-1.074 6.443c-0.085 0.506-0.626 1.006-1.138 1.051l-16.069 1.397-1.59-9.539h19.322c0.187 0 0.344 0.064 0.442 0.181s0.136 0.282 0.106 0.466z">
+			</path>
+		</symbol>
+
+		<symbol id="ui-magnifier" viewBox="0 0 32 32">
+			<path d="M30.19 30.659l-9.509-10.374c2.142-2.242 3.32-5.173 3.32-8.285 0-3.205-1.248-6.219-3.515-8.485s-5.28-3.515-8.485-3.515-6.219 1.248-8.485 3.515-3.515 5.28-3.515 8.485 1.248 6.219 3.515 8.485 5.28 3.515 8.485 3.515c2.762 0 5.379-0.926 7.501-2.632l9.509 10.373c0.158 0.173 0.373 0.259 0.59 0.259 0.194 0 0.387-0.069 0.541-0.21 0.326-0.299 0.347-0.805 0.050-1.13zM1.6 12c0-5.734 4.666-10.4 10.4-10.4s10.4 4.666 10.4 10.4-4.666 10.4-10.4 10.4-10.4-4.666-10.4-10.4z">
+			</path>
+		</symbol>
+
+		<symbol id="ui-arrow-down" viewBox="0 0 32 32">
+			<path d="M0 9.6c0-0.205 0.078-0.41 0.234-0.566 0.312-0.312 0.819-0.312 1.131 0l13.834 13.834 13.834-13.834c0.312-0.312 0.819-0.312 1.131 0s0.312 0.819 0 1.131l-14.4 14.4c-0.312 0.312-0.819 0.312-1.131 0l-14.4-14.4c-0.157-0.157-0.234-0.362-0.234-0.566z">
+			</path>
+		</symbol>
+
+		<symbol id="ui-arrow-prev" viewBox="0 0 32 32">
+			<path d="M22.4 32c0.205 0 0.41-0.078 0.566-0.234 0.312-0.312 0.312-0.819 0-1.131l-13.834-13.834 13.834-13.834c0.312-0.312 0.312-0.819 0-1.131s-0.819-0.312-1.131 0l-14.4 14.4c-0.312 0.312-0.312 0.819 0 1.131l14.4 14.4c0.157 0.157 0.362 0.234 0.566 0.234z">
+			</path>
+		</symbol>
+
+		<symbol id="ui-arrow-next" viewBox="0 0 32 32">
+			<path d="M8 32c-0.205 0-0.41-0.078-0.566-0.234-0.312-0.312-0.312-0.819 0-1.131l13.834-13.834-13.834-13.834c-0.312-0.312-0.312-0.819 0-1.131s0.819-0.312 1.131 0l14.4 14.4c0.312 0.312 0.312 0.819 0 1.131l-14.4 14.4c-0.157 0.157-0.362 0.234-0.566 0.234z">
+			</path>
+		</symbol>
+
+		<symbol id="ui-menu" viewBox="0 0 8 32">
+			<path d="M0.019 28.691c0.061-1.766 1.696-3.154 3.654-3.101 1.957 0.054 3.496 1.53 3.435 3.296-0.059 1.766-1.696 3.152-3.653 3.101-1.958-0.056-3.498-1.531-3.437-3.296zM0.454 15.901c0.061-1.768 1.696-3.154 3.654-3.101 1.958 0.054 3.496 1.53 3.437 3.296-0.061 1.766-1.696 3.154-3.654 3.101-1.958-0.056-3.496-1.531-3.437-3.296zM0.891 3.11c0.059-1.768 1.696-3.155 3.653-3.101 1.958 0.053 3.498 1.53 3.437 3.296-0.061 1.765-1.696 3.154-3.654 3.099-1.957-0.054-3.494-1.53-3.435-3.296z">
+			</path>
+		</symbol>
+
+		<symbol id="ui-html" viewBox="0 0 32 32">
+			<path d="M1.892 0l2.567 28.801 11.524 3.199 11.554-3.204 2.572-28.796h-28.216zM24.52 9.42h-13.517l0.322 3.617h12.874l-0.97 10.844-7.245 2.008-7.237-2.008-0.495-5.547h3.547l0.252 2.82 3.933 1.060 0.009-0.002 3.935-1.062 0.408-4.58h-12.242l-0.953-10.681h17.694l-0.316 3.532z">
+			</path>
+		</symbol>
+
+		<symbol id="ui-wp" viewBox="0 0 32 32">
+			<path d="M15.334 0.332c8.284 0.001 14.999 6.717 14.999 15.001s-6.716 15.001-15.001 15.001c-0.001 0-0.001 0-0.002 0h0c-8.284-0.001-14.999-6.717-14.999-15.001s6.716-15.001 15.001-15.001c0.001 0 0.001 0 0.002 0h-0zM9.292 27.79l-6.604-18.094c-0.757 1.658-1.199 3.595-1.199 5.636 0 5.448 3.147 10.162 7.722 12.422l0.081 0.036zM19.93 28.39c-0.035-0.053-0.068-0.115-0.097-0.179l-0.003-0.009-4.252-11.658-4.154 12.068c1.171 0.357 2.516 0.563 3.91 0.563 1.648 0 3.228-0.288 4.694-0.816l-0.097 0.030zM22.294 27.296c4.143-2.44 6.88-6.879 6.88-11.957 0-0.002 0-0.005 0-0.008v0c0-0.007 0-0.016 0-0.025 0-2.428-0.628-4.709-1.73-6.69l0.036 0.070c0.060 0.444 0.096 0.916 0.096 1.426 0 1.404-0.266 2.982-1.054 4.958zM22.178 7.568c0-1.274 0.962-2.456 2.324-2.456 0.060 0 0.12 0.006 0.18 0.010-2.446-2.253-5.725-3.634-9.327-3.634-0.008 0-0.016 0-0.024 0h0.001c-0.002 0-0.004 0-0.007 0-4.813 0-9.052 2.459-11.529 6.189l-0.032 0.051c0.326 0.010 0.63 0.016 0.89 0.016 1.45 0 3.69-0.176 3.69-0.176 0.744-0.040 0.836 1.052 0.090 1.14 0 0-0.752 0.088-1.586 0.132l5.042 14.994 3.030-9.084-2.154-5.91c-0.584-0.036-1.085-0.083-1.582-0.143l0.128 0.013c-0.744-0.044-0.658-1.184 0.090-1.142 0 0 2.284 0.176 3.644 0.176 1.448 0 3.69-0.176 3.69-0.176 0.744-0.040 0.834 1.052 0.088 1.14 0 0-0.748 0.088-1.584 0.132l5.004 14.88 1.38-4.61c0.7-1.8 1.054-3.292 1.054-4.476 0-1.712-0.616-2.898-1.14-3.82-0.702-1.14-1.36-2.104-1.36-3.246z">
+			</path>
+		</symbol>
+
+		<symbol id="ui-psd" viewBox="0 0 24 32">
+			<path d="M24.471 8.058v20.535c0 1.879-1.536 3.407-3.422 3.407h-17.626c-0.001 0-0.002 0-0.004 0-1.885 0-3.413-1.525-3.418-3.408v-25.184c0-1.877 1.536-3.407 3.422-3.407h12.919zM22.374 28.593l-0.051-19.708-4.393 0.013c-0.001 0-0.001 0-0.002 0-1.306 0-2.366-1.057-2.37-2.362v-4.462l-12.136 0.011c-0.001 0-0.001 0-0.002 0-0.729 0-1.32 0.589-1.323 1.317v25.19c0 0.73 0.595 1.321 1.325 1.321h17.626c0.001 0 0.001 0 0.002 0 0.73 0 1.322-0.591 1.323-1.321v-0zM11.407 13.862c0.555 0.437 0.93 1.158 0.93 2.005s-0.284 1.566-0.8 2.054c-0.672 0.631-1.666 0.915-2.829 0.915-0.258 0-0.489-0.015-0.67-0.040v3.095h-1.948v-8.542c0.726-0.115 1.563-0.181 2.416-0.181 0.086 0 0.171 0.001 0.257 0.002l-0.013-0c1.214 0 2.078 0.23 2.66 0.693zM10.387 15.917c0-0.796-0.555-1.272-1.536-1.272-0.401 0-0.672 0.038-0.813 0.075v2.56c0.168 0.038 0.375 0.051 0.659 0.051 1.045 0 1.69-0.527 1.69-1.414zM19.236 19.336c0 1.449-1.124 2.682-3.512 2.682-0.994 0-1.976-0.256-2.466-0.527l0.401-1.617c0.635 0.328 1.385 0.526 2.179 0.54l0.005 0c0.904 0 1.38-0.375 1.38-0.939 0-0.54-0.414-0.847-1.459-1.22-1.446-0.503-2.389-1.299-2.389-2.556 0-1.478 1.24-2.607 3.294-2.607 0.979 0 1.702 0.205 2.219 0.435l-0.439 1.581c-0.528-0.26-1.149-0.412-1.806-0.412-0.006 0-0.012 0-0.017 0h0.001c-0.851 0-1.265 0.386-1.265 0.836 0 0.553 0.491 0.796 1.615 1.22 1.536 0.565 2.259 1.361 2.259 2.584z">
+			</path>
+		</symbol>
+
+		<symbol id="ui-heart" viewBox="0 0 32 32">
+			<path d="M15.2 30.4c-0.134 0-0.267-0.034-0.389-0.101-0.15-0.083-3.722-2.082-7.347-5.355-2.146-1.936-3.858-3.917-5.093-5.888-1.574-2.514-2.371-5.022-2.371-7.456 0-4.632 3.768-8.4 8.4-8.4 1.568 0 3.234 0.587 4.69 1.654 0.851 0.624 1.576 1.376 2.11 2.174 0.534-0.798 1.259-1.55 2.11-2.174 1.456-1.067 3.122-1.654 4.69-1.654 4.632 0 8.4 3.768 8.4 8.4 0 2.434-0.798 4.942-2.371 7.456-1.234 1.971-2.947 3.952-5.091 5.888-3.626 3.274-7.197 5.272-7.347 5.355-0.122 0.067-0.254 0.101-0.389 0.101zM8.4 4.8c-3.749 0-6.8 3.051-6.8 6.8 0 4.864 3.76 9.283 6.914 12.136 2.816 2.547 5.67 4.333 6.686 4.939 1.016-0.606 3.87-2.392 6.686-4.939 3.154-2.851 6.914-7.272 6.914-12.136 0-3.749-3.051-6.8-6.8-6.8-2.725 0-5.371 2.242-6.042 4.253-0.109 0.326-0.414 0.547-0.758 0.547s-0.65-0.221-0.758-0.547c-0.67-2.011-3.317-4.253-6.042-4.253z">
+			</path>
+		</symbol>
+
+		<symbol id="ui-clock" viewBox="0 0 32 32">
+			<path d="M26.112 27.381c2.766-2.851 4.288-6.598 4.288-10.581 0-3.792-1.379-7.373-3.901-10.168l1.101-1.101 1.035 1.034c0.157 0.157 0.362 0.234 0.565 0.234s0.41-0.078 0.565-0.234c0.312-0.312 0.312-0.819 0-1.131l-3.2-3.2c-0.312-0.312-0.819-0.312-1.131 0s-0.312 0.819 0 1.131l1.035 1.034-1.101 1.101c-2.795-2.522-6.376-3.901-10.168-3.901s-7.373 1.379-10.168 3.901l-1.101-1.101 1.034-1.034c0.312-0.312 0.312-0.819 0-1.131s-0.819-0.312-1.131 0l-3.2 3.2c-0.312 0.312-0.312 0.819 0 1.131 0.157 0.157 0.362 0.234 0.566 0.234s0.41-0.078 0.566-0.234l1.034-1.034 1.101 1.101c-2.522 2.795-3.901 6.376-3.901 10.168 0 3.982 1.522 7.73 4.288 10.581l-3.254 3.254c-0.312 0.312-0.312 0.819 0 1.131 0.157 0.157 0.362 0.235 0.566 0.235s0.41-0.078 0.566-0.235l3.296-3.294c2.728 2.285 6.138 3.53 9.739 3.53s7.011-1.245 9.739-3.53l3.294 3.294c0.157 0.157 0.362 0.235 0.566 0.235s0.41-0.078 0.565-0.235c0.312-0.312 0.312-0.819 0-1.131l-3.254-3.254zM1.6 16.8c0-7.499 6.101-13.6 13.6-13.6s13.6 6.101 13.6 13.6c0 7.499-6.101 13.6-13.6 13.6s-13.6-6.101-13.6-13.6z">
+			</path>
+			<path d="M24.206 11.6c-0.221-0.382-0.71-0.514-1.093-0.293l-7.872 4.546-6.136-4.296c-0.362-0.253-0.861-0.165-1.114 0.197s-0.165 0.861 0.197 1.114l6.554 4.589c0.002 0.002 0.003 0.002 0.003 0.003 0.014 0.010 0.029 0.019 0.043 0.027 0.003 0.002 0.006 0.005 0.010 0.006 0.014 0.008 0.029 0.016 0.043 0.024 0.003 0.002 0.006 0.003 0.010 0.005 0.016 0.008 0.032 0.014 0.050 0.022 0.010 0.005 0.021 0.008 0.030 0.011 0.006 0.002 0.013 0.005 0.021 0.008 0.011 0.003 0.022 0.006 0.034 0.010 0.006 0.002 0.013 0.003 0.019 0.005 0.011 0.003 0.022 0.005 0.035 0.008 0.006 0.002 0.013 0.003 0.019 0.003 0.011 0.002 0.022 0.003 0.034 0.005 0.008 0.002 0.016 0.002 0.024 0.003 0.010 0.002 0.019 0.002 0.029 0.003 0.014 0.002 0.029 0.002 0.043 0.002 0.003 0 0.006 0 0.010 0 0 0 0 0 0 0s0 0 0.002 0c0.030 0 0.059-0.002 0.090-0.005 0.002 0 0.003 0 0.005 0 0.029-0.003 0.058-0.008 0.086-0.016 0.003 0 0.005-0.002 0.008-0.002 0.027-0.006 0.054-0.014 0.080-0.024 0.005-0.002 0.010-0.003 0.013-0.005 0.026-0.010 0.050-0.019 0.074-0.032 0.006-0.003 0.011-0.006 0.018-0.010 0.008-0.005 0.018-0.008 0.026-0.013l8.314-4.8c0.382-0.221 0.514-0.71 0.293-1.093z">
+			</path>
+		</symbol>
+
+		<symbol id="ui-bubble" viewBox="0 0 32 32">
+			<path d="M0.8 30.4c-0.36 0-0.675-0.24-0.771-0.587s0.051-0.715 0.36-0.899c2.706-1.622 3.827-3.982 4.226-5.086-2.941-2.251-4.614-5.366-4.614-8.627 0-1.646 0.413-3.242 1.229-4.742 0.778-1.43 1.888-2.712 3.298-3.81 2.859-2.224 6.65-3.45 10.674-3.45s7.814 1.226 10.674 3.45c1.41 1.096 2.52 2.378 3.298 3.81 0.816 1.499 1.229 3.094 1.229 4.742s-0.413 3.242-1.229 4.742c-0.778 1.43-1.888 2.712-3.298 3.81-2.859 2.224-6.65 3.45-10.674 3.45-1.653 0-3.275-0.206-4.826-0.616-0.686 0.458-1.97 1.269-3.502 2.032-2.381 1.184-4.422 1.784-6.070 1.784zM15.2 4.8c-7.499 0-13.6 4.666-13.6 10.4 0 2.904 1.608 5.699 4.41 7.667 0.275 0.194 0.4 0.538 0.314 0.862-0.187 0.698-0.824 2.613-2.528 4.461 2.083-0.73 4.326-1.995 5.982-3.134 0.197-0.136 0.443-0.176 0.674-0.11 1.517 0.434 3.115 0.654 4.749 0.654 7.499 0 13.6-4.666 13.6-10.4s-6.101-10.4-13.6-10.4z">
+			</path>
+		</symbol>
+
+		<symbol id="ui-view" viewBox="0 0 32 32">
+			<path d="M31.795 16.266c-0.075-0.085-1.891-2.088-4.73-4.115-1.675-1.197-3.36-2.15-5.008-2.837-2.088-0.87-4.126-1.312-6.058-1.312s-3.97 0.442-6.058 1.312c-1.648 0.686-3.333 1.642-5.008 2.837-2.838 2.027-4.654 4.032-4.73 4.115-0.274 0.304-0.274 0.766 0 1.070 0.075 0.085 1.891 2.088 4.73 4.115 1.675 1.197 3.36 2.15 5.008 2.837 2.088 0.87 4.126 1.312 6.058 1.312s3.97-0.442 6.058-1.312c1.648-0.686 3.333-1.642 5.008-2.837 2.838-2.027 4.654-4.032 4.73-4.115 0.274-0.304 0.274-0.766 0-1.070zM20.118 10.301c1.451 1.221 2.282 2.997 2.282 4.899 0 3.53-2.87 6.4-6.4 6.4s-6.4-2.87-6.4-6.4c0-1.901 0.83-3.678 2.282-4.899 1.315-0.429 2.706-0.701 4.118-0.701s2.803 0.272 4.118 0.701zM26.107 20.17c-2.453 1.747-6.197 3.83-10.107 3.83s-7.654-2.083-10.107-3.83c-1.851-1.318-3.267-2.653-3.982-3.37 0.715-0.717 2.131-2.050 3.982-3.37 0.848-0.605 1.85-1.248 2.96-1.832-0.555 1.101-0.853 2.328-0.853 3.602 0 4.411 3.589 8 8 8s8-3.589 8-8c0-1.274-0.298-2.501-0.853-3.602 1.11 0.584 2.112 1.229 2.96 1.832 1.851 1.318 3.267 2.653 3.982 3.37-0.715 0.717-2.131 2.050-3.982 3.37z">
+			</path>
+		</symbol>
+
+		<symbol id="ui-phone" viewBox="0 0 32 32">
+			<path d="M25.6 32c-2.834 0-5.848-0.803-8.96-2.387-2.869-1.461-5.702-3.552-8.195-6.048s-4.581-5.333-6.040-8.203c-1.581-3.114-2.384-6.128-2.384-8.962 0-1.837 1.712-3.611 2.446-4.288 1.058-0.974 2.722-2.112 3.931-2.112 0.602 0 1.306 0.394 2.219 1.238 0.68 0.63 1.446 1.485 2.213 2.47 0.462 0.595 2.768 3.634 2.768 5.091 0 1.195-1.352 2.027-2.782 2.906-0.554 0.339-1.125 0.691-1.538 1.022-0.442 0.354-0.52 0.541-0.533 0.582 1.518 3.786 6.16 8.427 9.944 9.944 0.034-0.011 0.221-0.085 0.581-0.533 0.331-0.413 0.683-0.986 1.022-1.538 0.88-1.43 1.71-2.782 2.906-2.782 1.458 0 4.496 2.306 5.091 2.768 0.986 0.766 1.84 1.533 2.47 2.213 0.845 0.912 1.238 1.618 1.238 2.219 0 1.21-1.138 2.878-2.11 3.941-0.678 0.739-2.453 2.459-4.29 2.459zM6.39 1.6c-0.429 0.008-1.582 0.533-2.837 1.688-1.19 1.098-1.931 2.29-1.931 3.112 0 10.766 13.222 24 23.978 24 0.821 0 2.013-0.744 3.11-1.941 1.157-1.261 1.682-2.419 1.69-2.85-0.051-0.304-0.893-1.486-3.195-3.259-1.979-1.523-3.584-2.341-3.997-2.35-0.029 0.008-0.208 0.077-0.571 0.538-0.315 0.402-0.653 0.95-0.981 1.482-0.896 1.458-1.742 2.835-2.973 2.835-0.198 0-0.394-0.038-0.581-0.114-4.2-1.68-9.166-6.646-10.846-10.846-0.202-0.504-0.234-1.294 0.758-2.194 0.528-0.478 1.258-0.926 1.965-1.362 0.531-0.326 1.082-0.664 1.482-0.981 0.461-0.363 0.53-0.542 0.538-0.571-0.011-0.413-0.827-2.018-2.35-3.997-1.773-2.302-2.955-3.142-3.259-3.195z">
+			</path>
+		</symbol>
+
+		<symbol id="ui-map-marker" viewBox="0 0 32 32">
+			<path d="M16 32c-0.245 0-0.477-0.112-0.629-0.306-0.091-0.117-2.269-2.902-4.475-7.016-1.299-2.421-2.336-4.798-3.080-7.066-0.939-2.859-1.414-5.555-1.414-8.013 0-5.293 4.307-9.6 9.6-9.6s9.6 4.307 9.6 9.6c0 2.458-0.477 5.152-1.414 8.013-0.744 2.267-1.781 4.645-3.080 7.066-2.208 4.114-4.384 6.899-4.475 7.016-0.152 0.194-0.384 0.306-0.629 0.306zM16 1.6c-4.411 0-8 3.589-8 8 0 5.206 2.341 10.662 4.306 14.322 1.443 2.69 2.894 4.822 3.694 5.936 0.803-1.118 2.264-3.264 3.709-5.962 1.957-3.653 4.291-9.099 4.291-14.296 0-4.411-3.589-8-8-8z">
+			</path>
+			<path d="M16 14.4c-2.646 0-4.8-2.154-4.8-4.8s2.154-4.8 4.8-4.8 4.8 2.154 4.8 4.8-2.154 4.8-4.8 4.8zM16 6.4c-1.765 0-3.2 1.435-3.2 3.2s1.435 3.2 3.2 3.2c1.765 0 3.2-1.435 3.2-3.2s-1.435-3.2-3.2-3.2z">
+			</path>
+		</symbol>
+	</defs>
+</svg>
 	</body>
 </html>

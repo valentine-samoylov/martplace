@@ -1,0 +1,59 @@
+@mixin respond($breakpoint) {
+	@if $breakpoint==lg {
+		@media only screen and (max-width: $md1+px) {
+			@content;
+		}
+	}
+
+	@if $breakpoint==md {
+		@media only screen and (max-width: $md2+px) {
+			@content;
+		}
+	}
+
+	@if $breakpoint==sm {
+		@media only screen and (max-width: $md3+px) {
+			@content;
+		}
+	}
+
+	@if $breakpoint==xs {
+		@media only screen and (max-width: $md4+px) {
+			@content;
+		}
+	}
+}
+
+@mixin font-face($font_name, $file_name, $weight, $style, $display) {
+	@font-face {
+		font-family: $font_name;
+		src: url("../fonts/#{$file_name}.woff2") format("woff2"), url("../fonts/#{$file_name}.woff") format("woff"),
+			url("../fonts/#{$file_name}.ttf") format("truetype");
+		font-weight: #{$weight};
+		font-style: #{$style};
+		font-display: #{$display};
+	}
+}
+
+@mixin font-size($font-size, $line-height: normal, $letter-spacing: normal) {
+	font-size: $font-size * 1px;
+	// font-size: $font-size * 0.1rem;
+	// example using rem values and 62.5% font-size so 1rem = 10px
+
+	@if $line-height==normal {
+		line-height: normal;
+	} @else {
+		line-height: $line-height;
+	}
+
+	@if $letter-spacing==normal {
+		letter-spacing: normal;
+	} @else {
+		letter-spacing: $letter-spacing;
+	}
+}
+
+@mixin flexbox() {
+	display: flex;
+	font-size: 0;
+}

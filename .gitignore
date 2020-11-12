@@ -3,4 +3,6 @@
 .LSOverride
 .vs
 
+debug.log
+
 node_modules/

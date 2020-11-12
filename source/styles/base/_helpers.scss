@@ -1,0 +1,80 @@
+.wrapper {
+	position: relative;
+	padding-top: 180px;
+}
+
+.container {
+	max-width: $mw + px;
+	margin: 0 auto;
+	padding: 0 15px;
+	width: 100%;
+
+	@include respond(lg) {
+		max-width: 970px;
+	}
+
+	@include respond(md) {
+		max-width: none;
+	}
+
+	@include respond(sm) {
+		max-width: none;
+		min-width: $minwidth;
+	}
+}
+
+.centered {
+	display: block;
+	margin: 0 auto;
+}
+
+.d-block {
+	display: block;
+}
+
+.d-flex {
+	display: flex;
+}
+
+.jc-c {
+	justify-content: center;
+}
+
+.jc-sb {
+	justify-content: space-between;
+}
+
+.ai-c {
+	align-items: center;
+}
+
+.ai-b {
+	align-items: baseline;
+}
+
+.fd-c {
+	flex-direction: column;
+}
+
+.fxw-w {
+	flex-wrap: wrap;
+}
+
+.sr-only {
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	width: 0;
+}
+
+.fw-bold {
+	font-weight: 700;
+}
+
+.txt-blue {
+	color: $azure-blue;
+}
+
+.txt-fuchsia {
+	color: $fuchsia-blue;
+}

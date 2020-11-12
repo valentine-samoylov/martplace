@@ -1,0 +1,43 @@
+// Features
+.features {
+	padding: 186px 0 121px;
+
+	&__card {
+		max-width: 360px;
+		position: relative;
+		padding: 41px 30px 45px;
+		border-radius: 4px;
+		text-align: center;
+		transition: all 0.3s ease 0s;
+
+		&:hover {
+			background-color: $white;
+			box-shadow: 0 2px 50px rgba(0, 0, 0, 0.08);
+		}
+	}
+
+	&__img {
+		display: inline-block;
+		width: 120px;
+		height: 120px;
+		margin-bottom: 31px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+	}
+
+	&__title {
+		margin-bottom: 20px;
+		font-size: 24px;
+		color: $black;
+	}
+
+	&__text {
+		height: 120px;
+		margin: 0;
+		font-size: 16px;
+		line-height: 30px;
+		color: $emperor-gray;
+		overflow-y: auto;
+	}
+}

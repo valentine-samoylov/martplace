@@ -1,10 +1,27 @@
-@import "helpers/variables";
-@import "helpers/mixins";
-@import "helpers/functions";
-@import "helpers/helpers";
+// Abstracts (Vars, mixins, functions)
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+// Vendors
 @import "vendor/libs";
+
+// Base
+@import "base/base";
 @import "base/fonts";
-@import "base/general";
-@import "modules/header";
-@import "modules/index-page";
-@import "modules/footer";
+@import "base/helpers";
+
+// Components
+@import "components/logo";
+@import "components/user";
+@import "components/btn";
+@import "components/btn";
+@import "components/input-form";
+@import "components/item-card";
+@import "components/social";
+
+// Layout-related sections
+@import "layout/header";
+@import "layout/footer";
+
+// Page-specific styles
+@import "pages/index-page/index-page";

@@ -1,0 +1,101 @@
+// Button
+.btn {
+	display: inline-block;
+	text-align: center;
+	font-size: 15px;
+	line-height: inherit;
+	border: none;
+	background-color: transparent;
+	outline: transparent;
+	cursor: pointer;
+	white-space: nowrap;
+	transition: all 0.3s ease 0s;
+
+	&--sm {
+		padding: 6px 16px 7px 16px;
+		border-radius: 16px;
+		font-weight: 500;
+	}
+
+	&--md {
+		padding: 8px 20px 9px 20px;
+		border-radius: 16px;
+		font-weight: 500;
+	}
+
+	&--lg {
+		padding: 15px 28px;
+		font-weight: 500;
+		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+		border-radius: 23px;
+	}
+
+	&--xl {
+		padding: 19px 32px 20px;
+		border-radius: 28px;
+		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+		font-size: 16px;
+	}
+
+	&--center {
+		display: block;
+		margin: 0 auto;
+	}
+
+	&--transparent {
+		border: 1px solid $white;
+		color: $white;
+	}
+
+	&--white {
+		background-color: $white;
+		color: $azure-blue;
+	}
+
+	&--white-alt {
+		@extend .btn--white;
+		color: $fuchsia-blue;
+	}
+
+	&--transparent:hover,
+	&--white:hover {
+		border-color: rgba($white, 0.2);
+		background-color: rgba($white, 0.4);
+		color: $white;
+		backdrop-filter: blur(3px);
+	}
+
+	&--transparent:focus,
+	&--white:focus {
+		box-shadow: 0 0 0 3px rgba($white, 0.5);
+	}
+
+	&--gray {
+		background-color: #f1f3f6;
+		color: #747b86;
+		&:focus {
+			box-shadow: 0 0 0 3px rgba($oslo-gray, 0.3);
+		}
+	}
+
+	&--blue {
+		background-color: $azure-blue;
+		color: $white;
+
+		&:focus {
+			box-shadow: 0 0 0 3px rgba($azure-blue, 0.5);
+		}
+
+		&:hover {
+			background-color: adjust-hue($azure-blue, 15%);
+		}
+	}
+
+	&:hover {
+		box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.15);
+	}
+
+	&:active {
+		box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+	}
+}

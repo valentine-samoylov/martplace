@@ -1,0 +1,91 @@
+// Section
+.section {
+	padding: 120px 0;
+
+	&__header {
+		position: relative;
+		margin-bottom: 50px;
+		padding: 33px 30px 32px 29px;
+		box-shadow: 0 2px 4px rgba(108, 111, 115, 0.1);
+		border-radius: 4px;
+		background-color: $white;
+	}
+
+	&__title {
+		font-size: 30px;
+		line-height: 1.5;
+		color: $deep-black;
+	}
+
+	&__slider-btn {
+		position: relative;
+		width: 55px;
+		height: 45px;
+		border: none;
+		background-color: $azure-blue;
+		outline: transparent;
+		cursor: pointer;
+		transition: all 0.3s all 0s;
+
+		&:focus {
+			box-shadow: 0 0 0 3px rgba($azure-blue, 0.5);
+		}
+
+		&:hover {
+			background-color: adjust-hue($azure-blue, 15%);
+		}
+
+		&--prev {
+			border-radius: 23px 0 0 23px;
+		}
+
+		&--next {
+			border-radius: 0 23px 23px 0;
+		}
+
+		&--fuchsia {
+			background-color: $fuchsia-blue;
+
+			&:focus {
+				box-shadow: 0 0 0 3px rgba($fuchsia-blue, 0.5);
+			}
+
+			&:hover {
+				background-color: darken($fuchsia-blue, 5%);
+			}
+		}
+
+		&:hover {
+			box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.15);
+		}
+
+		&:active {
+			box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+		}
+	}
+
+	&__slider-icon {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		fill: $white;
+		width: 14px;
+		height: 14px;
+		transform: translate(-50%, -50%);
+	}
+
+	&__heading {
+		margin-bottom: 25px;
+		font-size: 36px;
+		text-align: center;
+	}
+
+	&__subheading {
+		max-width: 700px;
+		margin: 0 auto 53px;
+		font-size: 16px;
+		line-height: 30px;
+		text-align: center;
+		color: $emperor-gray;
+	}
+}
